@@ -1,0 +1,39 @@
+{
+ "code": [
+  [
+   "    \n    img = Fixed(Text(text, xalign=0.5, yalign=0.5, color=\"#000\"), xmaximum=608)\n    if previously:",
+   "    \n    img = Fixed(Text(text, xalign=0.5, yalign=0.5, color=\"#000\"), xmaximum=1126)\n    if previously:",
+   1
+  ],
+  [
+   "                                (0,0), \"ui/bg-choice.png\",\n                                (577,2), im.Alpha(\"ui/bt-cf-checked.png\",0.5))\n    elif previously is not None:",
+   "                                (0,0), \"ui/bg-choice.png\",\n                                    (1062,7), im.Alpha(\"ui/bt-cf-checked.png\",0.5))\n    elif previously is not None:",
+   1
+  ],
+  [
+   "                                (0,0), \"ui/bg-choice.png\",\n                                (577,2), im.Alpha(\"ui/bt-cf-unchecked.png\",0.5))\n    else:",
+   "                                (0,0), \"ui/bg-choice.png\",\n                                    (1062,7), im.Alpha(\"ui/bt-cf-unchecked.png\",0.5))\n    else:",
+   1
+  ],
+  [
+   "    \n    bg = Fixed(bgim, xmaximum=608)\n    \n    this_idle = LiveComposite((608,35),\n                                  (0,0), ingm_bg(bg),",
+   "    \n    bg = Fixed(bgim, xmaximum=1126)\n    \n    this_idle = LiveComposite((1126,65),\n                                  (0,0), ingm_bg(bg),",
+   1
+  ],
+  [
+   "                                  )\n    this_hover = LiveComposite((608,35),\n                                  (0,0), ingm_bg(bg),",
+   "                                  )\n    this_hover = LiveComposite((1126,65),\n                                  (0,0), ingm_bg(bg),",
+   1
+  ],
+  [
+   "    \n    ui.fixed(xpos=0.5, ymaximum=35, xmaximum=800)\n    ui.imagebutton(this_idle, this_hover, clicked=clicked, style=\"default\", xanchor=0.5, yanchor=0.5)",
+   "    \n    ui.fixed(xpos=0.5, ymaximum=65, xmaximum=1920)\n    ui.imagebutton(this_idle, this_hover, clicked=clicked, style=\"default\", xanchor=0.5, yanchor=0.5)",
+   1
+  ],
+  [
+   "    if is_active:\n        img = Fixed(Text(text, xalign=0.5, yalign=0.5, color=\"#ccc\"), xmaximum=608)\n        bg = Fixed(\"ui/bg-choice_nochoice.png\", xmaximum=608)\n    else:\n        img = Fixed(Text(text, xalign=0.5, yalign=0.5, color=\"#00000080\"), xmaximum=608)\n        bg = Fixed(im.MatrixColor(\"ui/bg-choice.png\",im.matrix.desaturate()*im.matrix.brightness(-0.2)*im.matrix.opacity(0.3)), xmaximum=608)\n    \n    ui.fixed(xpos=0.5, ymaximum=35, xmaximum=800)\n    ui.button(clicked=clicked, style=\"default\", xanchor=0.5, yanchor=0.5)",
+   "    if is_active:\n        img = Fixed(Text(text, xalign=0.5, yalign=0.5, color=\"#ccc\"), xmaximum=972)\n        bg = Fixed(\"ui/bg-choice_nochoice.png\", xmaximum=972)\n    else:\n        img = Fixed(Text(text, xalign=0.5, yalign=0.5, color=\"#00000080\"), xmaximum=972)\n        bg = Fixed(im.MatrixColor(\"ui/bg-choice.png\",im.matrix.desaturate()*im.matrix.brightness(-0.2)*im.matrix.opacity(0.3)), xmaximum=972)\n    \n    ui.fixed(xpos=0.5, ymaximum=56, xmaximum=1920)\n    ui.button(clicked=clicked, style=\"default\", xanchor=0.5, yanchor=0.5)",
+   1
+  ]
+ ]
+}

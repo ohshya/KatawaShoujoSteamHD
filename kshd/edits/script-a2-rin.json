@@ -1,0 +1,130 @@
+{
+ "nodes": [
+  {
+   "label": "R3",
+   "n": 0,
+   "match": [
+    "RawMultipurpose='<node>'",
+    "RawMultipurpose.circles='0'",
+    "RawMultipurpose.duration='0'",
+    "RawMultipurpose.properties[]()='zoom'",
+    "RawMultipurpose.properties[]()='1.0'",
+    "RawMultipurpose.properties[]()='xalign'",
+    "RawMultipurpose.properties[]()='0.5'",
+    "RawMultipurpose.properties[]()='yalign'",
+    "RawMultipurpose.properties[]()='0.5'",
+    "RawMultipurpose.properties[]()='subpixel'",
+    "RawMultipurpose.properties[]()='True'"
+   ],
+   "atl": {
+    "properties": [
+     [
+      "zoom",
+      "1.2  "
+     ],
+     [
+      "xalign",
+      "0.5 "
+     ],
+     [
+      "yalign",
+      "0.5 "
+     ],
+     [
+      "subpixel",
+      "True"
+     ]
+    ]
+   }
+  },
+  {
+   "label": "R3",
+   "n": 0,
+   "match": [
+    "RawMultipurpose='<node>'",
+    "RawMultipurpose.circles='0'",
+    "RawMultipurpose.duration='20.0'",
+    "RawMultipurpose.properties[]()='zoom'",
+    "RawMultipurpose.properties[]()='0.8'",
+    "RawMultipurpose.warper='ease'"
+   ],
+   "atl": {
+    "properties": [
+     [
+      "zoom",
+      "1.0 "
+     ]
+    ]
+   }
+  },
+  {
+   "label": "_call_h_R15_3",
+   "n": 0,
+   "match": [
+    "Show='<node>'",
+    "Show.imspec()()='ev'",
+    "Show.imspec()()='rin_high_sleep'",
+    "Show.imspec()='master'"
+   ],
+   "scene": true
+  },
+  {
+   "label": "R16",
+   "n": 0,
+   "match": [
+    "RawMultipurpose='<node>'",
+    "RawMultipurpose.circles='0'",
+    "RawMultipurpose.duration='0'",
+    "RawMultipurpose.properties[]()='yalign'",
+    "RawMultipurpose.properties[]()='0.5'",
+    "RawMultipurpose.properties[]()='xalign'",
+    "RawMultipurpose.properties[]()='0.5'",
+    "RawMultipurpose.properties[]()='zoom'",
+    "RawMultipurpose.properties[]()='0.8'",
+    "RawMultipurpose.properties[]()='subpixel'",
+    "RawMultipurpose.properties[]()='True'"
+   ],
+   "atl": {
+    "properties": [
+     [
+      "yalign",
+      "0.5 "
+     ],
+     [
+      "xalign",
+      "0.5 "
+     ],
+     [
+      "zoom",
+      "1.0  "
+     ],
+     [
+      "subpixel",
+      "True"
+     ]
+    ]
+   }
+  },
+  {
+   "label": "R16",
+   "n": 0,
+   "match": [
+    "RawMultipurpose='<node>'",
+    "RawMultipurpose.circles='0'",
+    "RawMultipurpose.duration='20.0'",
+    "RawMultipurpose.properties[]()='zoom'",
+    "RawMultipurpose.properties[]()='0.9'",
+    "RawMultipurpose.warper='ease'"
+   ],
+   "atl": {
+    "properties": [
+     [
+      "zoom",
+      "1.1"
+     ]
+    ]
+   }
+  }
+ ],
+ "languages": true
+}

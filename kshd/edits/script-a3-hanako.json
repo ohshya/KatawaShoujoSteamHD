@@ -1,0 +1,30 @@
+{
+ "nodes": [
+  {
+   "label": "H17",
+   "n": 0,
+   "match": [
+    "RawMultipurpose='<node>'",
+    "RawMultipurpose.circles='0'",
+    "RawMultipurpose.duration='0'",
+    "RawMultipurpose.properties[]()='ypos'",
+    "RawMultipurpose.properties[]()='0'",
+    "RawMultipurpose.properties[]()='xpos'",
+    "RawMultipurpose.properties[]()='-860'"
+   ],
+   "atl": {
+    "properties": [
+     [
+      "xpos",
+      "-1900  "
+     ],
+     [
+      "ypos",
+      "-150"
+     ]
+    ]
+   }
+  }
+ ],
+ "languages": true
+}

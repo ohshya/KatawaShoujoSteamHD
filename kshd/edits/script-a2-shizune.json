@@ -1,0 +1,184 @@
+{
+ "nodes": [
+  {
+   "label": "S11",
+   "n": 0,
+   "match": [
+    "RawMultipurpose='<node>'",
+    "RawMultipurpose.circles='0'",
+    "RawMultipurpose.duration='0'",
+    "RawMultipurpose.properties[]()='subpixel'",
+    "RawMultipurpose.properties[]()='True'",
+    "RawMultipurpose.properties[]()='xanchor'",
+    "RawMultipurpose.properties[]()='1140'",
+    "RawMultipurpose.properties[]()='yanchor'",
+    "RawMultipurpose.properties[]()='1100'",
+    "RawMultipurpose.properties[]()='xpos'",
+    "RawMultipurpose.properties[]()='400'",
+    "RawMultipurpose.properties[]()='ypos'",
+    "RawMultipurpose.properties[]()='300'",
+    "RawMultipurpose.properties[]()='zoom'",
+    "RawMultipurpose.properties[]()='1.0'"
+   ],
+   "atl": {
+    "properties": [
+     [
+      "subpixel",
+      "True "
+     ],
+     [
+      "xanchor",
+      "2173  "
+     ],
+     [
+      "yanchor",
+      "2396  "
+     ],
+     [
+      "xpos",
+      "400 "
+     ],
+     [
+      "ypos",
+      "300 "
+     ],
+     [
+      "zoom",
+      "1.0"
+     ]
+    ]
+   }
+  },
+  {
+   "label": "S11",
+   "n": 0,
+   "match": [
+    "RawMultipurpose='<node>'",
+    "RawMultipurpose.circles='0'",
+    "RawMultipurpose.duration='10.0'",
+    "RawMultipurpose.properties[]()='yanchor'",
+    "RawMultipurpose.properties[]()='1050'",
+    "RawMultipurpose.warper='easein'"
+   ],
+   "atl": {
+    "properties": [
+     [
+      "yanchor",
+      "2296 "
+     ]
+    ]
+   }
+  },
+  {
+   "label": "S11",
+   "n": 0,
+   "match": [
+    "RawMultipurpose='<node>'",
+    "RawMultipurpose.circles='0'",
+    "RawMultipurpose.duration='1.0'",
+    "RawMultipurpose.properties[]()='xpos'",
+    "RawMultipurpose.properties[]()='400'",
+    "RawMultipurpose.properties[]()='xanchor'",
+    "RawMultipurpose.properties[]()='1400'",
+    "RawMultipurpose.properties[]()='yanchor'",
+    "RawMultipurpose.properties[]()='400'",
+    "RawMultipurpose.properties[]()='ypos'",
+    "RawMultipurpose.properties[]()='300'",
+    "RawMultipurpose.warper='ease'"
+   ],
+   "atl": {
+    "properties": [
+     [
+      "xpos",
+      "400 "
+     ],
+     [
+      "xanchor",
+      "2870  "
+     ],
+     [
+      "yanchor",
+      "650  "
+     ],
+     [
+      "ypos",
+      "300"
+     ]
+    ]
+   }
+  },
+  {
+   "label": "S11",
+   "n": 0,
+   "match": [
+    "RawMultipurpose='<node>'",
+    "RawMultipurpose.circles='0'",
+    "RawMultipurpose.duration='10.0'",
+    "RawMultipurpose.properties[]()='xanchor'",
+    "RawMultipurpose.properties[]()='1300'",
+    "RawMultipurpose.warper='acdc_warp'"
+   ],
+   "atl": {
+    "properties": [
+     [
+      "xanchor",
+      "2670 "
+     ]
+    ]
+   }
+  },
+  {
+   "label": "S11",
+   "n": 0,
+   "match": [
+    "RawMultipurpose='<node>'",
+    "RawMultipurpose.circles='0'",
+    "RawMultipurpose.duration='0.5'",
+    "RawMultipurpose.properties[]()='xanchor'",
+    "RawMultipurpose.properties[]()='800'",
+    "RawMultipurpose.properties[]()='yanchor'",
+    "RawMultipurpose.properties[]()='360'",
+    "RawMultipurpose.warper='ease'"
+   ],
+   "atl": {
+    "properties": [
+     [
+      "xanchor",
+      "1600  "
+     ],
+     [
+      "yanchor",
+      "560 "
+     ]
+    ]
+   }
+  },
+  {
+   "label": "S11",
+   "n": 0,
+   "match": [
+    "RawMultipurpose='<node>'",
+    "RawMultipurpose.circles='0'",
+    "RawMultipurpose.duration='10.0'",
+    "RawMultipurpose.properties[]()='xanchor'",
+    "RawMultipurpose.properties[]()='700'",
+    "RawMultipurpose.properties[]()='yanchor'",
+    "RawMultipurpose.properties[]()='360'",
+    "RawMultipurpose.warper='easein'"
+   ],
+   "atl": {
+    "properties": [
+     [
+      "xanchor",
+      "1400  "
+     ],
+     [
+      "yanchor",
+      "560  "
+     ]
+    ]
+   }
+  }
+ ],
+ "languages": true
+}

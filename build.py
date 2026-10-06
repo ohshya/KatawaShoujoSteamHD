@@ -1,62 +1,120 @@
-import os
-import urllib
-import subprocess
-import platform
-from distutils.dir_util import copy_tree
+import json
+import re
+import sys
+import zipfile
+from concurrent.futures import ProcessPoolExecutor
+from pathlib import Path
 
-default_dir = "C:\Program Files (x86)\Katawa Shoujo"
-patch_dir = "KatawaShoujoHD"
-languages_dir = "Languages"
-out_dir = "bin"
+from kshd import rpa
+from kshd.patch import PatchError, apply
 
-#Determine the base game install path
-if os.path.exists("paths.txt"):
-	f = open("paths.txt", "r")
-	path = f.read().rstrip()
-	f.close()
-elif os.path.exists(default_dir):
-	path = default_dir
-else:
-	while True:
-		path = input("Enter the base game's directory: ")
-		if os.path.exists(path):
-			break
-		print("Invalid directory entered.")
+ROOT = Path(__file__).resolve().parent
+# Patch version, used in the output file name "KS HD <VERSION> STEAM.zip".
+VERSION = '1.0.0'
+# Script suffixes of the Steam languages ('' is English); add new ones here if Steam adds languages.
+LANGUAGES = ['', '_ES', '_FR', '_JP', '_DE', '_KR', '_PL', '_PT-BR', '_RU', '_ZH', '_ZH-HANT']
 
-print("Found the game files at:", path)
 
-#Copy the base game files to the output directory
-copy_tree(path, out_dir)
+class Assets:
+    def __init__(self, path):
+        self.zip = zipfile.ZipFile(path) if path.is_file() else None
+        names = [n for n in self.zip.namelist() if not n.endswith('/')] if self.zip else \
+            [p.relative_to(path).as_posix() for p in path.rglob('*') if p.is_file()]
+        root = min((n[:-len('presplash.png')] for n in names if n.endswith('presplash.png')), key=len, default=None)
+        if root is None:
+            sys.exit('%s is not the HD assets package.' % path)
+        self.path, self.root = path, root
+        self.names = [n[len(root):] for n in names if n.startswith(root)]
 
-print("Copied base game files")
+    def open(self, name):
+        return self.zip.open(self.root + name) if self.zip else open(self.path / self.root / name, 'rb')
 
-#Hand the call to rpaExtract to wine if not on windows
-user_os = platform.system()
+    def size(self, name):
+        return self.zip.getinfo(self.root + name).file_size if self.zip else (self.path / self.root / name).stat().st_size
 
-rpa_path = os.path.join(path, 'game/data.rpa')
-extract_path = os.path.join(out_dir, 'game')
 
-if user_os == "Windows":
-	subprocess.call(['rpatool.exe', '-x', rpa_path, '-o', extract_path])
-else:
-	subprocess.call(['wine', 'rpatool.exe', '-x', rpa_path, '-o', extract_path])
+class Steam:
+    def __init__(self, game):
+        self.game = Path(game)
+        self.index = {}
+        for archive in self.game.glob('lang-*.rpa'):
+            self.index.update(rpa.read_index(archive))
 
-print("Extracted rpa")
+    def script(self, name):
+        path = self.game / name
+        return path.read_bytes() if path.exists() else rpa.read(self.index[name])
 
-#Remove the rpa
-os.remove(os.path.join(out_dir, "game/data.rpa"))
 
-print("Removed redundant files")
-	
+def steam_libraries():
+    roots = []
+    if sys.platform == 'win32':
+        import winreg
+        for hive, key, value in ((winreg.HKEY_CURRENT_USER, r'Software\Valve\Steam', 'SteamPath'),
+                                 (winreg.HKEY_LOCAL_MACHINE, r'SOFTWARE\WOW6432Node\Valve\Steam', 'InstallPath')):
+            try:
+                with winreg.OpenKey(hive, key) as k:
+                    roots.append(Path(winreg.QueryValueEx(k, value)[0]))
+            except OSError:
+                pass
+    roots += [Path.home() / p for p in ('.steam/steam', '.local/share/Steam', 'Library/Application Support/Steam')]
+    libraries = []
+    for root in roots:
+        vdf = root / 'steamapps' / 'libraryfolders.vdf'
+        if vdf.exists():
+            libraries += [root] + [Path(p.replace('\\\\', '\\')) for p in re.findall(r'"path"\s+"([^"]+)"', vdf.read_text(errors='ignore'))]
+    return list(dict.fromkeys(libraries))
 
-copy_tree(patch_dir, out_dir)
-print("Patched the game files, the game is now playable in the folder", out_dir, "by running KatawaShoujo.exe")
 
-russian = input("Install the Russian patch? (Y/N)")
+def find_game():
+    for folder in [lib / 'steamapps' / 'common' / 'Katawa Shoujo' for lib in steam_libraries()] + [ROOT / 'Katawa Shoujo']:
+        hit = next(folder.rglob('data.rpa'), None) if folder.is_dir() else None
+        if hit:
+            return hit.parent
+    sys.exit('Katawa Shoujo was not found in Steam. Copy the game folder here as "Katawa Shoujo".')
 
-if russian.lower() == 'y':
-	copy_tree(os.path.join(languages_dir,"Russian"), out_dir)
-	print("Installed Russian patch")
 
-print("Installation complete")
-input()
+def find_assets():
+    folder = ROOT / 'assets'
+    archive = next(folder.glob('*.zip'), None)
+    if archive or folder.is_dir() and any(folder.rglob('presplash.png')):
+        return Assets(archive or folder)
+    sys.exit('HD assets not found. Download them from the releases page and put them in the "assets" folder.')
+
+
+def init(game):
+    global STEAM
+    STEAM = Steam(game)
+
+
+def task(job):
+    name, edits = job
+    return name, apply(name, STEAM.script(name), edits)
+
+
+def main():
+    game, assets = find_game(), find_assets()
+    print('Game:', game.parent)
+    jobs = []
+    for f in sorted((ROOT / 'kshd' / 'edits').glob('*.json')):
+        edits = json.loads(f.read_text(encoding='utf-8'))
+        jobs += [(f.stem + s + '.rpyc', edits) for s in (LANGUAGES if edits.get('languages') else [''])]
+    try:
+        with ProcessPoolExecutor(initializer=init, initargs=(str(game),)) as pool:
+            scripts = dict(pool.map(task, jobs, chunksize=4))
+    except PatchError as e:
+        sys.exit('%s\nThe game files are modified or from another version: verify them in Steam and try again.' % e)
+    out = ROOT / ('KS HD %s STEAM.zip' % VERSION)
+    with zipfile.ZipFile(out, 'w') as z:
+        z.write(ROOT / 'README.md', 'README.md', zipfile.ZIP_DEFLATED)
+        for name, data in sorted(scripts.items()):
+            z.writestr('game/' + name, data, zipfile.ZIP_DEFLATED)
+        with assets.open('presplash.png') as f:
+            z.writestr('game/presplash.png', f.read())
+        for archive, folder in (('patch-hd.rpa', 'hd/'), ('r18-hd.rpa', 'r18/')):
+            with z.open('game/' + archive, 'w', force_zip64=True) as f:
+                rpa.write(f, {n[len(folder):]: (assets.size(n), lambda n=n: assets.open(n)) for n in assets.names if n.startswith(folder)})
+    print('Done:', out)
+
+
+if __name__ == '__main__':
+    main()

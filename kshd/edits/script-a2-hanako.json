@@ -1,0 +1,135 @@
+{
+ "nodes": [
+  {
+   "label": "H7",
+   "n": 0,
+   "match": [
+    "RawMultipurpose='<node>'",
+    "RawMultipurpose.circles='0'",
+    "RawMultipurpose.duration='0'",
+    "RawMultipurpose.properties[]()='xpos'",
+    "RawMultipurpose.properties[]()='-130'",
+    "RawMultipurpose.properties[]()='ypos'",
+    "RawMultipurpose.properties[]()='-400'",
+    "RawMultipurpose.properties[]()='subpixel'",
+    "RawMultipurpose.properties[]()='True'"
+   ],
+   "atl": {
+    "properties": [
+     [
+      "xpos",
+      "-312  "
+     ],
+     [
+      "ypos",
+      "-840  "
+     ],
+     [
+      "subpixel",
+      "True"
+     ]
+    ]
+   }
+  },
+  {
+   "label": "H7",
+   "n": 0,
+   "match": [
+    "RawMultipurpose='<node>'",
+    "RawMultipurpose.circles='0'",
+    "RawMultipurpose.duration='4.0'",
+    "RawMultipurpose.properties[]()='ypos'",
+    "RawMultipurpose.properties[]()='-600'",
+    "RawMultipurpose.warper='acdc_warp'"
+   ],
+   "atl": {
+    "properties": [
+     [
+      "ypos",
+      "-1680"
+     ]
+    ],
+    "duration": "5.0  "
+   }
+  },
+  {
+   "label": "H7",
+   "n": 0,
+   "match": [
+    "RawMultipurpose='<node>'",
+    "RawMultipurpose.circles='0'",
+    "RawMultipurpose.duration='1.0'",
+    "RawMultipurpose.properties[]()='ypos'",
+    "RawMultipurpose.properties[]()='-300'",
+    "RawMultipurpose.properties[]()='xpos'",
+    "RawMultipurpose.properties[]()='-830'",
+    "RawMultipurpose.warper='ease'"
+   ],
+   "atl": {
+    "properties": [
+     [
+      "xpos",
+      "-1900  "
+     ],
+     [
+      "ypos",
+      "-580  "
+     ],
+     [
+      "subpixel",
+      "True "
+     ]
+    ]
+   }
+  },
+  {
+   "label": "H7",
+   "n": 0,
+   "match": [
+    "RawMultipurpose='<node>'",
+    "RawMultipurpose.circles='0'",
+    "RawMultipurpose.duration='12.0'",
+    "RawMultipurpose.properties[]()='ypos'",
+    "RawMultipurpose.properties[]()='0'",
+    "RawMultipurpose.properties[]()='xpos'",
+    "RawMultipurpose.properties[]()='-830'",
+    "RawMultipurpose.warper='acdc_warp'"
+   ],
+   "atl": {
+    "properties": [
+     [
+      "ypos",
+      "-110 "
+     ]
+    ]
+   }
+  },
+  {
+   "label": "H7",
+   "n": 0,
+   "match": [
+    "RawMultipurpose='<node>'",
+    "RawMultipurpose.circles='0'",
+    "RawMultipurpose.duration='1.0'",
+    "RawMultipurpose.properties[]()='xpos'",
+    "RawMultipurpose.properties[]()='-130'",
+    "RawMultipurpose.properties[]()='ypos'",
+    "RawMultipurpose.properties[]()='-400'",
+    "RawMultipurpose.warper='ease'"
+   ],
+   "atl": {
+    "properties": [
+     [
+      "xpos",
+      "-312  "
+     ],
+     [
+      "ypos",
+      "-1040 "
+     ]
+    ]
+   }
+  }
+ ],
+ "languages": true
+}

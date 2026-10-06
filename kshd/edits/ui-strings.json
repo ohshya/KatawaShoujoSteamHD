@@ -1,0 +1,9 @@
+{
+ "code": [
+  [
+   "displayDict[\"en\"].hdisabled_label = u\"Not assigned\"\ndisplayDict[\"en\"].config_page_caption = u\"Options\"",
+   "displayDict[\"en\"].hdisabled_label = u\"Not assigned\"\ndisplayDict[\"en\"].widesay_label = u\"Enable wide textbox\"\ndisplayDict[\"en\"].config_page_caption = u\"Options\"",
+   1
+  ]
+ ]
+}

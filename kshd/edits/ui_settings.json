@@ -1,0 +1,971 @@
+{
+ "code": [
+  [
+   "\nemigymbouncecomp = im.Composite ((295,630),\n                                         (0,0),\"sprites/emi/emi_basic_grin_gym.png\",\n                                         (0,600),\"vfx/emi_gym_30pxlegs.png\")\n\nemigymclosedbouncecomp = im.Composite ((295,630),\n                                         (0,0),\"sprites/emi/emi_basic_closedgrin_gym.png\",\n                                         (0,600),\"vfx/emi_gym_30pxlegs.png\")\n\nemigymconcentratebouncecomp = im.Composite ((295,630),\n                                         (0,0),\"sprites/emi/emi_basic_concentrate_gym.png\",\n                                         (0,600),\"vfx/emi_gym_30pxlegs.png\")\n\nemiannoyedbouncecomp = im.Composite ((295,660),\n                                         (0,0),\"sprites/emi/emi_basic_annoyed.png\",\n                                         (0,600),\"vfx/emi_uni_60pxlegs.png\")\n\nemihappybouncecomp = im.Composite ((295,630),\n                                         (0,0),\"sprites/emi/emi_basic_closedhappy.png\",\n                                         (0,600),\"vfx/emi_uni_60pxlegs.png\")\n",
+   "\nemigymbouncecomp = im.Composite ((531,1134),\n                                         (0,0),\"sprites/emi/emi_basic_grin_gym.png\",\n                                                 (0,1080),\"vfx/emi_gym_30pxlegs.png\")\n\nemigymclosedbouncecomp = im.Composite ((531,1134),\n                                         (0,0),\"sprites/emi/emi_basic_closedgrin_gym.png\",\n                                                 (0,1080),\"vfx/emi_gym_30pxlegs.png\")\n\nemigymconcentratebouncecomp = im.Composite ((531,1134),\n                                         (0,0),\"sprites/emi/emi_basic_concentrate_gym.png\",\n                                                 (0,1080),\"vfx/emi_gym_30pxlegs.png\")\n\nemiannoyedbouncecomp = im.Composite ((531,1188),\n                                         (0,0),\"sprites/emi/emi_basic_annoyed.png\",\n                                                 (0,1080),\"vfx/emi_uni_60pxlegs.png\")\n\nemihappybouncecomp = im.Composite ((531,1134),\n                                         (0,0),\"sprites/emi/emi_basic_closedhappy.png\",\n                                                 (0,1080),\"vfx/emi_uni_60pxlegs.png\")\n",
+   1
+  ],
+  [
+   "im.Crop(\"event/hisao_class.jpg\", 0, 0, 800, 600)",
+   "im.Crop(\"event/hisao_class.jpg\", 0, 0, 1920, 1080)",
+   1
+  ],
+  [
+   "im.Crop(\"event/hisao_class.jpg\", 800, 0, 800, 600)",
+   "im.Crop(\"event/hisao_class.jpg\", 960, 0, 1920, 1080)",
+   1
+  ],
+  [
+   "im.Crop(\"event/emi_knockeddown_large.jpg\", 840, 50, 800, 600)",
+   "im.Crop(\"event/emi_knockeddown_large.jpg\", 2016, 90, 1920, 1080)",
+   1
+  ],
+  [
+   "                                (0,0), \"event/rin_roof/rin_roof_boredom.jpg\",\n                                (300, 200), comppath)\n",
+   "                                (0,0), \"event/rin_roof/rin_roof_boredom.jpg\",\n                                        (300*2.4, 200*1.5), comppath)\n",
+   1
+  ],
+  [
+   "im.FactorScale(\"event/hisao_mirror.jpg\", 0.8)",
+   "im.FactorScale(\"event/hisao_mirror.jpg\", 1.0)",
+   1
+  ],
+  [
+   "im.Crop(\"event/rin_rain_towards_close.jpg\", 400,0,400,1200)",
+   "im.Crop(\"event/rin_rain_towards_close.jpg\", 960,0,960,2880)",
+   1
+  ],
+  [
+   "im.Crop(\"event/rin_rain_towards.jpg\", 400,0,400,600)",
+   "im.Crop(\"event/rin_rain_towards.jpg\", 960,0,960,1080)",
+   1
+  ],
+  [
+   "LiveComposite((800,600),\n                                                       (0,0), \"ev rin_nap_total_awind\",",
+   "LiveComposite((1920,1080),\n                                                       (0,0), \"ev rin_nap_total_awind\",",
+   1
+  ],
+  [
+   "LiveComposite((800,600),\n                                                       (0,0), \"ev rin_nap_close_awind\",",
+   "LiveComposite((1920,1080),\n                                                       (0,0), \"ev rin_nap_close_awind\",",
+   1
+  ],
+  [
+   "rin_trueend_comp([((113,124),\"normal\")])",
+   "rin_trueend_comp([((271,118),\"normal\")])",
+   1
+  ],
+  [
+   "rin_trueend_comp([((113,124),\"normal\"), ((177,129),\"closed\")])",
+   "rin_trueend_comp([((271,118),\"normal\"), ((425,130),\"closed\")])",
+   1
+  ],
+  [
+   "rin_trueend_comp([((113,124),\"normal\"), ((177,129),\"sad\")])",
+   "rin_trueend_comp([((271,118),\"normal\"), ((425,130),\"sad\")])",
+   1
+  ],
+  [
+   "rin_trueend_comp([((113,124),\"normal\"), ((177,129),\"smile\")])",
+   "rin_trueend_comp([((271,118),\"normal\"), ((425,130),\"smile\")])",
+   1
+  ],
+  [
+   "rin_trueend_comp([((113,124),\"normal\"), ((177,129),\"weaksmile\")])",
+   "rin_trueend_comp([((271,118),\"normal\"), ((425,130),\"weaksmile\")])",
+   1
+  ],
+  [
+   "rin_trueend_comp([((335,51),\"hug\")])",
+   "rin_trueend_comp([((804,-57),\"hug\")])",
+   1
+  ],
+  [
+   "rin_trueend_comp([((335,51),\"hug\"), ((484,154), \"hugclosed\")])",
+   "rin_trueend_comp([((804,-57),\"hug\"), ((1161,190), \"hugclosed\")])",
+   1
+  ],
+  [
+   "d_rin_h2_pan_surprise = im.Composite((800,900),\n                                           (0,0), \"event/rin_h2/rin_h2_u_surprise.jpg\",\n                                           (0,300), \"event/rin_h2/rin_h2_l_pan.jpg\")",
+   "\nd_rin_h2_pan_surprise = im.Composite((1920,2160),\n                                           (0,0), \"event/rin_h2/rin_h2_u_surprise.jpg\",\n                                                   (0,720), \"event/rin_h2/rin_h2_l_pan.jpg\")\n",
+   1
+  ],
+  [
+   "im.Crop(d_rin_h2_pan_surprise,0,0,800,600)",
+   "im.Crop(d_rin_h2_pan_surprise,0,0,1920,1080)",
+   1
+  ],
+  [
+   "d_rin_h2_pan_away = im.Composite((800,900),\n                                       (0,0), \"event/rin_h2/rin_h2_u_away.jpg\",\n                                       (0,300), \"event/rin_h2/rin_h2_l_pan.jpg\")",
+   "\nd_rin_h2_pan_away = im.Composite((1920,2160),\n                                       (0,0), \"event/rin_h2/rin_h2_u_away.jpg\",\n                                               (0,720), \"event/rin_h2/rin_h2_l_pan.jpg\")\n",
+   1
+  ],
+  [
+   "im.Crop(d_rin_h2_pan_away,0,0,800,600)",
+   "im.Crop(d_rin_h2_pan_away,0,0,1920,1080)",
+   1
+  ],
+  [
+   "d_rin_h2_pan_closed = im.Composite((800,900),\n                                         (0,0), \"event/rin_h2/rin_h2_u_closed.jpg\",\n                                         (0,300), \"event/rin_h2/rin_h2_l_pan.jpg\")",
+   "\nd_rin_h2_pan_closed = im.Composite((1920,2160),\n                                         (0,0), \"event/rin_h2/rin_h2_u_closed.jpg\",\n                                                 (0,720), \"event/rin_h2/rin_h2_l_pan.jpg\")\n",
+   1
+  ],
+  [
+   "im.Crop(d_rin_h2_pan_closed,0,0,800,600)",
+   "im.Crop(d_rin_h2_pan_closed,0,0,1920,1080)",
+   1
+  ],
+  [
+   "im.Composite((800,900),\n                                     (0,0), \"event/rin_h2/rin_h2_u_closed.jpg\",\n                                     (0,300), \"event/rin_h2/rin_h2_l_nopan.jpg\")",
+   "im.Composite((1920,2160),\n                                     (0,0), \"event/rin_h2/rin_h2_u_closed.jpg\",\n                                     (0,720), \"event/rin_h2/rin_h2_l_nopan.jpg\")",
+   1
+  ],
+  [
+   "im.Composite((800,900),\n                                     (0,0), \"event/rin_h2/rin_h2_u_surprise.jpg\",\n                                     (0,300), \"event/rin_h2/rin_h2_l_hisao.jpg\")",
+   "im.Composite((1920,2160),\n                                     (0,0), \"event/rin_h2/rin_h2_u_surprise.jpg\",\n                                     (0,720), \"event/rin_h2/rin_h2_l_hisao.jpg\")",
+   1
+  ],
+  [
+   "im.Composite((800,900),\n                                     (0,0), \"event/rin_h2/rin_h2_u_away.jpg\",\n                                     (0,300), \"event/rin_h2/rin_h2_l_hisao.jpg\")",
+   "im.Composite((1920,2160),\n                                     (0,0), \"event/rin_h2/rin_h2_u_away.jpg\",\n                                     (0,720), \"event/rin_h2/rin_h2_l_hisao.jpg\")",
+   1
+  ],
+  [
+   "im.Composite((800,900),\n                                     (0,0), \"event/rin_h2/rin_h2_u_closed.jpg\",\n                                     (0,300), \"event/rin_h2/rin_h2_l_hisao.jpg\")",
+   "im.Composite((1920,2160),\n                                     (0,0), \"event/rin_h2/rin_h2_u_closed.jpg\",\n                                     (0,720), \"event/rin_h2/rin_h2_l_hisao.jpg\")",
+   1
+  ],
+  [
+   "                                                (0,0), \"event/lilly_train/lilly_trainride.png\",\n                                                (338,301), \"event/lilly_train/lilly_trainride_smile.png\",\n                                                (573,331), \"event/lilly_train/lilly_trainride_hanasmile.png\")",
+   "                                                (0,0), \"event/lilly_train/lilly_trainride.png\",\n                                                (811,518), \"event/lilly_train/lilly_trainride_smile.png\",\n                                                (1375,590), \"event/lilly_train/lilly_trainride_hanasmile.png\")",
+   1
+  ],
+  [
+   "                                (0,0), \"event/lilly_train/lilly_trainride_ni_norm.png\",\n                                (321, 200), comppath)\n",
+   "                                (0,0), \"event/lilly_train/lilly_trainride_ni_norm.png\",\n                                        (770, 276), comppath)\n",
+   1
+  ],
+  [
+   "im.Composite(None,\n                                                  (0,0),\"event/hanako_breakdown/hanako_breakdown_down.png\",\n                                                  (588,71),\"event/hanako_breakdown/hanako_breakdown_up.jpg\")",
+   "im.Composite(None,\n                                                  (0,0),\"event/hanako_breakdown/hanako_breakdown_down.png\",\n                                                  (1411,141),\"event/hanako_breakdown/hanako_breakdown_up.jpg\")",
+   1
+  ],
+  [
+   "                                                      (0,0),\"event/hanako_breakdown/hanako_breakdown_down.png\",\n                                                      (588,71),\"event/hanako_breakdown/hanako_breakdown_closed.jpg\")",
+   "                                                      (0,0),\"event/hanako_breakdown/hanako_breakdown_down.png\",\n                                                      (1411,141),\"event/hanako_breakdown/hanako_breakdown_closed.jpg\")",
+   1
+  ],
+  [
+   "                                                  (0,0), \"event/hanako_breakdown/hanako_breakdown_bg.jpg\",\n                                                  (0,0),\"event/hanako_breakdown/hanako_breakdown_down.png\",\n                                                  (588,71),\"event/hanako_breakdown/hanako_breakdown_up.jpg\")",
+   "                                                  (0,0), \"event/hanako_breakdown/hanako_breakdown_bg.jpg\",\n                                                  (0,0),\"event/hanako_breakdown/hanako_breakdown_down.png\",\n                                                  (1411,141),\"event/hanako_breakdown/hanako_breakdown_up.jpg\")",
+   1
+  ],
+  [
+   "                                                  (0,0),\"event/hanako_breakdown/hanako_breakdown_down.png\",\n                                                  (588,71),\"event/hanako_breakdown/hanako_breakdown_closed.jpg\")",
+   "                                                  (0,0),\"event/hanako_breakdown/hanako_breakdown_down.png\",\n                                                  (1411,141),\"event/hanako_breakdown/hanako_breakdown_closed.jpg\")",
+   1
+  ],
+  [
+   "                                          (0,0), \"event/kenji_glasses/kenji_glasses_mg.png\",\n                                          (400,190), \"event/kenji_glasses/kenji_glasses_frown.png\")",
+   "                                          (0,0), \"event/kenji_glasses/kenji_glasses_mg.png\",\n                                          (960,456), \"event/kenji_glasses/kenji_glasses_frown.png\")",
+   1
+  ],
+  [
+   "                                          (0,0), \"event/kenji_glasses/kenji_glasses_mg.png\",\n                                          (400,190), \"event/kenji_glasses/kenji_glasses_closed.png\")",
+   "                                          (0,0), \"event/kenji_glasses/kenji_glasses_mg.png\",\n                                          (960,456), \"event/kenji_glasses/kenji_glasses_closed.png\")",
+   1
+  ],
+  [
+   "                                          (0,0), \"event/kenji_glasses/kenji_glasses_mg.png\",\n                                          (400,190), \"event/kenji_glasses/kenji_glasses_frown.png\",\n                                          (0,0), \"event/kenji_glasses/kenji_glasses_fg.png\"),0.8)",
+   "                                          (0,0), \"event/kenji_glasses/kenji_glasses_mg.png\",\n                                          (960,456), \"event/kenji_glasses/kenji_glasses_frown.png\",\n                                          (0,0), \"event/kenji_glasses/kenji_glasses_fg.png\"),0.8)",
+   1
+  ],
+  [
+   "                                          (0,0), \"event/kenji_glasses/kenji_glasses_mg.png\",\n                                          (400,190), \"event/kenji_glasses/kenji_glasses_closed.png\",\n                                          (0,0), \"event/kenji_glasses/kenji_glasses_fg.png\"),0.8)",
+   "                                          (0,0), \"event/kenji_glasses/kenji_glasses_mg.png\",\n                                          (960,456), \"event/kenji_glasses/kenji_glasses_closed.png\",\n                                          (0,0), \"event/kenji_glasses/kenji_glasses_fg.png\"),0.8)",
+   1
+  ],
+  [
+   "                                            (0,0),  \"event/shizu_roof/shizu_roof.jpg\",\n                                            (299,296), \"event/shizu_roof/shizu_roof_towardsangry.jpg\")",
+   "                                            (0,0),  \"event/shizu_roof/shizu_roof.jpg\",\n                                            (718,297), \"event/shizu_roof/shizu_roof_towardsangry.jpg\")",
+   1
+  ],
+  [
+   "                                            (0,0),  \"event/shizu_roof/shizu_roof.jpg\",\n                                            (299,296), \"event/shizu_roof/shizu_roof_towardsnormal.jpg\")",
+   "                                            (0,0),  \"event/shizu_roof/shizu_roof.jpg\",\n                                            (718,297), \"event/shizu_roof/shizu_roof_towardsnormal.jpg\")",
+   1
+  ],
+  [
+   "                                            (0,0),  \"event/shizu_roof/shizu_roof.jpg\",\n                                            (299,296), \"event/shizu_roof/shizu_roof_smile.jpg\")",
+   "                                            (0,0),  \"event/shizu_roof/shizu_roof.jpg\",\n                                            (718,297), \"event/shizu_roof/shizu_roof_smile.jpg\")",
+   1
+  ],
+  [
+   "                                            (0,0),  \"event/shizu_roof/shizu_roof.jpg\",\n                                            (601,316), \"event/shizu_roof/shizu_roof_hisao2.jpg\")",
+   "                                            (0,0),  \"event/shizu_roof/shizu_roof.jpg\",\n                                            (1442,345), \"event/shizu_roof/shizu_roof_hisao2.jpg\")",
+   1
+  ],
+  [
+   "                                            (0,0),  \"event/shizu_roof/shizu_roof.jpg\",\n                                            (601,316), \"event/shizu_roof/shizu_roof_hisao2.jpg\",\n                                            (299,296), \"event/shizu_roof/shizu_roof_towardsangry.jpg\")",
+   "                                            (0,0),  \"event/shizu_roof/shizu_roof.jpg\",\n                                            (1442,345), \"event/shizu_roof/shizu_roof_hisao2.jpg\",\n                                            (718,297), \"event/shizu_roof/shizu_roof_towardsangry.jpg\")",
+   1
+  ],
+  [
+   "                                            (0,0),  \"event/shizu_roof/shizu_roof.jpg\",\n                                            (601,316), \"event/shizu_roof/shizu_roof_hisao2.jpg\",\n                                            (299,296), \"event/shizu_roof/shizu_roof_towardsnormal.jpg\")",
+   "                                            (0,0),  \"event/shizu_roof/shizu_roof.jpg\",\n                                            (1442,345), \"event/shizu_roof/shizu_roof_hisao2.jpg\",\n                                            (718,297), \"event/shizu_roof/shizu_roof_towardsnormal.jpg\")",
+   1
+  ],
+  [
+   "                                            (0,0),  \"event/shizu_roof/shizu_roof.jpg\",\n                                            (601,316), \"event/shizu_roof/shizu_roof_hisao2.jpg\",\n                                            (299,296), \"event/shizu_roof/shizu_roof_smile.jpg\")",
+   "                                            (0,0),  \"event/shizu_roof/shizu_roof.jpg\",\n                                            (1442,345), \"event/shizu_roof/shizu_roof_hisao2.jpg\",\n                                            (718,297), \"event/shizu_roof/shizu_roof_smile.jpg\")",
+   1
+  ],
+  [
+   "im.Composite((1600,1200),\n                                                        (1080,290),\"event/shizune_hcg_tied/shizune_hcg_tied_hisao2.png\")",
+   "im.Composite((3840,2880),\n                                                        (2592,696),\"event/shizune_hcg_tied/shizune_hcg_tied_hisao2.png\")",
+   1
+  ],
+  [
+   "im.Composite((800,600),\n                                                              (540,145),\"event/shizune_hcg_tied/shizune_hcg_tied_hisao2_small.png\")",
+   "im.Composite((1920,1080),\n                                                              (1296,224),\"event/shizune_hcg_tied/shizune_hcg_tied_hisao2_small.png\")",
+   1
+  ],
+  [
+   "im.Composite((800,600),\n                                                             (0,0), \"event/shizune_hcg_tied/shizune_hcg_tied_kinky3_small.jpg\",\n                                                             (540,145),\"event/shizune_hcg_tied/shizune_hcg_tied_hisao2_small.png\")",
+   "im.Composite((1920,1080),\n                                                             (0,0), \"event/shizune_hcg_tied/shizune_hcg_tied_kinky3_small.jpg\",\n                                                             (1296,224),\"event/shizune_hcg_tied/shizune_hcg_tied_hisao2_small.png\")",
+   1
+  ],
+  [
+   "im.Crop(\"event/lilly_shizu_showdown_large.jpg\", 280,100,800,600)",
+   "im.Crop(\"event/lilly_shizu_showdown_large.jpg\", 280*2.4,100*2.4,1920,1080)",
+   1
+  ],
+  [
+   "im.Crop(\"event/lilly_shizu_showdown_large.jpg\", 1400,160,800,600)",
+   "im.Crop(\"event/lilly_shizu_showdown_large.jpg\", 1400*2.4,160*2.4,1920,1080)",
+   1
+  ],
+  [
+   "im.Crop(\"event/lilly_shizu_showdown_large.jpg\", 440,260,800,299)",
+   "im.Crop(\"event/lilly_shizu_showdown_large.jpg\", 440*2.4,260*2.4,1920,1080/2)",
+   1
+  ],
+  [
+   "im.Crop(\"event/lilly_shizu_showdown_large.jpg\", 1360,320,800,299)",
+   "im.Crop(\"event/lilly_shizu_showdown_large.jpg\", 1360*2.4,320*2.4,1920,1080/2)",
+   1
+  ],
+  [
+   "im.Crop(\"event/kenji_rooftop_large.jpg\", 288,376,800,600)",
+   "im.Crop(\"event/kenji_rooftop_large.jpg\", 288*2.4,376*1.6,1920,1080)",
+   1
+  ],
+  [
+   "ex_g_images = ((\"thumb/other_iwanako.jpg\", \"evul other_iwanako\"),",
+   "\nex_g_images = ((\"thumb/other_iwanako.jpg\", \"evul other_iwanako\"),",
+   1
+  ],
+  [
+   "                     (\"thumb/completionbonus.jpg\",\"completionbonus\"))",
+   "                     (\"thumb/completionbonus.jpg\",\"completionbonus\"))\n",
+   1
+  ],
+  [
+   "im.Crop(\"event/shizu_supercg/shizu_chess_base3.jpg\", 400, 0, 400, 600)",
+   "im.Crop(\"event/shizu_supercg/shizu_chess_base3.jpg\", 960, 0, 960, 1080)",
+   1
+  ],
+  [
+   "\nshizuepiccomp = im.Composite ((874,836),\n                                  (0,0),sp_night(\"sprites/shizu/close/shizu_out_serious_close.png\"),\n                                  (2.5,600),sp_night(\"vfx/shizu_out_serious_legs.png\"))\n\nshizuepiccomp_sil = im.Composite ((874,836),\n                                  (0,0),silhouette(\"sprites/shizu/close/shizu_out_serious_close.png\"),\n                                  (2.5,600),silhouette(\"vfx/shizu_out_serious_legs.png\"))\n",
+   "\nshizuepiccomp = im.Composite ((2098,1555),\n                                  (0,0),sp_night(\"sprites/shizu/close/shizu_out_serious_close.png\"),\n                                          (2.5,1080),sp_night(\"vfx/shizu_out_serious_legs.png\"))\n\nshizuepiccomp_sil = im.Composite ((2098,1555),\n                                  (0,0),silhouette(\"sprites/shizu/close/shizu_out_serious_close.png\"),\n                                          (2.5,1080),silhouette(\"vfx/shizu_out_serious_legs.png\"))\n",
+   1
+  ],
+  [
+   "im.Crop(\"bgs/school_roof_ni.jpg\",200,0,800,600)",
+   "im.Crop(\"bgs/school_roof_ni.jpg\",200,0,1920,1080)",
+   1
+  ],
+  [
+   "LiveComposite((800,1280),\n                                        (0,0),\"event/emi_bed_normal.jpg\",\n                                        (0,600),\"event/emi_bed_legs.jpg\")",
+   "LiveComposite((1920,2967),\n                                        (0,0),\"event/emi_bed_normal_f.jpg\",\n                                        (0,1335),\"event/emi_bed_legs.jpg\")",
+   1
+  ],
+  [
+   "LiveComposite((800,600),\n                                  (0,0), fw_constructor(\"vfx/fw1.png\"),",
+   "LiveComposite((1920, 1080),\n                                  (0,0), fw_constructor(\"vfx/fw1.png\"),",
+   1
+  ],
+  [
+   "LiveComposite((800,600),\n                                  (0,0), fw_constructor_nosparkle(Solid(\"#FF000009\")),",
+   "LiveComposite((1920, 1080),\n                                  (0,0), fw_constructor_nosparkle(Solid(\"#FF000009\")),",
+   1
+  ],
+  [
+   "LiveComposite((800,600),\n                                    (0,0), hanako_fw_constructor(1.0, 1.0, 1.0),",
+   "LiveComposite((1920, 1080),\n                                    (0,0), hanako_fw_constructor(1.0, 1.0, 1.0),",
+   1
+  ],
+  [
+   "LiveComposite((800, 600),\n                             (0,0), rainAnim(),",
+   "LiveComposite((1920, 1080),\n                             (0,0), rainAnim(),",
+   1
+  ],
+  [
+   "LiveComposite((800, 600),\n                             (0,0), rainAnim(alpha=0.3),",
+   "LiveComposite((1920, 1080),\n                             (0,0), rainAnim(alpha=0.3),",
+   1
+  ],
+  [
+   "LiveComposite((800, 600),\n                             (0,0), rainAnim(alpha=0.6),",
+   "LiveComposite((1920, 1080),\n                             (0,0), rainAnim(alpha=0.6),",
+   1
+  ],
+  [
+   "\n\nletterbox = LiveComposite((800,600),\n                              (0,0), Solid(\"#000\", ymaximum=75),\n                              (0,525), Solid(\"#000\", ymaximum=75))",
+   "\n\nletterbox = LiveComposite((1920, 1080),\n                              (0,0), Solid(\"#000\", ymaximum=75),\n                              (0,525), Solid(\"#000\", ymaximum=75))",
+   1
+  ],
+  [
+   "\n\nsnowfg = SnowBlossom(\"vfx/snowflake.png\", start=3.0, count=30, border=50, xspeed=(20, 50), yspeed=(120, 180), fast=True)\nsnowbg = SnowBlossom(im.Scale(\"vfx/snowflake.png\",5,5), count=60, yspeed=(80, 120), start=3.0, border=50, xspeed=(20, 50), fast=True)\nrenpy.image(\"snow\",LiveComposite((800,600),\n                                     (0,0),snowbg,\n                                     (0,0),snowfg))",
+   "\n\nsnowfg = SnowBlossom(\"vfx/snowflake.png\", start=3.0, count=20, border=50, xspeed=(20, 50), yspeed=(120, 180), fast=True)\nsnowbg = SnowBlossom(im.Scale(\"vfx/snowflake.png\",5,5), count=30, yspeed=(80, 120), start=3.0, border=50, xspeed=(20, 50), fast=True)\nrenpy.image(\"snow\",LiveComposite((1920,1080),\n                                     (0,0),snowbg,\n                                     (0,0),snowfg))",
+   1
+  ],
+  [
+   "\n\nsakura = SnowBlossom(anim.Filmstrip(\"vfx/sakura.png\", (10, 10), (2, 1), .25), xspeed=(150, 100), yspeed=(75, 150), count=80, fast=True)\nrenpy.image(\"sakura\", sakura)\nrenpy.image(\"hospitalmask\", \"vfx/hospitalroommask_new.png\")",
+   "\n\nsakura = SnowBlossom(anim.Filmstrip(\"vfx/sakura.png\", (20, 20), (2, 1), .25), xspeed=(150, 100), yspeed=(75, 150), count=80, fast=True)\nrenpy.image(\"sakura\", sakura)\nrenpy.image(\"hospitalmask\", \"vfx/hospitalroommask_new.png\")",
+   1
+  ],
+  [
+   "\n\nconfig.nvl_page_ctc = anim.Filmstrip(\"ui/ctc_strip.png\", (16,16), (8,8), 0.03, ypos=560, xpos=772) \nconfig.nvl_page_ctc_position = \"fixed\"\n",
+   "\n\nconfig.nvl_page_ctc = anim.Filmstrip(\"ui/ctc_strip.png\", (32,32), (8,8), 0.03, ypos=0.94166, xpos=0.84)\nconfig.nvl_page_ctc_position = \"fixed\"\n",
+   1
+  ],
+  [
+   "    \n    store.adv = ReadbackADVCharacter(name=None,\n                                         ctc=config.nvl_page_ctc,\n                                         ctc_position = \"fixed\",\n                                         show_function=quotefixer,",
+   "    \n    store.adv = ReadbackADVCharacter(name=None,\n                                             ctc=anim.Filmstrip(\"ui/ctc_strip.png\", (32,32), (8,8), 0.03, ypos=0.94166, xpos=0.8),\n                                         ctc_position = \"fixed\",\n                                         show_function=quotefixer,",
+   1
+  ],
+  [
+   "    store.n = ReadbackNVLCharacter(None,\n                                       kind=nvl,\n                                       ctc=anim.Blink(im.Rotozoom(\"ui/ctc.png\", 270, 1.0),\n                                       offset=1.0, ypos=560, xpos=772),\n                                       ctc_position = \"fixed\",\n                                       **add_styles)",
+   "    store.n = ReadbackNVLCharacter(None,\n                                       kind=nvl,\n                                           ctc=config.nvl_page_ctc,\n                                       ctc_position = \"fixed\",\n                                       **add_styles)",
+   1
+  ],
+  [
+   "                               kind=adv,\n                               ctc=None,\n                               what_color=\"#666666\",\n                               what_line_spacing=8,",
+   "                               kind=adv,\n                               ctc=None,\n                                   ctc_position = \"fixed\",\n                               what_color=\"#666666\",\n                               what_line_spacing=8,",
+   1
+  ],
+  [
+   "\ndissolvecharamove = Dissolvemove(1.0)\n\ndelayed_dissolve = MultipleTransition([False,Dissolve(0.5),False,Dissolve(0.5),True])",
+   "\ndissolvecharamove = Dissolvemove(1.0)\n\n\ndelayed_dissolve = MultipleTransition([False,Dissolve(0.5),False,Dissolve(0.5),True])",
+   1
+  ],
+  [
+   "\n\nconfig.screen_width = 800\nconfig.screen_height = 600\n\n",
+   "\n\nconfig.screen_width = 1920\nconfig.screen_height = 1080\n\n",
+   1
+  ],
+  [
+   "\nstyle.default.font = mainfont\n\n\ndef main_menu_composer(is_animated):",
+   "\nstyle.default.font = mainfont\nstyle.default.size = 36\ndef turn_wide():\n    if not persistent.widesay:\n        style.say_window.background = \"ui/bg-say_notwide.png\"\n        style.say_window.left_padding = 384\n        style.say_window.right_padding = 400\n\n        style.say_window.top_padding = 22\n        style.say_window.xmargin = 0\n        style.say_window.ymargin = 0\n        style.say_window.yminimum = 253   \n        \n        style.nvl_window.background = \"ui/bg-nvl_old.png\"\n        style.nvl_window.top_padding = 59\n        style.nvl_window.left_padding = 300\n        style.nvl_window.right_padding = 300\n        \n        style.create(\"b_nvl_window\", \"nvl_window\")\n        style.b_nvl_window.background = None\n        style.b_nvl_window.top_padding = 140\n        style.b_nvl_window.left_padding = 300\n        style.b_nvl_window.right_padding = 300\n    else:\n        style.say_window.background = \"ui/bg-say_wide.png\"\n        style.say_window.left_padding = 30\n        style.say_window.right_padding = 65\n        \n        style.say_window.top_padding = 10\n        style.say_window.xmargin = 0\n        style.say_window.ymargin = 0\n        style.say_window.yminimum = 200\n        style.nvl_window.background = \"ui/bg-nvl.png\"\n        style.nvl_window.top_padding = 59\n        style.nvl_window.left_padding = 55\n        style.nvl_window.right_padding = 70\n        \n        style.create(\"b_nvl_window\", \"nvl_window\")\n        style.b_nvl_window.background = None\n        style.b_nvl_window.top_padding = 140\n        style.b_nvl_window.left_padding = 100\n        style.b_nvl_window.right_padding = 100\nturn_wide()\n\ndef main_menu_composer(is_animated):",
+   1
+  ],
+  [
+   "        is_animated = False\n    \n    \n    \n    \n    widget_map = [('tc_act4_shizune', (677, 308), '16_tc4-shizune.png'),\n                      ('tc_act3_shizune', (681, 383), '15_tc3-shizune.png'),\n                      ('tc_act2_shizune', (620, 476), '14_tc2-shizune.png'),\n                      ('tc_act4_rin', (526, 190), '13_tc4-rin.png'),\n                      ('tc_act3_rin', (590, 232), '12_tc3-rin-rin.png'),\n                      ('tc_act3_rin', (637, 295), '11_tc3-rin-hisao.png'),\n                      ('tc_act2_rin', (629, 402), '10_tc2-rin.png'),\n                      ('tc_act4_lilly', (464, 201), '09_tc4-lilly.png'),\n                      ('tc_act3_lilly', (529, 279), '08_tc3-lilly.png'),\n                      ('tc_act2_lilly', (582, 375), '07_tc2-lilly.png'),\n                      ('tc_act4_hanako', (382, 279), '06_tc4-hanako.png'),\n                      ('tc_act4_emi', (375, 370), '05_tc4-emi.png'),\n                      ('tc_act3_emi', (429, 453), '04_tc3-emi.png'),\n                      ('tc_act2_emi', (463, 498), '03_tc2-emi.png'),\n                      ('tc_act3_hanako', (469, 312), '02_tc3-hanako.png'),\n                      ('tc_act2_hanako', (493, 380), '01_tc2-hanako.png'),\n                      ('tc_act1', (552, 473), '00_tc1-hisao.png')]\n    \n    basedelay = 0.07\n    delay = basedelay * len (widget_map)\n    widget_list = [(800,600), (0,0), \"ui/main/bg-main.png\", (720,568),Text(game_version+\"\\n\"+renpy.version(),color=\"#00000080\", line_spacing=0, size=9, font=\"font/playtime.ttf\")]\n    for trigger, offset, widget in widget_map:\n        if persistent_seen(trigger) or has_devlvl():",
+   "        is_animated = False\n    \n    widget_map = [('tc_act4_shizune', (1491, 479), '16_tc4-shizune.png'),\n                          ('tc_act3_shizune', (1508, 645), '15_tc3-shizune.png'),\n                          ('tc_act2_shizune', (1393, 832), '14_tc2-shizune.png'),\n                          ('tc_act4_rin', (1183, 248), '13_tc4-rin.png'),\n                          ('tc_act3_rin', (1304, 338), '12_tc3-rin-rin.png'),\n                          ('tc_act3_rin', (1409, 454), '11_tc3-rin-hisao.png'),\n                          ('tc_act2_rin', (1409, 681), '10_tc2-rin.png'),\n                          ('tc_act4_lilly', (1053, 283), '09_tc4-lilly.png'),\n                          ('tc_act3_lilly', (1183, 439), '08_tc3-lilly.png'),\n                          ('tc_act2_lilly', (1302, 630), '07_tc2-lilly.png'),\n                          ('tc_act4_hanako', (888, 439), '06_tc4-hanako.png'),\n                          ('tc_act4_emi', (881, 621), '05_tc4-emi.png'),\n                          ('tc_act3_emi', (993, 786), '04_tc3-emi.png'),\n                          ('tc_act2_emi', (1069, 876), '03_tc2-emi.png'),\n                          ('tc_act3_hanako', (1058, 500), '02_tc3-hanako.png'),\n                          ('tc_act2_hanako', (1124, 645), '01_tc2-hanako.png'),\n                          ('tc_act1', (1260, 826), '00_tc1-hisao.png')]\n    \n    basedelay = 0.07\n    delay = basedelay * len (widget_map)\n    widget_list = [(1920,1080), (0,0), \"ui/main/bg-main.png\", (1745,1015),Text(game_version+\"\\n\"+renpy.version()+\"\\nRemastered by Letow\",color=\"#00000080\", size=15, font=\"font/playtime.ttf\")]\n    for trigger, offset, widget in widget_map:\n        if persistent_seen(trigger) or has_devlvl():",
+   1
+  ],
+  [
+   "style.mm_menu_frame.xanchor = 0.0\nstyle.mm_menu_frame.yanchor = 1.0 \nstyle.mm_menu_frame.xpos = 65\n\nstyle.mm_menu_frame.ypos = 540\nstyle.mm_button.background = None\nstyle.mm_button.xminimum = 0\nstyle.mm_button_text.xalign = 0\n\nstyle.mm_button_text.color = \"#00000066\"\nstyle.mm_button_text.insensitive_color = \"#00000019\"",
+   "style.mm_menu_frame.xanchor = 0.0\nstyle.mm_menu_frame.yanchor = 1.0 \nstyle.mm_menu_frame.xpos = 156\n\nstyle.mm_menu_frame.ypos = 972\nstyle.mm_button.background = None\nstyle.mm_button.xminimum = 0\nstyle.mm_button_text.xalign = 0\nstyle.mm_button_text.size = 42\nstyle.mm_button_text.color = \"#00000066\"\nstyle.mm_button_text.insensitive_color = \"#00000019\"",
+   1
+  ],
+  [
+   "\nstyle.prompt_text.color = \"#00000066\"\n\n",
+   "\nstyle.prompt_text.color = \"#00000066\"\nstyle.prompt_text.size = 30\n\n",
+   1
+  ],
+  [
+   "style.rpa_active_button_text.insensitive_color = \"#000000\"\n\n\n\nstyle.say_window.background = \"ui/bg-say.png\"\nstyle.say_window.left_padding = 14\nstyle.say_window.right_padding = 30\n\nstyle.say_window.top_padding = 10\nstyle.say_window.xmargin = 0\nstyle.say_window.ymargin = 0\nstyle.say_window.yminimum = 160\n\nstyle.say_vbox.spacing = 15\n\n",
+   "style.rpa_active_button_text.insensitive_color = \"#000000\"\n\nstyle.say_vbox.spacing = 9\n\n",
+   1
+  ],
+  [
+   "\n\nstyle.centered_text.size = 26\nstyle.centered_text.outlines = [ (1,\"#000C\") ]\n",
+   "\n\nstyle.centered_text.size = 37\nstyle.centered_text.outlines = [ (1,\"#000C\") ]\n",
+   1
+  ],
+  [
+   "style.note_window.xalign=0.5\nstyle.note_window.yalign=0.5\nstyle.note_window.top_padding=14\nstyle.note_window.left_padding=35\nstyle.note_window.right_padding=25\nstyle.note_window.xmaximum=402\nstyle.note_window.yfill = False\nstyle.note_window.xminimum=402\n\nstyle.create(\"note_text\", \"centered_text\")\nstyle.note_text.size = 25\nstyle.note_text.outlines = []\nstyle.note_text.color = \"#000244\"",
+   "style.note_window.xalign=0.5\nstyle.note_window.yalign=0.5\nstyle.note_window.top_padding=30\nstyle.note_window.left_padding=45\nstyle.note_window.right_padding=35\nstyle.note_window.xmaximum=643\nstyle.note_window.yfill = False\nstyle.note_window.xminimum=643\nstyle.note_window.ymaximum=483\nstyle.note_window.yminimum=483\n\nstyle.create(\"note_text\", \"centered_text\")\nstyle.note_text.size = 38\nstyle.note_text.outlines = []\nstyle.note_text.color = \"#000244\"",
+   1
+  ],
+  [
+   "style.note_text.layout = \"greedy\"\n\nstyle.nvl_window.background = \"ui/bg-nvl.png\"\nstyle.nvl_window.top_padding = 25\n\n\nstyle.say_window.left_padding = 14\nstyle.say_window.right_padding = 30\n\nstyle.create(\"b_nvl_window\", \"nvl_window\")\nstyle.b_nvl_window.background = None\nstyle.b_nvl_window.top_padding = 140\nstyle.b_nvl_window.left_padding = 80\n\nstyle.menu_choice_button.background = \"ui/bg-choice.png\"\nstyle.menu_choice.take(style.mm_button_text)\nstyle.menu_choice.xalign = 0.5\nstyle.menu_choice.size = 20\nstyle.menu_choice_button.top_padding = 5\n",
+   "style.note_text.layout = \"greedy\"\n\n\nstyle.menu_choice_button.background = \"ui/bg-choice.png\"\nstyle.menu_choice.take(style.mm_button_text)\nstyle.menu_choice.xalign = 0.5\nstyle.menu_choice.size = 19\nstyle.menu_choice_button.top_padding = 5\n",
+   1
+  ],
+  [
+   "\nstyle.create(\"readback_text\", \"say_dialogue\")\nstyle.readback_text.size= 16\nstyle.readback_text.color = \"#00000066\"\nstyle.create(\"readback_label\", \"readback_text\")",
+   "\nstyle.create(\"readback_text\", \"say_dialogue\")\nstyle.readback_text.size= 34\nstyle.readback_text.color = \"#00000066\"\nstyle.create(\"readback_label\", \"readback_text\")",
+   1
+  ],
+  [
+   "style.comment_frame.top_padding = 12\nstyle.comment_frame.bottom_padding = 18\nstyle.comment_frame.xminimum = 800\n\nstyle.create(\"comment_label\", \"say_label\")",
+   "style.comment_frame.top_padding = 12\nstyle.comment_frame.bottom_padding = 18\nstyle.comment_frame.xminimum = 1920\n\nstyle.create(\"comment_label\", \"say_label\")",
+   1
+  ],
+  [
+   "style.gm_root[None].background = None \nstyle.gm_nav_frame.xalign = 0.5\nstyle.gm_nav_frame.yalign = 0.4\nstyle.gm_nav_frame.xminimum= 200\nstyle.gm_nav_frame.yminimum = 306\nstyle.gm_nav_frame.background = \"ui/bg-gm.png\"\nstyle.gm_nav_frame.top_padding = 62\nstyle.gm_nav_box.xalign = 0.5\nstyle.gm_nav_box.yalign = 0.5",
+   "style.gm_root[None].background = None \nstyle.gm_nav_frame.xalign = 0.5\nstyle.gm_nav_frame.yalign = 0.3\nstyle.gm_nav_frame.xminimum = 400\nstyle.gm_nav_frame.yminimum = 760\nstyle.gm_nav_frame.background = \"ui/bg-gm.png\"\nstyle.gm_nav_frame.top_padding = 54\nstyle.gm_nav_box.xalign = 0.5\nstyle.gm_nav_box.yalign = 0.5",
+   1
+  ],
+  [
+   "    style.gm_nav_box.spacing = 0\nstyle.gm_nav_button.take(style.mm_button)\nstyle.gm_nav_button_text.take(style.mm_button_text)\nstyle.gm_nav_button.xalign = 0.5\nstyle.gm_nav_button_text.xalign = 0.5\n\n",
+   "    style.gm_nav_box.spacing = 0\nstyle.gm_nav_button.take(style.mm_button)\nstyle.gm_nav_button.yminimum = 60\nstyle.gm_nav_button_text.take(style.mm_button_text)\nstyle.gm_nav_button.xalign = 0.5\nstyle.gm_nav_button_text.xalign = 0.5\nstyle.gm_nav_button_text.yminimum = 60\n\n",
+   1
+  ],
+  [
+   "\nstyle.yesno_button.size_group = \"yesno\"\n\nstyle.yesno_frame.xalign = 0.5\nstyle.yesno_frame.yalign = 0.5\nstyle.yesno_frame.xmaximum = 331 \n\nstyle.yesno_frame.xmargin = 0\nstyle.yesno_frame.background = \"ui/bg-popup.png\"\nstyle.yesno_prompt.yminimum = 60\nstyle.yesno_prompt.color = \"#00000066\"\nstyle.yesno_button_hbox.box_spacing = 20\nstyle.yesno_button.background = None\nstyle.yesno_button_text.take(style.mm_button_text)",
+   "\nstyle.yesno_button.size_group = \"yesno\"\nstyle.yesno_prompt_text.size = 35\n\nstyle.yesno_frame.xalign = 0.5\nstyle.yesno_frame.yalign = 0.5\nstyle.yesno_frame.xmaximum = 530\nstyle.yesno_frame.yminimum = 277\nstyle.yesno_frame.ymaximum = 277\n\nstyle.yesno_frame.xmargin = 0\nstyle.yesno_frame.background = \"ui/bg-popup.png\"\nstyle.yesno_prompt.yminimum = 80\nstyle.yesno_prompt.color = \"#00000066\"\nstyle.yesno_button_hbox.box_spacing = 40\nstyle.yesno_button.background = None\nstyle.yesno_button_text.take(style.mm_button_text)",
+   1
+  ],
+  [
+   "style.file_picker_entry_box = Style(style.hbox, help=\"the box inside a file picker entry\")\n\nstyle.file_picker_text = Style(style.large_button_text, help=\"text inside a file picker entry\")\nstyle.file_picker_empty_slot = Style(style.file_picker_text, help=\"text inside an empty file picker entry slot\")\nstyle.file_picker_extra_info = Style(style.file_picker_text)",
+   "style.file_picker_entry_box = Style(style.hbox, help=\"the box inside a file picker entry\")\n\nstyle.file_picker_text = Style(style.prompt_text, help=\"text inside a file picker entry\")\nstyle.file_picker_empty_slot = Style(style.file_picker_text, help=\"text inside an empty file picker entry slot\")\nstyle.file_picker_extra_info = Style(style.file_picker_text)",
+   1
+  ],
+  [
+   "style.file_picker_old = Style(style.file_picker_text)\n\nstyle.file_picker_frame = Style(style.menu_frame, help=\"the frame enclosing the entire file picker\")\nstyle.file_picker_frame_box = Style(style.vbox, help=\"the box containing the navbox and the grid of file picker entries\")\n",
+   "style.file_picker_old = Style(style.file_picker_text)\n\nstyle.file_picker_frame = Style(style.default, help=\"the frame enclosing the entire file picker\")\nstyle.file_picker_frame_box = Style(style.vbox, help=\"the box containing the navbox and the grid of file picker entries\")\n",
+   1
+  ],
+  [
+   "style.file_picker_frame.xalign = 0.5\nstyle.file_picker_frame.yalign = 0.42\nstyle.file_picker_frame.xmaximum = 480\nstyle.file_picker_navbox.xalign = 0.5\nstyle.file_picker_new.bold = True",
+   "style.file_picker_frame.xalign = 0.5\nstyle.file_picker_frame.yalign = 0.42\nstyle.file_picker_frame.xminimum = 580\nstyle.file_picker_navbox.xalign = 0.5\nstyle.file_picker_new.bold = True",
+   1
+  ],
+  [
+   "style.file_picker_empty_slot.color = \"#00000066\"\nstyle.file_picker_empty_slot.hover_color = \"#000000\"\nstyle.file_picker_entry.xfill=False\nstyle.file_picker_entry.xminimum=380\nstyle.file_picker_entry.background = ib_base(\"ui/bt-scribble.png\")\nstyle.file_picker_entry.hover_background = \"ui/bt-scribble.png\"\nstyle.file_picker_entry.top_padding = 3\n\nstyle.vscrollbar.thumb_offset = -10\nstyle.vscrollbar.ymaximum = 250\nstyle.vscrollbar.xmaximum = 24\nstyle.vscrollbar.top_gutter = 15\nstyle.vscrollbar.bottom_gutter = 14\nstyle.vscrollbar.top_bar = ib_base(\"ui/bt-vscrollbar.png\")\nstyle.vscrollbar.hover_top_bar = \"ui/bt-vscrollbar.png\"",
+   "style.file_picker_empty_slot.color = \"#00000066\"\nstyle.file_picker_empty_slot.hover_color = \"#000000\"\nstyle.file_picker_entry.xfill=True\nstyle.file_picker_entry.xminimum=669\nstyle.file_picker_entry.xmaximum=669\nstyle.file_picker_entry.yminimum=115\nstyle.file_picker_entry.background = ib_base(\"ui/bt-scribble.png\")\nstyle.file_picker_entry.hover_background = \"ui/bt-scribble.png\"\nstyle.file_picker_entry.top_padding = 6\n\nstyle.vscrollbar.thumb_offset = -10\nstyle.vscrollbar.ymaximum = 500\nstyle.vscrollbar.xmaximum = 48\nstyle.vscrollbar.top_gutter = 30\nstyle.vscrollbar.bottom_gutter = 28\nstyle.vscrollbar.top_bar = ib_base(\"ui/bt-vscrollbar.png\")\nstyle.vscrollbar.hover_top_bar = \"ui/bt-vscrollbar.png\"",
+   1
+  ],
+  [
+   "\nstyle.create(\"vscrollbar2\", \"vscrollbar\")\nstyle.vscrollbar2.ymaximum = 224\nstyle.vscrollbar2.top_bar = ib_base(\"ui/bt-vscrollbar2.png\")\nstyle.vscrollbar2.hover_top_bar = \"ui/bt-vscrollbar2.png\"",
+   "\nstyle.create(\"vscrollbar2\", \"vscrollbar\")\nstyle.vscrollbar2.ymaximum = 448\nstyle.vscrollbar2.top_bar = ib_base(\"ui/bt-vscrollbar2.png\")\nstyle.vscrollbar2.hover_top_bar = \"ui/bt-vscrollbar2.png\"",
+   1
+  ],
+  [
+   "\nstyle.prefs_pref_frame.xfill = True\nstyle.prefs_column.xanchor = 0.5\n\nstyle.prefs_pref_box.box_spacing = 12\n\nstyle.prefs_column.xmaximum = 250\nstyle.prefs_column.box_spacing = 10\nstyle.prefs_frame.top_margin = 10",
+   "\nstyle.prefs_pref_frame.xfill = True\nstyle.prefs_pref_frame.yminimum = 30\nstyle.prefs_column.xanchor = 0.5\n\nstyle.prefs_pref_box.box_spacing = 12\n\nstyle.prefs_column.xmaximum = 500\nstyle.prefs_column.box_spacing = 10\nstyle.prefs_frame.top_margin = 10",
+   1
+  ],
+  [
+   "style.prefs_right.xpos = 663\n\nstyle.prefs_slider.xmaximum = 200\n\nstyle.prefs_pref_box.xfill = True\nstyle.prefs_volume_box.xfill = True\nstyle.prefs_pref_choicebox.xfill = True\nstyle.prefs_button.xalign = 1.0\nstyle.prefs_jump_button.xalign = 1.0",
+   "style.prefs_right.xpos = 663\n\nstyle.prefs_slider.xmaximum = 400\nstyle.prefs_slider.ymaximum = 60\n\nstyle.prefs_pref_box.xfill = True\nstyle.prefs_volume_box.xfill = True\nstyle.prefs_pref_choicebox.xfill = True\nstyle.prefs_pref_box.yfill = True\nstyle.prefs_volume_box.yfill = True\nstyle.prefs_pref_choicebox.yfill = True\nstyle.prefs_button.xalign = 1.0\nstyle.prefs_jump_button.xalign = 1.0",
+   1
+  ],
+  [
+   "style.prefs_pref_frame.background = None\nstyle.prefs_pref_frame.bottom_margin = 0\nstyle.prefs_button.take(style.mm_button)\nstyle.prefs_button_text.take(style.mm_button_text)",
+   "style.prefs_pref_frame.background = None\nstyle.prefs_pref_frame.bottom_margin = 0\nstyle.prefs_pref_frame.bottom_padding = 100\nstyle.prefs_button.take(style.mm_button)\nstyle.prefs_button_text.take(style.mm_button_text)",
+   1
+  ],
+  [
+   "style.prefs_label.yminimum = None\nstyle.prefs_label.xalign = 0.0\nstyle.prefs_label_text.take(style.prompt_text)\n\nstyle.prefs_slider.clear()",
+   "style.prefs_label.yminimum = None\nstyle.prefs_label.xalign = 0.0\nstyle.prefs_label.yalign = 0.5\nstyle.prefs_label_text.take(style.prompt_text)\nstyle.prefs_label_text.size = 34\n\nstyle.prefs_slider.clear()",
+   1
+  ],
+  [
+   "style.prefs_slider.thumb = ib_base(\"ui/bt-cf-thumb.png\")\nstyle.prefs_slider.hover_thumb = \"ui/bt-cf-thumb.png\"\nstyle.prefs_slider.left_gutter = 12\nstyle.prefs_slider.right_gutter = 12\nstyle.prefs_slider.xmaximum = 200\nstyle.prefs_slider.thumb_offset = -3\n",
+   "style.prefs_slider.thumb = ib_base(\"ui/bt-cf-thumb.png\")\nstyle.prefs_slider.hover_thumb = \"ui/bt-cf-thumb.png\"\nstyle.prefs_slider.left_gutter = 20\nstyle.prefs_slider.right_gutter = 20\nstyle.prefs_slider.xmaximum = 400\nstyle.prefs_slider.ymaximum = 60\nstyle.prefs_slider.thumb_offset = -3\n",
+   1
+  ],
+  [
+   "if not persistent.hdisabled:\n    persistent.hdisabled = False\n\nif not persistent.emi:",
+   "if not persistent.hdisabled:\n    persistent.hdisabled = False\nif not persistent.widesay:\n    persistent.widesay = False\n\nif not persistent.emi:",
+   1
+  ]
+ ],
+ "nodes": [
+  {
+   "label": "",
+   "n": 0,
+   "match": [
+    "RawMultipurpose='<node>'",
+    "RawMultipurpose.circles='0'",
+    "RawMultipurpose.duration='0'",
+    "RawMultipurpose.properties[]()='xpos'",
+    "RawMultipurpose.properties[]()='0.4'",
+    "RawMultipurpose.properties[]()='xanchor'",
+    "RawMultipurpose.properties[]()='0.5'",
+    "RawMultipurpose.properties[]()='ypos'",
+    "RawMultipurpose.properties[]()='1.0'",
+    "RawMultipurpose.properties[]()='yanchor'",
+    "RawMultipurpose.properties[]()='1.0'"
+   ],
+   "atl": {
+    "properties": [
+     [
+      "xpos",
+      "0.45  "
+     ],
+     [
+      "xanchor",
+      "0.5 "
+     ],
+     [
+      "ypos",
+      "1.0 "
+     ],
+     [
+      "yanchor",
+      "1.0"
+     ]
+    ]
+   }
+  },
+  {
+   "label": "",
+   "n": 0,
+   "match": [
+    "RawMultipurpose='<node>'",
+    "RawMultipurpose.circles='0'",
+    "RawMultipurpose.duration='0'",
+    "RawMultipurpose.properties[]()='xpos'",
+    "RawMultipurpose.properties[]()='0.6'",
+    "RawMultipurpose.properties[]()='xanchor'",
+    "RawMultipurpose.properties[]()='0.5'",
+    "RawMultipurpose.properties[]()='ypos'",
+    "RawMultipurpose.properties[]()='1.0'",
+    "RawMultipurpose.properties[]()='yanchor'",
+    "RawMultipurpose.properties[]()='1.0'"
+   ],
+   "atl": {
+    "properties": [
+     [
+      "xpos",
+      "0.55  "
+     ],
+     [
+      "xanchor",
+      "0.5 "
+     ],
+     [
+      "ypos",
+      "1.0 "
+     ],
+     [
+      "yanchor",
+      "1.0"
+     ]
+    ]
+   }
+  },
+  {
+   "label": "",
+   "n": 0,
+   "match": [
+    "RawMultipurpose='<node>'",
+    "RawMultipurpose.circles='0'",
+    "RawMultipurpose.duration='0'",
+    "RawMultipurpose.properties[]()='size'",
+    "RawMultipurpose.properties[]()='(800,600)'",
+    "RawMultipurpose.properties[]()='crop'",
+    "RawMultipurpose.properties[]()='(840, 50, 800, 600)'",
+    "RawMultipurpose.properties[]()='subpixel'",
+    "RawMultipurpose.properties[]()='True'"
+   ],
+   "atl": {
+    "properties": [
+     [
+      "size",
+      "(1920,1080)  "
+     ],
+     [
+      "crop",
+      "(2016, 90, 1920, 1080)  "
+     ],
+     [
+      "subpixel",
+      "True"
+     ]
+    ]
+   }
+  },
+  {
+   "label": "",
+   "n": 0,
+   "match": [
+    "RawMultipurpose='<node>'",
+    "RawMultipurpose.circles='0'",
+    "RawMultipurpose.duration='10.0'",
+    "RawMultipurpose.properties[]()='crop'",
+    "RawMultipurpose.properties[]()='(840, 50, 880, 660)'",
+    "RawMultipurpose.warper='easeout'"
+   ],
+   "atl": {
+    "properties": [
+     [
+      "crop",
+      "(2016, 90, 2112, 1188) "
+     ]
+    ]
+   }
+  },
+  {
+   "label": "",
+   "n": 0,
+   "match": [
+    "RawMultipurpose='<node>'",
+    "RawMultipurpose.circles='0'",
+    "RawMultipurpose.duration='0'",
+    "RawMultipurpose.properties[]()='size'",
+    "RawMultipurpose.properties[]()='(800,600)'",
+    "RawMultipurpose.properties[]()='crop'",
+    "RawMultipurpose.properties[]()='(40, 30, 720, 540)'",
+    "RawMultipurpose.properties[]()='subpixel'",
+    "RawMultipurpose.properties[]()='True'"
+   ],
+   "atl": {
+    "properties": [
+     [
+      "size",
+      "(1920,1080)  "
+     ],
+     [
+      "crop",
+      "(96, 54, 1728, 972)  "
+     ],
+     [
+      "subpixel",
+      "True"
+     ]
+    ]
+   }
+  },
+  {
+   "label": "",
+   "n": 0,
+   "match": [
+    "RawMultipurpose='<node>'",
+    "RawMultipurpose.circles='0'",
+    "RawMultipurpose.duration='10.0'",
+    "RawMultipurpose.properties[]()='crop'",
+    "RawMultipurpose.properties[]()='(0, 0, 800, 600)'",
+    "RawMultipurpose.warper='easein'"
+   ],
+   "atl": {
+    "properties": [
+     [
+      "crop",
+      "(0, 0, 1920, 1080) "
+     ]
+    ]
+   }
+  },
+  {
+   "label": "",
+   "n": 0,
+   "match": [
+    "RawMultipurpose='<node>'",
+    "RawMultipurpose.circles='0'",
+    "RawMultipurpose.duration='0'",
+    "RawMultipurpose.properties[]()='xpos'",
+    "RawMultipurpose.properties[]()='2350'",
+    "RawMultipurpose.properties[]()='ypos'",
+    "RawMultipurpose.properties[]()='1010'",
+    "RawMultipurpose.properties[]()='xanchor'",
+    "RawMultipurpose.properties[]()='2400'",
+    "RawMultipurpose.properties[]()='yanchor'",
+    "RawMultipurpose.properties[]()='1800'"
+   ],
+   "atl": {
+    "properties": [
+     [
+      "xpos",
+      "4700  "
+     ],
+     [
+      "ypos",
+      "2020  "
+     ],
+     [
+      "xanchor",
+      "4800  "
+     ],
+     [
+      "yanchor",
+      "3600 "
+     ]
+    ]
+   }
+  },
+  {
+   "label": "",
+   "n": 0,
+   "match": [
+    "RawMultipurpose='<node>'",
+    "RawMultipurpose.circles='0'",
+    "RawMultipurpose.duration='8.0'",
+    "RawMultipurpose.properties[]()='xpos'",
+    "RawMultipurpose.properties[]()='1900'",
+    "RawMultipurpose.properties[]()='ypos'",
+    "RawMultipurpose.properties[]()='900'",
+    "RawMultipurpose.warper='ease'"
+   ],
+   "atl": {
+    "properties": [
+     [
+      "xpos",
+      "3800  "
+     ],
+     [
+      "ypos",
+      "1800"
+     ]
+    ]
+   }
+  },
+  {
+   "label": "",
+   "n": 0,
+   "match": [
+    "RawMultipurpose='<node>'",
+    "RawMultipurpose.circles='0'",
+    "RawMultipurpose.duration='0'",
+    "RawMultipurpose.properties[]()='size'",
+    "RawMultipurpose.properties[]()='(800,600)'",
+    "RawMultipurpose.properties[]()='crop'",
+    "RawMultipurpose.properties[]()='(0, 0, 800, 600)'",
+    "RawMultipurpose.properties[]()='subpixel'",
+    "RawMultipurpose.properties[]()='True'"
+   ],
+   "atl": {
+    "properties": [
+     [
+      "size",
+      "(1920,1080)  "
+     ],
+     [
+      "crop",
+      "(0, 0, 1920, 1080)  "
+     ],
+     [
+      "subpixel",
+      "True"
+     ]
+    ]
+   }
+  },
+  {
+   "label": "",
+   "n": 0,
+   "match": [
+    "RawMultipurpose='<node>'",
+    "RawMultipurpose.circles='0'",
+    "RawMultipurpose.duration='10.0'",
+    "RawMultipurpose.properties[]()='crop'",
+    "RawMultipurpose.properties[]()='(40, 30, 720, 540)'",
+    "RawMultipurpose.warper='ease'"
+   ],
+   "atl": {
+    "properties": [
+     [
+      "crop",
+      "(40*2.4, 30*1.7, 1720, 970) "
+     ]
+    ]
+   }
+  },
+  {
+   "label": "",
+   "n": 1,
+   "match": [
+    "RawMultipurpose='<node>'",
+    "RawMultipurpose.circles='0'",
+    "RawMultipurpose.duration='0'",
+    "RawMultipurpose.properties[]()='size'",
+    "RawMultipurpose.properties[]()='(800,600)'",
+    "RawMultipurpose.properties[]()='crop'",
+    "RawMultipurpose.properties[]()='(40, 30, 720, 540)'",
+    "RawMultipurpose.properties[]()='subpixel'",
+    "RawMultipurpose.properties[]()='True'"
+   ],
+   "atl": {
+    "properties": [
+     [
+      "size",
+      "(1920,1080)  "
+     ],
+     [
+      "crop",
+      "(40*2.4, 30*1.7, 1720, 970)  "
+     ],
+     [
+      "subpixel",
+      "True"
+     ]
+    ]
+   }
+  },
+  {
+   "label": "",
+   "n": 0,
+   "match": [
+    "RawMultipurpose='<node>'",
+    "RawMultipurpose.circles='0'",
+    "RawMultipurpose.duration='10.0'",
+    "RawMultipurpose.properties[]()='crop'",
+    "RawMultipurpose.properties[]()='(0, 0, 800, 600)'",
+    "RawMultipurpose.warper='ease'"
+   ],
+   "atl": {
+    "properties": [
+     [
+      "crop",
+      "(0, 0, 1920, 1080) "
+     ]
+    ]
+   }
+  },
+  {
+   "label": "",
+   "n": 0,
+   "match": [
+    "RawMultipurpose='<node>'",
+    "RawMultipurpose.circles='0'",
+    "RawMultipurpose.duration='0'",
+    "RawMultipurpose.properties[]()='size'",
+    "RawMultipurpose.properties[]()='(800,600)'",
+    "RawMultipurpose.properties[]()='crop'",
+    "RawMultipurpose.properties[]()='(159,0,640,480)'",
+    "RawMultipurpose.properties[]()='subpixel'",
+    "RawMultipurpose.properties[]()='True'"
+   ],
+   "atl": {
+    "properties": [
+     [
+      "size",
+      "(1920,1080)  "
+     ],
+     [
+      "crop",
+      "(332,0,1536,864)  "
+     ],
+     [
+      "subpixel",
+      "True"
+     ]
+    ]
+   }
+  },
+  {
+   "label": "",
+   "n": 0,
+   "match": [
+    "RawMultipurpose='<node>'",
+    "RawMultipurpose.circles='0'",
+    "RawMultipurpose.duration='10.0'",
+    "RawMultipurpose.properties[]()='crop'",
+    "RawMultipurpose.properties[]()='(0, 0, 800, 600)'",
+    "RawMultipurpose.warper='acdc_warp'"
+   ],
+   "atl": {
+    "properties": [
+     [
+      "crop",
+      "(0, 0, 1920, 1080) "
+     ]
+    ]
+   }
+  },
+  {
+   "label": "",
+   "n": 1,
+   "match": [
+    "RawMultipurpose='<node>'",
+    "RawMultipurpose.circles='0'",
+    "RawMultipurpose.duration='0'",
+    "RawMultipurpose.properties[]()='xalign'",
+    "RawMultipurpose.properties[]()='0.5'",
+    "RawMultipurpose.properties[]()='yalign'",
+    "RawMultipurpose.properties[]()='1.0'",
+    "RawMultipurpose.properties[]()='subpixel'",
+    "RawMultipurpose.properties[]()='True'"
+   ],
+   "atl": {
+    "properties": [
+     [
+      "xalign",
+      "0.5 "
+     ],
+     [
+      "yalign",
+      "0.85  "
+     ],
+     [
+      "subpixel",
+      "True"
+     ]
+    ]
+   }
+  },
+  {
+   "label": "",
+   "n": 2,
+   "match": [
+    "RawMultipurpose='<node>'",
+    "RawMultipurpose.circles='0'",
+    "RawMultipurpose.duration='0'",
+    "RawMultipurpose.properties[]()='xalign'",
+    "RawMultipurpose.properties[]()='0.5'",
+    "RawMultipurpose.properties[]()='yalign'",
+    "RawMultipurpose.properties[]()='1.0'",
+    "RawMultipurpose.properties[]()='subpixel'",
+    "RawMultipurpose.properties[]()='True'"
+   ],
+   "atl": {
+    "properties": [
+     [
+      "xalign",
+      "0.5 "
+     ],
+     [
+      "yalign",
+      "0.85  "
+     ],
+     [
+      "subpixel",
+      "True"
+     ]
+    ]
+   }
+  },
+  {
+   "label": "",
+   "n": 0,
+   "match": [
+    "RawMultipurpose='<node>'",
+    "RawMultipurpose.circles='0'",
+    "RawMultipurpose.duration='2.0'",
+    "RawMultipurpose.properties[]()='zoom'",
+    "RawMultipurpose.properties[]()='0.1'",
+    "RawMultipurpose.properties[]()='ypos'",
+    "RawMultipurpose.properties[]()='0.665'",
+    "RawMultipurpose.warper='ease'"
+   ],
+   "atl": {
+    "properties": [
+     [
+      "zoom",
+      "0.1 "
+     ],
+     [
+      "ypos",
+      "0.565 "
+     ]
+    ]
+   }
+  }
+ ]
+}

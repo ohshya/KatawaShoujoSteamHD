@@ -1,0 +1,94 @@
+{
+ "nodes": [
+  {
+   "label": "H27",
+   "n": 0,
+   "match": [
+    "RawMultipurpose='<node>'",
+    "RawMultipurpose.circles='0'",
+    "RawMultipurpose.duration='0'",
+    "RawMultipurpose.properties[]()='xanchor'",
+    "RawMultipurpose.properties[]()='0'",
+    "RawMultipurpose.properties[]()='yanchor'",
+    "RawMultipurpose.properties[]()='0'",
+    "RawMultipurpose.properties[]()='xpos'",
+    "RawMultipurpose.properties[]()='-600'",
+    "RawMultipurpose.properties[]()='ypos'",
+    "RawMultipurpose.properties[]()='-140'"
+   ],
+   "atl": {
+    "properties": [
+     [
+      "xanchor",
+      "0 "
+     ],
+     [
+      "yanchor",
+      "0 "
+     ],
+     [
+      "xpos",
+      "-1440  "
+     ],
+     [
+      "ypos",
+      "-336  "
+     ]
+    ]
+   }
+  },
+  {
+   "label": "H27",
+   "n": 0,
+   "match": [
+    "RawMultipurpose='<node>'",
+    "RawMultipurpose.circles='0'",
+    "RawMultipurpose.duration='1.0'",
+    "RawMultipurpose.properties[]()='xpos'",
+    "RawMultipurpose.properties[]()='0'",
+    "RawMultipurpose.properties[]()='ypos'",
+    "RawMultipurpose.properties[]()='-290'",
+    "RawMultipurpose.warper='ease'"
+   ],
+   "atl": {
+    "properties": [
+     [
+      "xpos",
+      "0 "
+     ],
+     [
+      "ypos",
+      "-700"
+     ]
+    ]
+   }
+  },
+  {
+   "label": "H27",
+   "n": 0,
+   "match": [
+    "RawMultipurpose='<node>'",
+    "RawMultipurpose.circles='0'",
+    "RawMultipurpose.duration='1.0'",
+    "RawMultipurpose.properties[]()='xpos'",
+    "RawMultipurpose.properties[]()='-600'",
+    "RawMultipurpose.properties[]()='ypos'",
+    "RawMultipurpose.properties[]()='-140'",
+    "RawMultipurpose.warper='ease'"
+   ],
+   "atl": {
+    "properties": [
+     [
+      "xpos",
+      "-1440  "
+     ],
+     [
+      "ypos",
+      "-336  "
+     ]
+    ]
+   }
+  }
+ ],
+ "languages": true
+}

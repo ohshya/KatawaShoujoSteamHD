@@ -1,0 +1,136 @@
+{
+ "nodes": [
+  {
+   "label": "A21",
+   "n": 0,
+   "match": [
+    "RawMultipurpose='<node>'",
+    "RawMultipurpose.circles='0'",
+    "RawMultipurpose.duration='0'",
+    "RawMultipurpose.properties[]()='size'",
+    "RawMultipurpose.properties[]()='(800,600)'",
+    "RawMultipurpose.properties[]()='crop'",
+    "RawMultipurpose.properties[]()='(0, 0, 2400, 1800)'",
+    "RawMultipurpose.properties[]()='subpixel'",
+    "RawMultipurpose.properties[]()='True'"
+   ],
+   "atl": {
+    "properties": [
+     [
+      "size",
+      "(1920,1080)  "
+     ],
+     [
+      "crop",
+      "(0, 0, 5760, 3240)  "
+     ],
+     [
+      "subpixel",
+      "True"
+     ]
+    ]
+   }
+  },
+  {
+   "label": "A21",
+   "n": 0,
+   "match": [
+    "RawMultipurpose='<node>'",
+    "RawMultipurpose.circles='0'",
+    "RawMultipurpose.duration='0.2'",
+    "RawMultipurpose.properties[]()='crop'",
+    "RawMultipurpose.properties[]()='(280, 100, 800, 600)'",
+    "RawMultipurpose.warper='easeout'"
+   ],
+   "atl": {
+    "properties": [
+     [
+      "crop",
+      "(280*2.4, 100*2.4, 1920*1.15,1080*1.15)"
+     ]
+    ]
+   }
+  },
+  {
+   "label": "A21",
+   "n": 0,
+   "match": [
+    "RawMultipurpose='<node>'",
+    "RawMultipurpose.circles='0'",
+    "RawMultipurpose.duration='0.2'",
+    "RawMultipurpose.properties[]()='crop'",
+    "RawMultipurpose.properties[]()='(1400,160, 800, 600)'",
+    "RawMultipurpose.warper='ease'"
+   ],
+   "atl": {
+    "properties": [
+     [
+      "crop",
+      "(1400*2.4,160*2.4, 1920*1.15,1080*1.15) "
+     ]
+    ]
+   }
+  },
+  {
+   "label": "A21",
+   "n": 0,
+   "match": [
+    "RawMultipurpose='<node>'",
+    "RawMultipurpose.circles='0'",
+    "RawMultipurpose.duration='0.2'",
+    "RawMultipurpose.properties[]()='crop'",
+    "RawMultipurpose.properties[]()='(280,100, 800, 600)'",
+    "RawMultipurpose.warper='ease'"
+   ],
+   "atl": {
+    "properties": [
+     [
+      "crop",
+      "(280*2.4,100*2.4, 1920*1.15,1080*1.15) "
+     ]
+    ]
+   }
+  },
+  {
+   "label": "A21",
+   "n": 1,
+   "match": [
+    "RawMultipurpose='<node>'",
+    "RawMultipurpose.circles='0'",
+    "RawMultipurpose.duration='0.2'",
+    "RawMultipurpose.properties[]()='crop'",
+    "RawMultipurpose.properties[]()='(1400,160, 800, 600)'",
+    "RawMultipurpose.warper='ease'"
+   ],
+   "atl": {
+    "properties": [
+     [
+      "crop",
+      "(1400*2.4,160*2.4, 1920*1.15,1080*1.15) "
+     ]
+    ]
+   }
+  },
+  {
+   "label": "A21",
+   "n": 1,
+   "match": [
+    "RawMultipurpose='<node>'",
+    "RawMultipurpose.circles='0'",
+    "RawMultipurpose.duration='0.2'",
+    "RawMultipurpose.properties[]()='crop'",
+    "RawMultipurpose.properties[]()='(280,100, 800, 600)'",
+    "RawMultipurpose.warper='ease'"
+   ],
+   "atl": {
+    "properties": [
+     [
+      "crop",
+      "(280*2.4,100*2.4, 1920*1.15,1080*1.15) "
+     ]
+    ]
+   }
+  }
+ ],
+ "languages": true
+}

@@ -1,0 +1,296 @@
+{
+ "code": [
+  [
+   "\nui.text(footerstring, text_align=0.5, xalign=0.5, yalign=0.98, size=18)\nui.interact()",
+   "\nui.text(footerstring, text_align=0.5, xalign=0.5, yalign=0.98, size=30)\nui.interact()",
+   1
+  ],
+  [
+   "\nui.vbox(xpos=180, ypos=120, background=None)\nui.text(displayStrings.text_history_caption, style=\"page_caption\")\nui.hbox(xpos=0)\nvp = ui.viewport(yadjustment=yadj, offsets=(0.0,1.0), mousewheel=False, draggable=False, xmaximum=415, ymaximum = 296, xalign=0.5, yalign=0.5)\nui.vbox(xfill=True)",
+   "\nui.vbox(xpos = 565, ypos = 222, background=None)\nui.text(displayStrings.text_history_caption, style=\"page_caption\")\nui.hbox(xpos=0, ypos=-25)\nvp = ui.viewport(yadjustment=yadj, offsets=(0.0,1.0), mousewheel=False, draggable=False, xmaximum=720, ymaximum = 510, xalign=0.5, yalign=0.5)\nui.vbox(xfill=True)",
+   1
+  ],
+  [
+   "        transition = config.enter_transition\n    gi_result = _yesno_prompt(None, displayStrings.yesno_quit, im.Image(\"ui/sd-hanako.png\",xpos=515,ypos=305), transition=transition)\n    if gi_result:",
+   "        transition = config.enter_transition\n    gi_result = _yesno_prompt(None, displayStrings.yesno_quit, im.Image(\"ui/sd-hanako.png\",xpos=638,ypos=492), transition=transition)\n    if gi_result:",
+   1
+  ],
+  [
+   "if playthroughflag:\n    gi_result = _yesno_prompt(None, displayStrings.yesno_return_to_main, im.Image(\"ui/sd-shizune.png\",xpos=195,ypos=275))\n    if gi_result:",
+   "if playthroughflag:\n    gi_result = _yesno_prompt(None, displayStrings.yesno_return_to_main, im.Image(\"ui/sd-shizune.png\",xpos=615,ypos=482))\n    if gi_result:",
+   1
+  ],
+  [
+   "ui.image(\"ui/bg-config.png\", xalign=0.5, yalign=0.5)\n\ngroup_spacing = 8\nplus_spacing = 3\nif config.r18:\n    plus_spacing = 0\n\nui.vbox(xpos = 180, ypos = 120)\nui.text(displayStrings.config_page_caption, style=\"page_caption\")",
+   "ui.image(\"ui/bg-config.png\", xalign=0.5, yalign=0.5)\n\"\"\" if not entered_from_game and mm_context():\n            inMenu = True\n            widgetysize = 50\n        else:\n            inMenu = False\n            widgetysize = 60\"\"\"\nwidgetysize = 60\ninMenu = False\ngroup_spacing = 3\n\nui.vbox(xpos = 565, ypos = 222)\nui.text(displayStrings.config_page_caption, style=\"page_caption\")",
+   1
+  ],
+  [
+   "else:\n    checkboximage = \"ui/bt-cf-checked.png\"\nif config.r18:\n    widget_button(displayStrings.hdisabled_label, checkboximage, toggle_h, xsize=300, widgetyoffset=0, state=(\"button\" if config.r18 else \"disabled\"))\nui.null(height=group_spacing)\n\nfullscreen_p.render_preference(disabled=disallow_fullscreen)\nui.null(height=group_spacing+plus_spacing)\nunreadskip_p.render_preference()\nui.null(height=plus_spacing)\nchoiceskip_p.render_preference()\nui.null(height=group_spacing+plus_spacing)\ntextspeed_p.render_preference()\nui.null(height=plus_spacing)\nafm_p.render_preference()\nui.null(height=group_spacing+plus_spacing)\nmusicvol_p.render_preference()\nui.null(height=plus_spacing)\nui.hbox()\nsfxvol_p.render_preference()\nui.null(width=20)\nwidget_button(displayStrings.config_sfxtest_label, \"ui/bt-musicplay.png\", test_sound)\n\nui.close()\nui.null(height=group_spacing+plus_spacing)\nwidget_button(displayStrings.config_language_sel, \"ui/bt-language.png\", ui.jumps(\"language_screen\"), xsize=300, widgetyoffset=3)\nif renpy.display.joystick.enabled: \n    widget_button(displayStrings.config_gamepad_label, \"ui/bt-gamepad.png\", ui.jumps(\"joystick_screen\"), xsize=300, widgetyoffset=3)\n",
+   "else:\n    checkboximage = \"ui/bt-cf-checked.png\"  \nif not persistent.widesay:\n    checkboximage1 = \"ui/bt-cf-unchecked.png\"\nelse:\n    checkboximage1 = \"ui/bt-cf-checked.png\"                           \nif config.r18:\n    widget_button(displayStrings.hdisabled_label, checkboximage, toggle_h, xsize=600, ysize=widgetysize, widgetyoffset=-8, textxoffset=40)\nelse:\n    ui.null(height=widgetysize)\nif inMenu:\n    widget_button(displayStrings.widesay_label, checkboximage1, toggle_widesay, xsize=600, ysize=widgetysize, widgetyoffset=-8, textxoffset=40)\n\n\nfullscreen_p.render_preference(disabled=disallow_fullscreen, widgetysize=widgetysize)\nunreadskip_p.render_preference(widgetysize=widgetysize)\nchoiceskip_p.render_preference(widgetysize=widgetysize)\nui.null(height=group_spacing)\ntextspeed_p.render_preference()\nui.null(height=group_spacing)\nafm_p.render_preference()\nui.null(height=group_spacing)\nmusicvol_p.render_preference()\nui.null(height=group_spacing)\nui.hbox()\nif inMenu:\n    ui.null(height=100)\nsfxvol_p.render_preference()\nui.null(height=5)\nui.null(width=30)\nwidget_button(displayStrings.config_sfxtest_label, \"ui/bt-musicplay.png\", test_sound, widgetyoffset=-3, textxoffset=50, ysize=50, ypos=13)\nui.close()\nui.null(height=group_spacing*5)\nwidget_button(displayStrings.config_language_sel, \"ui/bt-language.png\", ui.jumps(\"language_screen\"), xsize=300, widgetyoffset=-3, textxoffset=50, ypos=-541)\nif renpy.display.joystick.enabled: \n    widget_button(displayStrings.config_gamepad_label, \"ui/bt-gamepad.png\", ui.jumps(\"joystick_screen\"), xsize=700, widgetyoffset=-3, textxoffset=50, ypos=-495)\n",
+   1
+  ],
+  [
+   "layout.navigation(None)\nscrollable = (len(available_languages) > 9)\nif scrollable:\n    auto_offset = 30\n    if not persistent.lpicker_yoffset:",
+   "layout.navigation(None)\nscrollable = (len(available_languages) > 8)\nif scrollable:\n    auto_offset = 60\n    if not persistent.lpicker_yoffset:",
+   1
+  ],
+  [
+   "    persistent.lpicker_yoffset = 0\nui.vbox(xpos = 180, ypos = 120)\nui.text(displayStrings.config_language_caption, style=\"page_caption\")\nui.null(height=8)\nui.hbox()\nui.null(width=10)\nyadj = ui.adjustment(range=auto_offset * (len(available_languages)-10), value=persistent.lpicker_yoffset, changed=store_l_yoffset, step=auto_offset)\nvp = ui.viewport(yadjustment=yadj, mousewheel=False, draggable=False, xmaximum=390, ymaximum=270, xalign=0.5, yalign=0.5)\nui.vbox(xfill=True)",
+   "    persistent.lpicker_yoffset = 0\nui.vbox(xpos = 565, ypos = 222)\nui.text(displayStrings.config_language_caption, style=\"page_caption\")\nui.null(height=47)\nui.hbox()\nui.null(width=6)\nyadj = ui.adjustment(range=auto_offset * (len(available_languages)-8), value=persistent.lpicker_yoffset, changed=store_l_yoffset, step=auto_offset)\nvp = ui.viewport(yadjustment=yadj, mousewheel=False, draggable=False, xmaximum=750, ymaximum=480, xalign=0.5, yalign=0.5)\nui.vbox(xfill=True)",
+   1
+  ],
+  [
+   "        button_function = renpy.curry(switch_language)(target=language)\n    widget_button(text=button_label, displayable=button_image, clicked=button_function, state=button_state, xsize=500, widgetyoffset=3)\nui.close()",
+   "        button_function = renpy.curry(switch_language)(target=language)\n    widget_button(text=button_label, displayable=button_image, clicked=button_function, state=button_state, xsize=750, widgetyoffset=-3, textxoffset=50)\nui.close()",
+   1
+  ],
+  [
+   "if not mm_context():\n    ui.text(displayStrings.config_language_restart_note, text_align=0.5, xalign=0.5, yalign=0.98, size=18)\n",
+   "if not mm_context():\n    ui.text(displayStrings.config_language_restart_note, text_align=0.5, xalign=0.5, yalign=0.98, size=30)\n",
+   1
+  ],
+  [
+   "layout.navigation(None)\nui.vbox(xpos = 180, ypos = 120)\nui.text(displayStrings.gamepad_caption, style=\"page_caption\")",
+   "layout.navigation(None)\nui.vbox(xpos = 565, ypos = 222)\nui.text(displayStrings.gamepad_caption, style=\"page_caption\")",
+   1
+  ],
+  [
+   "if mm_context(): \n    mybackground = LiveComposite((800, 600),\n                                         (0, 0), style.mm_static.background,\n                                         (0, 0), style.gm_root.background,\n                                         (150, 100), \"ui/bg-config.png\")\nelse:\n    mybackground = LiveComposite((800, 600),\n                                         (0, 0), style.gm_root.background,\n                                         (150, 100), \"ui/bg-config.png\")\n",
+   "if mm_context(): \n    mybackground = LiveComposite((1920, 1080),\n                                         (0, 0), style.mm_static.background,\n                                         (0, 0), style.gm_root.background,\n                                                 (508, 187), \"ui/bg-config.png\")\nelse:\n    mybackground = LiveComposite((1920, 1080),\n                                         (0, 0), style.gm_root.background,\n                                                 (508, 187), \"ui/bg-config.png\")\n",
+   1
+  ],
+  [
+   "        background = style.mm_static.background\n    if _yesno_prompt(None, displayStrings.yesno_delete_savegame, im.Image(\"ui/sd-emi.png\",xpos=510,ypos=275), background=background):\n        ",
+   "        background = style.mm_static.background\n    if _yesno_prompt(None, displayStrings.yesno_delete_savegame, im.Image(\"ui/sd-emi.png\",xpos=1108,ypos=440), background=background):\n        ",
+   1
+  ],
+  [
+   "    if not mm_context() and playthroughflag and statechangesincesave:\n        if _yesno_prompt(None, displayStrings.yesno_load_in_game, im.Image(\"ui/sd-emi.png\",xpos=510,ypos=275)):\n            renpy.load(fn)",
+   "    if not mm_context() and playthroughflag and statechangesincesave:\n        if _yesno_prompt(None, displayStrings.yesno_load_in_game, im.Image(\"ui/sd-emi.png\",xpos=1108,ypos=440)):\n            renpy.load(fn)",
+   1
+  ],
+  [
+   "\nmybackground = LiveComposite((800, 600),\n                                     (0, 0), style.gm_root.background,\n                                     (150, 100), \"ui/bg-config.png\")\nif entered_from_game:",
+   "\nmybackground = LiveComposite((1920, 1080),\n                                     (0, 0), style.gm_root.background,\n                                             (508, 187), \"ui/bg-config.png\")\nif entered_from_game:",
+   1
+  ],
+  [
+   "elif _fn == \"delete\":\n    if _yesno_prompt(None, displayStrings.yesno_delete_savegame, im.Image(\"ui/sd-emi.png\",xpos=510,ypos=275)):\n        ",
+   "elif _fn == \"delete\":\n    if _yesno_prompt(None, displayStrings.yesno_delete_savegame, im.Image(\"ui/sd-emi.png\",xpos=1108,ypos=440)):\n        ",
+   1
+  ],
+  [
+   "else:\n    if not _exists or _yesno_prompt(None, displayStrings.yesno_save_overwrite, im.Image(\"ui/sd-lilly.png\",xpos=195,ypos=275)):\n        minutes, seconds = divmod(int(renpy.get_game_runtime()), 60)",
+   "else:\n    if not _exists or _yesno_prompt(None, displayStrings.yesno_save_overwrite, im.Image(\"ui/sd-lilly.png\",xpos=580,ypos=440)):\n        minutes, seconds = divmod(int(renpy.get_game_runtime()), 60)",
+   1
+  ],
+  [
+   "            \n            _prompt(None, displayStrings.yesno_savesuccess, im.Image(\"ui/sd-rin.png\",xpos=510,ypos=165))\n        renpy.jump(_game_menu_screen)",
+   "            \n            _prompt(None, displayStrings.yesno_savesuccess, im.Image(\"ui/sd-rin.png\",xpos=1108,ypos=209))\n        renpy.jump(_game_menu_screen)",
+   1
+  ],
+  [
+   "\nui.image(LiveComposite((800, 600),\n                               (0, 0), style.mm_static.background,\n                               (0, 0), style.gm_root.background,\n                               (150, 100), \"ui/bg-config.png\"))\n\nui.vbox(xpos=180, ypos=120, background=None)\nui.text(displayStrings.extra_menu_caption, style=\"page_caption\")\nui.null(height=10)\nui.hbox(box_spacing=15)\nextra_button(displayStrings.extra_music_button_label,\"ui/sd-lilly.png\",clicked=ui.jumps(\"music_menu\", \"intra_transition\"), state=musicstate)",
+   "\nui.image(LiveComposite((1920, 1080),\n                               (0, 0), style.mm_static.background,\n                               (0, 0), style.gm_root.background,\n                                       (508, 187), \"ui/bg-config.png\"))\n\nui.vbox(xpos = 565, ypos = 222, background=None)\nui.text(displayStrings.extra_menu_caption, style=\"page_caption\")\nui.null(height=10)\nui.hbox(box_spacing=5)\nextra_button(displayStrings.extra_music_button_label,\"ui/sd-lilly.png\",clicked=ui.jumps(\"music_menu\", \"intra_transition\"), state=musicstate)",
+   1
+  ],
+  [
+   "ui.close()\nui.hbox(xpos=540, ypos=346)\nextra_button(displayStrings.return_button_text,\"ui/sd-hanako.png\", clicked=ui.jumps(\"main_menu\", \"game_main_transition\"), state=\"return\")",
+   "ui.close()\nui.hbox(xpos=1221, ypos=608)\nextra_button(displayStrings.return_button_text,\"ui/sd-hanako.png\", clicked=ui.jumps(\"main_menu\", \"game_main_transition\"), state=\"return\")",
+   1
+  ],
+  [
+   "\nui.image(LiveComposite((800, 600),\n                               (0, 0), style.mm_static.background,\n                               (0, 0), style.gm_root.background,\n                               (150, 100), \"ui/bg-config.png\"))\n\nui.vbox(xpos=180, ypos=120, background=None)\nui.text(displayStrings.video_page_caption, style=\"page_caption\")",
+   "\nui.image(LiveComposite((1920, 1080),\n                               (0, 0), style.mm_static.background,\n                               (0, 0), style.gm_root.background,\n                                       (508, 187), \"ui/bg-config.png\"))\n\nui.vbox(xpos = 565, ypos = 222, background=None)\nui.text(displayStrings.video_page_caption, style=\"page_caption\")",
+   1
+  ],
+  [
+   "\nui.grid(3,2, padding=20, xpos=35, ypos=55)\nfor this_video in displayStrings.videos:",
+   "\nui.grid(3,2, padding=30, xpos=37, ypos=95)\nfor this_video in displayStrings.videos:",
+   1
+  ],
+  [
+   "    \n    button_base = LiveComposite((110, 85),\n                                        (0, 0), ib_base(\"ui/bt-cg-locked.png\"),\n                                        (5, 5), im.MatrixColor(this_tn, im.matrix.desaturate()))\n    button_hover = LiveComposite((110, 85),\n                                         (0, 0), \"ui/bt-cg-locked.png\",\n                                         (5, 5), this_tn)\n    ",
+   "    \n    button_base = LiveComposite((110*2, 85*2),\n                                        (0, 0), ib_base(\"ui/bt-cg-locked.png\"),\n                                                (10, 10), im.MatrixColor(this_tn, im.matrix.desaturate()))\n    button_hover = LiveComposite((110*2, 85*2),\n                                         (0, 0), \"ui/bt-cg-locked.png\",\n                                                 (10, 10), this_tn)\n    ",
+   1
+  ],
+  [
+   "\nauto_offset = 34\nif not persistent.mpicker_yoffset:",
+   "\nauto_offset = 52.4\nif not persistent.mpicker_yoffset:",
+   1
+  ],
+  [
+   "\nui.image(LiveComposite((800, 600),\n                               (0, 0), style.mm_static.background,\n                               (0, 0), style.gm_root.background,\n                               (150, 100), \"ui/bg-config.png\"))\n\nui.vbox(xpos=180, ypos=120, background=None)\nui.text(displayStrings.music_page_caption, style=\"page_caption\")",
+   "\nui.image(LiveComposite((1920, 1080),\n                               (0, 0), style.mm_static.background,\n                               (0, 0), style.gm_root.background,\n                                       (508, 187), \"ui/bg-config.png\"))\n\nui.vbox(xpos = 565, ypos = 222, background=None)\nui.text(displayStrings.music_page_caption, style=\"page_caption\")",
+   1
+  ],
+  [
+   "ui.hbox(xpos=4)\nvp = ui.viewport(yadjustment=yadj, mousewheel=False, draggable=False, xmaximum=415, ymaximum = 267, xalign=0.5, yalign=0.5)\nui.vbox(xfill=True)",
+   "ui.hbox(xpos=4)\nvp = ui.viewport(yadjustment=yadj, mousewheel=False, draggable=False, xmaximum=715, ymaximum = 448, xalign=0.5, yalign=0.15)\nui.vbox(xfill=True)",
+   1
+  ],
+  [
+   "            layout.button(name, \"mm\", clicked=ui.returns((name, file)))\n        ui.null(height=1)\n    else:",
+   "            layout.button(name, \"mm\", clicked=ui.returns((name, file)))\n        if not is_glrenpy():\n            ui.null(height=1)\n    else:",
+   1
+  ],
+  [
+   "ui.close()\nui.vbox()\nui.imagebutton(ib_base(\"ui/bt-vscrollup.png\"), \"ui/bt-vscrollup.png\", clicked=decrease_m_yoffset)",
+   "ui.close()\nui.vbox(ypos=-30)\nui.imagebutton(ib_base(\"ui/bt-vscrollup.png\"), \"ui/bt-vscrollup.png\", clicked=decrease_m_yoffset)",
+   1
+  ],
+  [
+   "\nui.hbox(xpos=180, ypos=449)\nmusicvol_p_jukebox.render_preference()\nui.null(width=20)\nwidget_button(displayStrings.music_stop_button_text, \"ui/bt-musicstop.png\", clicked=ui.returns((\"\", \"\")), xsize=80)\nui.close()",
+   "\nui.hbox(xpos=580, ypos=785)\nmusicvol_p_jukebox.render_preference()\nui.null(width=30)\nwidget_button(displayStrings.music_stop_button_text, \"ui/bt-musicstop.png\", clicked=ui.returns((\"\", \"\")), xsize=128, textxoffset=52, widgetyoffset=-3, ypos=13)\nui.close()",
+   1
+  ],
+  [
+   "\nui.image(LiveComposite((800, 600),\n                               (0, 0), style.mm_static.background,\n                               (0, 0), style.gm_root.background,\n                               (150, 100), \"ui/bg-config.png\"))\n\navailable_scenes = get_available_scenes(filter, include_locked=True, include_acts=True) or ()",
+   "\nui.image(LiveComposite((1920, 1080),\n                               (0, 0), style.mm_static.background,\n                               (0, 0), style.gm_root.background,\n                                       (508, 187), \"ui/bg-config.png\"))\n\navailable_scenes = get_available_scenes(filter, include_locked=True, include_acts=True) or ()",
+   1
+  ],
+  [
+   "    auto_offset = 1.0 / (len(available_scenes) - 8)\n    \n    auto_offset = 34\nelse:\n    auto_offset = 0",
+   "    auto_offset = 1.0 / (len(available_scenes) - 8)\n    \n    auto_offset = 56\nelse:\n    auto_offset = 0",
+   1
+  ],
+  [
+   "    persistent.spicker_yoffset = 0.0\n\nui.vbox(xpos=180, ypos=120, background=None)\nui.text(displayStrings.scene_page_caption, style=\"page_caption\")\nui.hbox()\nshown_buttons = (\"Act 1\", \"Emi\", \"Hanako\", \"Lilly\", \"Rin\", \"Shizune\")",
+   "    persistent.spicker_yoffset = 0.0\n\nui.vbox(xpos = 565, ypos = 222, background=None)\nui.text(displayStrings.scene_page_caption, style=\"page_caption\")\nui.null(height=10)\nui.hbox()\nshown_buttons = (\"Act 1\", \"Emi\", \"Hanako\", \"Lilly\", \"Rin\", \"Shizune\")",
+   1
+  ],
+  [
+   "        layout.button(label, \"rpa\", clicked=None)\nui.close()\nui.hbox()\n\n",
+   "        layout.button(label, \"rpa\", clicked=None)\nui.close()\nui.hbox(ypos=-12)\n\n",
+   1
+  ],
+  [
+   "yadj = ui.adjustment(range=auto_offset * (len(available_scenes) - 8), value=persistent.spicker_yoffset, changed=store_s_yoffset)\n\nscene_indent = 15\n\nvp = ui.viewport(yadjustment=yadj, mousewheel=False, draggable=False, xmaximum=410, ymaximum = 270, xalign=0.5, yalign=0.5)\nui.vbox(xfill=True)\nfor (name, label, display, path, unlocked) in available_scenes:",
+   "yadj = ui.adjustment(range=auto_offset * (len(available_scenes) - 8), value=persistent.spicker_yoffset, changed=store_s_yoffset)\n\nscene_indent = 30\n\nvp = ui.viewport(yadjustment=yadj, mousewheel=False, draggable=False, xmaximum=715, ymaximum = 448, xalign=0.5, yalign=0.12)\nui.vbox(xfill=True)\nfor (name, label, display, path, unlocked) in available_scenes:",
+   1
+  ],
+  [
+   "        if path in open_acts:\n            ss_button(\"{color=00000066}\" + name + \"{/color}\",\"\", clicked=None)\n            ui.null(height=1)\n    elif unlocked:\n        if False: ",
+   "        if path in open_acts:\n            ss_button(\"{color=00000066}\" + name + \"{/color}\",\"\", clicked=None)\n            if not is_glrenpy():\n                ui.null(height=1)\n    elif unlocked:\n        if False: ",
+   1
+  ],
+  [
+   "        ss_button(name+extension, display, clicked=ui.returns((name,label)))\n        ui.close()\n        ui.null(height=1)\n    else:\n        ui.null(height=1)\n        ui.hbox()\n        ui.null(width=scene_indent+12)\n        ui.image(ib_disabled(\"ui/bg-lockedtrack.png\"))\n        ui.close()\n    ",
+   "        ss_button(name+extension, display, clicked=ui.returns((name,label)))\n        ui.close()\n        if not is_glrenpy():\n            ui.null(height=1)\n    else:\n        ui.null(height=1)\n        ui.hbox()\n        ui.null(width=scene_indent)\n        ui.image(ib_disabled(\"ui/bg-lockedtrack.png\", xpos=14))\n        ui.close()\n    ",
+   1
+  ],
+  [
+   "\nui.close()\nui.null(width=10)\nui.vbox(box_spacing=2)\nif scrollable:\n    ui.imagebutton(ib_base(\"ui/bt-vscrollup.png\"), \"ui/bt-vscrollup.png\", clicked=decrease_s_yoffset)",
+   "\nui.close()\nui.null(width=20)\nui.vbox(box_spacing=2, ypos=-30)\nif scrollable:\n    ui.imagebutton(ib_base(\"ui/bt-vscrollup.png\"), \"ui/bt-vscrollup.png\", clicked=decrease_s_yoffset)",
+   1
+  ],
+  [
+   "else:\n    completion_percentage = get_completion_percentage()\n    ui.text(displayStrings.scene_completion_label % completion_percentage, style=\"prefs_label\", xpos=180, ypos=450)\n\nui.add(DynamicDisplayable(refresh_label))",
+   "else:\n    completion_percentage = get_completion_percentage()\n    ui.text(displayStrings.scene_completion_label % completion_percentage, style=\"prefs_label\", xpos=607, ypos=820)\n\nui.add(DynamicDisplayable(refresh_label))",
+   1
+  ],
+  [
+   "mygallery.locked_background = \"ui/bg-ex-gallery-lockedimage.png\"\nmygallery.background = (LiveComposite((800, 600),\n                                              (0, 0), style.mm_static.background,\n                                              (0, 0), style.gm_root.background,\n                                              (150, 100), \"ui/bg-config.png\"))\nmygallery.locked_button = ib_disabled(\"ui/bt-cg-locked.png\")\nmygallery.grid_layout((4,3),(175,160),(115,90))\ni = 0",
+   "mygallery.locked_background = \"ui/bg-ex-gallery-lockedimage.png\"\nmygallery.background = (LiveComposite((1920, 1080),\n                                              (0, 0), style.mm_static.background,\n                                              (0, 0), style.gm_root.background,\n                                                      (451, 143), \"ui/bg-config-gallery.png\"))\nmygallery.locked_button = ib_disabled(\"ui/bt-cg-locked.png\")\nmygallery.grid_layout((4,3),(500,246),(236,208))\ni = 0",
+   1
+  ],
+  [
+   "    ui.keymap(K_ESCAPE=clicked)\n    ui.textbutton(\"{color=#000}\"+getattr(displayStrings,\"skipcredits_button\",\"Skip\")+\"{/color}\",clicked=clicked, xpos=795, xanchor=1.0, ypos=595, yanchor=1.0, xpadding=6,\n                      background=RoundRect((48, 48, 48, 255), 6),",
+   "    ui.keymap(K_ESCAPE=clicked)\n    ui.textbutton(\"{color=#000}\"+getattr(displayStrings,\"skipcredits_button\",\"Skip\")+\"{/color}\",clicked=clicked, xpos=1910, xanchor=1.0, ypos=1070, yanchor=1.0, xpadding=6,\n                      background=RoundRect((48, 48, 48, 255), 6),",
+   1
+  ],
+  [
+   "\ncreditstext_disp = Text(displayStrings.creditstring, color=\"#ffffff\", text_align=0.5, min_width=800)\n\n\nlogo_top = LiveComposite((800, 600),\n                                 (313,233), \"ui/cred_logo.png\")\n\nlogo_bottom = LiveComposite((800, 600),\n                                    (311, 238), \"ui/4lsl-small.png\")\n\nif c_movie:\n    creditstext_offs = HBox(Null(width=320), creditstext_disp)\nelse:",
+   "\ncreditstext_disp = Text(displayStrings.creditstring, color=\"#ffffff\", text_align=0.5, min_width=1920, size=47)\n\n\nlogo_top = LiveComposite((1920, 1080),\n                                 (685,347), \"ui/cred_logo.png\")\n\nlogo_bottom = LiveComposite((1920, 1080),\n                                    (779, 435), \"ui/4lsl-small.png\")\n\nif c_movie:\n    creditstext_offs = HBox(Null(width=768), creditstext_disp)\nelse:",
+   1
+  ]
+ ],
+ "nodes": [
+  {
+   "label": "scene_deleted",
+   "n": 0,
+   "match": [
+    "RawMultipurpose='<node>'",
+    "RawMultipurpose.circles='0'",
+    "RawMultipurpose.duration='0'",
+    "RawMultipurpose.properties[]()='xanchor'",
+    "RawMultipurpose.properties[]()='0'",
+    "RawMultipurpose.properties[]()='yanchor'",
+    "RawMultipurpose.properties[]()='0'",
+    "RawMultipurpose.properties[]()='xpos'",
+    "RawMultipurpose.properties[]()='610'",
+    "RawMultipurpose.properties[]()='ypos'",
+    "RawMultipurpose.properties[]()='10'"
+   ],
+   "atl": {
+    "properties": [
+     [
+      "xanchor",
+      "0 "
+     ],
+     [
+      "yanchor",
+      "0 "
+     ],
+     [
+      "xpos",
+      "1550  "
+     ],
+     [
+      "ypos",
+      "20 "
+     ]
+    ]
+   }
+  },
+  {
+   "label": "credits",
+   "n": 0,
+   "match": [
+    "Show='<node>'",
+    "Show.imspec()()='Movie(fps=30, size=(400, 300), yalign=0.5, xanchor=0.5, xpos=0.3)'",
+    "Show.imspec()='Movie(fps=30, size=(400, 300), yalign=0.5, xanchor=0.5, xpos=0.3)'",
+    "Show.imspec()='themovie'",
+    "Show.imspec()='master'",
+    "Show.imspec()[]='roll'"
+   ],
+   "set": [
+    [
+     1,
+     "Movie(fps=30, size=(800, 600), yalign=0.5, xanchor=0.5, xpos=0.3)"
+    ],
+    [
+     2,
+     "Movie(fps=30, size=(800, 600), yalign=0.5, xanchor=0.5, xpos=0.3)  "
+    ]
+   ]
+  },
+  {
+   "label": "credits",
+   "n": 0,
+   "match": [
+    "Show='<node>'",
+    "Show.imspec()()='Text(u\"©MMXV Four Leaf Studios\", text_align=0.5, size=15)'",
+    "Show.imspec()='Text(u\"©MMXV Four Leaf Studios\", text_align=0.5, size=15)'",
+    "Show.imspec()='copyright'",
+    "Show.imspec()[]='Position(xalign=0.5, yalign=0.576)'",
+    "Show.imspec()='master'"
+   ],
+   "set": [
+    [
+     1,
+     "Text(u\"©MMXV Four Leaf Studios\", text_align=0.5, size=29)"
+    ],
+    [
+     2,
+     "Text(u\"©MMXV Four Leaf Studios\", text_align=0.5, size=29)  "
+    ],
+    [
+     4,
+     "Position(xalign=0.5, yalign=0.602) "
+    ]
+   ]
+  }
+ ]
+}

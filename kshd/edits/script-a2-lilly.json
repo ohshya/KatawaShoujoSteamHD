@@ -1,0 +1,199 @@
+{
+ "nodes": [
+  {
+   "label": "L4",
+   "n": 0,
+   "match": [
+    "RawMultipurpose='<node>'",
+    "RawMultipurpose.circles='0'",
+    "RawMultipurpose.duration='0'",
+    "RawMultipurpose.properties[]()='xpos'",
+    "RawMultipurpose.properties[]()='-130'",
+    "RawMultipurpose.properties[]()='ypos'",
+    "RawMultipurpose.properties[]()='-400'",
+    "RawMultipurpose.properties[]()='subpixel'",
+    "RawMultipurpose.properties[]()='True'"
+   ],
+   "atl": {
+    "properties": [
+     [
+      "xpos",
+      "-330  "
+     ],
+     [
+      "ypos",
+      "-900 "
+     ],
+     [
+      "subpixel",
+      "True"
+     ]
+    ]
+   }
+  },
+  {
+   "label": "L4",
+   "n": 0,
+   "match": [
+    "RawMultipurpose='<node>'",
+    "RawMultipurpose.circles='0'",
+    "RawMultipurpose.duration='12.0'",
+    "RawMultipurpose.properties[]()='ypos'",
+    "RawMultipurpose.properties[]()='-800'",
+    "RawMultipurpose.warper='acdc_warp'"
+   ],
+   "atl": {
+    "properties": [
+     [
+      "ypos",
+      "-1650"
+     ]
+    ]
+   }
+  },
+  {
+   "label": "L4",
+   "n": 0,
+   "match": [
+    "RawMultipurpose='<node>'",
+    "RawMultipurpose.circles='0'",
+    "RawMultipurpose.duration='0'",
+    "RawMultipurpose.properties[]()='xpos'",
+    "RawMultipurpose.properties[]()='-830'",
+    "RawMultipurpose.properties[]()='ypos'",
+    "RawMultipurpose.properties[]()='-200'",
+    "RawMultipurpose.properties[]()='subpixel'",
+    "RawMultipurpose.properties[]()='True'"
+   ],
+   "atl": {
+    "properties": [
+     [
+      "xpos",
+      "-1880  "
+     ],
+     [
+      "ypos",
+      "-840  "
+     ],
+     [
+      "subpixel",
+      "True"
+     ]
+    ]
+   }
+  },
+  {
+   "label": "L5",
+   "n": 0,
+   "match": [
+    "RawMultipurpose='<node>'",
+    "RawMultipurpose.circles='0'",
+    "RawMultipurpose.duration='1.0'",
+    "RawMultipurpose.properties[]()='xpos'",
+    "RawMultipurpose.properties[]()='0.4'",
+    "RawMultipurpose.warper='ease'"
+   ],
+   "atl": {
+    "properties": [
+     [
+      "xpos",
+      "0.45 "
+     ]
+    ]
+   }
+  },
+  {
+   "label": "L5",
+   "n": 1,
+   "match": [
+    "RawMultipurpose='<node>'",
+    "RawMultipurpose.circles='0'",
+    "RawMultipurpose.duration='1.0'",
+    "RawMultipurpose.properties[]()='xpos'",
+    "RawMultipurpose.properties[]()='0.4'",
+    "RawMultipurpose.warper='ease'"
+   ],
+   "atl": {
+    "properties": [
+     [
+      "xpos",
+      "0.45 "
+     ]
+    ]
+   }
+  },
+  {
+   "label": "L5",
+   "n": 0,
+   "match": [
+    "RawMultipurpose='<node>'",
+    "RawMultipurpose.circles='0'",
+    "RawMultipurpose.duration='0'",
+    "RawMultipurpose.properties[]()='xpos'",
+    "RawMultipurpose.properties[]()='0.4'"
+   ],
+   "atl": {
+    "properties": [
+     [
+      "xpos",
+      "0.45"
+     ]
+    ]
+   }
+  },
+  {
+   "label": "L6i",
+   "n": 0,
+   "match": [
+    "Show='<node>'",
+    "Show.imspec()()='lilly'",
+    "Show.imspec()()='cane_smileclosed'",
+    "Show.imspec()[]='Transform(ypos=800)'",
+    "Show.imspec()='master'"
+   ],
+   "set": [
+    [
+     3,
+     "Transform(ypos=1450) "
+    ]
+   ]
+  },
+  {
+   "label": "L6i",
+   "n": 0,
+   "match": [
+    "Show='<node>'",
+    "Show.imspec()()='lilly'",
+    "Show.imspec()()='basic_smileclosed'",
+    "Show.imspec()[]='Transform(ypos=800)'",
+    "Show.imspec()='master'"
+   ],
+   "set": [
+    [
+     3,
+     "Transform(ypos=1450) "
+    ]
+   ]
+  },
+  {
+   "label": "L6c",
+   "n": 0,
+   "match": [
+    "RawMultipurpose='<node>'",
+    "RawMultipurpose.circles='0'",
+    "RawMultipurpose.duration='0'",
+    "RawMultipurpose.properties[]()='xpos'",
+    "RawMultipurpose.properties[]()='0.45'"
+   ],
+   "atl": {
+    "properties": [
+     [
+      "xpos",
+      "0.42 "
+     ]
+    ]
+   }
+  }
+ ],
+ "languages": true
+}

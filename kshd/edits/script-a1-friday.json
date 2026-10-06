@@ -1,0 +1,39 @@
+{
+ "nodes": [
+  {
+   "label": "A30",
+   "n": 0,
+   "match": [
+    "Show='<node>'",
+    "Show.imspec()()='lilly'",
+    "Show.imspec()()='cane_weaksmile'",
+    "Show.imspec()[]='Transform(ypos=800)'",
+    "Show.imspec()='master'"
+   ],
+   "set": [
+    [
+     3,
+     "Transform(ypos=1450) "
+    ]
+   ]
+  },
+  {
+   "label": "A30",
+   "n": 0,
+   "match": [
+    "Show='<node>'",
+    "Show.imspec()()='lilly'",
+    "Show.imspec()()='basic_smileclosed'",
+    "Show.imspec()[]='Transform(ypos=800)'",
+    "Show.imspec()='master'"
+   ],
+   "set": [
+    [
+     3,
+     "Transform(ypos=1450) "
+    ]
+   ]
+  }
+ ],
+ "languages": true
+}

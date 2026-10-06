@@ -1,0 +1,154 @@
+{
+ "code": [
+  [
+   "config.joystick = False\nconfig.locked = True",
+   "config.joystick = False\nconfig.thumbnail_width = 136\nconfig.thumbnail_height = 101\nconfig.locked = True",
+   1
+  ],
+  [
+   "\ndef widget_button(text,displayable,clicked=None,style='prefs_label',xsize=220,ysize=30,widgetyoffset=3,textxoffset=30,state=\"button\", xpos=0, ypos=0):\n    ",
+   "\ndef widget_button(text,displayable,clicked=None,style='prefs_label',xsize=220,ysize=60,widgetyoffset=3,textxoffset=30,state=\"button\", xpos=0, ypos=0):\n    ",
+   1
+  ],
+  [
+   "\ndef return_button(wherefunc, text=None, xpos=540, ypos=450):\n    if text == None:",
+   "\ndef return_button(wherefunc, text=None, xpos=1242, ypos=810):\n    if text == None:",
+   1
+  ],
+  [
+   "    ui.add(renpy.Keymap(game_menu=wherefunc))\n    widget_button(text, \"ui/bt-return.png\", wherefunc, xsize=100, xpos=xpos, ypos=ypos)\n",
+   "    ui.add(renpy.Keymap(game_menu=wherefunc))\n    widget_button(text, \"ui/bt-return.png\", wherefunc, xsize=133, ysize=42, xpos=xpos, ypos=ypos, textxoffset=47, widgetyoffset=1)\n",
+   1
+  ],
+  [
+   "    ui.hbox(style=style.file_picker_entry_box[index])\n    ui.add(screenshot)\n    \n    ui.null(width=10)\n    ",
+   "    ui.hbox(style=style.file_picker_entry_box[index])\n    ui.null(width=5)\n    ui.add(screenshot)\n    \n    ui.null(width=11)\n    ",
+   1
+  ],
+  [
+   "            save_name=scene_name, playtime=playtime)\n    ui.text(s, style=style.file_picker_extra_info[index])\n    ui.close()\n    ui.vbox()\n    ui.null(height=6)\n    if has_delete:",
+   "            save_name=scene_name, playtime=playtime)\n    ui.text(s, style=style.file_picker_extra_info[index], ypos=-6)\n    ui.close()\n    ui.vbox(xpos=-30)\n    ui.null(height=27)\n    if has_delete:",
+   1
+  ],
+  [
+   "        scrollable = False\n        if len(displayed_slots) > 5:\n            scrollable = True",
+   "        scrollable = False\n        if len(displayed_slots) > 4:\n            scrollable = True",
+   1
+  ],
+  [
+   "        if scrollable:\n            auto_offset = 1.0 / (len(displayed_slots) - 5)\n            \n            auto_offset = 59\n        else:",
+   "        if scrollable:\n            auto_offset = 1.0 / (len(displayed_slots) - 4)\n            \n            auto_offset = 115\n        else:",
+   1
+  ],
+  [
+   "        \n        ui.window(style='file_picker_frame', xminimum=470)\n        ",
+   "        \n        ui.window(style='file_picker_frame', xminimum=350)\n        ",
+   1
+  ],
+  [
+   "        if selected == \"save\":\n            ui.text(displayStrings.save_page_caption, style=\"page_caption\")\n        else:\n            ui.text(displayStrings.load_page_caption, style=\"page_caption\")\n        \n        def entry(name, filename, offset, ro):",
+   "        if selected == \"save\":\n            ui.text(displayStrings.save_page_caption, style=\"page_caption\", xpos=-40)\n        else:\n            ui.text(displayStrings.load_page_caption, style=\"page_caption\", xpos=-40)\n        ui.null(height=15)\n        def entry(name, filename, offset, ro):",
+   1
+  ],
+  [
+   "            global auto_offset, displayed_slots\n            maxheight = auto_offset * (len(displayed_slots) - 5)\n            if input > maxheight:",
+   "            global auto_offset, displayed_slots\n            maxheight = auto_offset * (len(displayed_slots) - 4)\n            if input > maxheight:",
+   1
+  ],
+  [
+   "            persistent.fpicker_yoffset = 0.0\n        elif persistent.fpicker_yoffset > auto_offset * (len(displayed_slots) - 5) or persistent.fpicker_yoffset == -1:\n            persistent.fpicker_yoffset = auto_offset * (len(displayed_slots) - 5)\n        \n        yadj = ui.adjustment(range=auto_offset * (len(displayed_slots) - 5), value=persistent.fpicker_yoffset, changed=store_yoffset)\n        vp = ui.viewport(yadjustment=yadj, mousewheel=False, draggable=False, xmaximum=400, ymaximum = 296, xpos=0, ypos = 2)\n        ui.vbox(xfill=True)\n        ",
+   "            persistent.fpicker_yoffset = 0.0\n        elif persistent.fpicker_yoffset > auto_offset * (len(displayed_slots) - 4) or persistent.fpicker_yoffset == -1:\n            persistent.fpicker_yoffset = auto_offset * (len(displayed_slots) - 4)\n        \n        yadj = ui.adjustment(range=auto_offset * (len(displayed_slots) - 4), value=persistent.fpicker_yoffset, changed=store_yoffset)\n        vp = ui.viewport(yadjustment=yadj, mousewheel=False, draggable=False, xmaximum=700, ymaximum = 500, xpos=-20, ypos = 3) \n        ui.vbox(xfill=False)\n        ",
+   1
+  ],
+  [
+   "        \n        ui.vbox(xpos = 600, yalign=0.493, box_spacing=2)\n        if scrollable:",
+   "        \n        ui.vbox(xpos = 1300, yalign=0.454, box_spacing=2)\n        if scrollable:",
+   1
+  ],
+  [
+   "            nextsaveslot = int(maxname) + 1\n            widget_button(displayStrings.new_save_button, \"ui/bt-star.png\", ui.returns((str(nextsaveslot),False)), xsize=340, widgetyoffset=0, xpos=180, ypos=450)\n        elif config.has_autosave:",
+   "            nextsaveslot = int(maxname) + 1\n            widget_button(displayStrings.new_save_button, \"ui/bt-star.png\", ui.returns((str(nextsaveslot),False)), xsize=440, widgetyoffset=-7, textxoffset=53, xpos=580, ypos=810)\n        elif config.has_autosave:",
+   1
+  ],
+  [
+   "        res.append(\"{image=ui/sd-mute.png}\")\n    ui.text(' '.join(res), xanchor=1.0, xpos=790, ypos=10 )\n",
+   "        res.append(\"{image=ui/sd-mute.png}\")\n    ui.text(' '.join(res), xanchor=1.0, xpos=1899, ypos=10 )\n",
+   1
+  ],
+  [
+   "    \n    def render_preference(self, thisxpos=0, thisypos=0, disabled=False):\n        cur = getattr(self.base, self.field)",
+   "    \n    def render_preference(self, thisxpos=0, thisypos=0, disabled=False, widgetysize=50):\n        cur = getattr(self.base, self.field)",
+   1
+  ],
+  [
+   "        if disabled:\n            widget_button(self.name, checkboximage, clicked, xsize=350, widgetyoffset=0, state=\"disabled\")\n        else:\n            widget_button(self.name, checkboximage, clicked, xsize=350, widgetyoffset=0)\n",
+   "        if disabled:\n            widget_button(self.name, checkboximage, clicked, xsize=625, ysize=widgetysize, widgetyoffset=-8, textxoffset=40, state=\"disabled\")\n        else:\n            widget_button(self.name, checkboximage, clicked, xsize=625, ysize=widgetysize, widgetyoffset=-8, textxoffset=40)\n",
+   1
+  ],
+  [
+   "            if c_u is None:\n                self.insensitive = Transform(im.MatrixColor(\"ui/bt-cg-locked.png\",im.matrix.colorize(\"#ff7fd4\",\"fff\")*im.matrix.opacity(0.2)),size=(110,85))\n            insensitive = self.insensitive or self.gallery.locked_button",
+   "            if c_u is None:\n                self.insensitive = Transform(im.MatrixColor(\"ui/bt-cg-locked.png\",im.matrix.colorize(\"#ff7fd4\",\"fff\")*im.matrix.opacity(0.2)),size=(220,170))\n            insensitive = self.insensitive or self.gallery.locked_button",
+   1
+  ],
+  [
+   "        \n        ui.hbox(background=None,xpos=180,ypos=448)\n        ui.text(displayStrings.gallery_num_page_prefix+\": \", style=\"gallery_pager_desc\")",
+   "        \n        ui.hbox(background=None,xpos=617,ypos=850)\n        ui.text(displayStrings.gallery_num_page_prefix+\": \", style=\"gallery_pager_desc\")",
+   1
+  ],
+  [
+   "        ui.add(self.locked_background)\n        ui.text(text, xalign=0.5, ypos=400, style=\"prefs_label\")\n        for k in ('game_menu','K_RETURN'):",
+   "        ui.add(self.locked_background)\n        ui.text(text, xalign=0.5, yalign=0.5, style=\"prefs_label\")\n        for k in ('game_menu','K_RETURN'):",
+   1
+  ],
+  [
+   "            \n            ui.text(displayStrings.gallery_page_caption, style=\"page_caption\", xpos=180,ypos=120)\n            if len(self.pages) > 1:",
+   "            \n            ui.text(displayStrings.gallery_page_caption, style=\"page_caption\", xpos = 505, ypos = 198)\n            if len(self.pages) > 1:",
+   1
+  ],
+  [
+   "            \n            return_button(_intra_jumps(\"extra_menu\", \"intra_transition\"))\n            ",
+   "            \n            return_button(_intra_jumps(\"extra_menu\", \"intra_transition\"), xpos=1298, ypos=857)\n            ",
+   1
+  ],
+  [
+   "        if not thumbnail:\n            thumbnail = im.Scale(ImageReference(thumb_base), 100, 75)\n        button_base = LiveComposite((110, 85),\n                                        (0, 0), ib_base(\"ui/bt-cg-locked.png\"),\n                                        (5, 5), im.MatrixColor(thumbnail, im.matrix.desaturate()))\n        button_hover = LiveComposite((110, 85),\n                                         (0, 0), \"ui/bt-cg-locked.png\",\n                                         (5, 5), thumbnail)\n        self.button(button_base, button_hover)",
+   "        if not thumbnail:\n            thumbnail = im.Scale(ImageReference(thumb_base), 100*2, 75*2)\n        button_base = LiveComposite((110*2, 85*2),\n                                        (0, 0), ib_base(\"ui/bt-cg-locked.png\"),\n                                            (10, 10), im.MatrixColor(thumbnail, im.matrix.desaturate()))\n        button_hover = LiveComposite((110*2, 85*2),\n                                         (0, 0), \"ui/bt-cg-locked.png\",\n                                             (10, 10), thumbnail)\n        self.button(button_base, button_hover)",
+   1
+  ],
+  [
+   "    renpy.shown_window()\n    ui.frame(background=\"ui/bg-doublespeak.png\", yalign=1.0, yminimum=160, style=\"say_window\")\n    ui.grid(2,1,xfill=True)",
+   "    renpy.shown_window()\n    ui.frame(background=\"ui/bg-doublespeak_notwide.png\", yalign=1.0, yminimum=253, style=\"say_window\")\n    ui.grid(2,1,xfill=True)",
+   1
+  ],
+  [
+   "    ui.text(speaker[0], style=\"say_label\", **displayStrings.styleoverrides)\n    ui.text(msg0, slow=True, style=\"say_dialogue\", xmaximum=350, **displayStrings.styleoverrides)\n    ui.close()\n    ui.vbox(style=\"say_vbox\", xpos=20)\n    ui.text(speaker[1], style=\"say_label\", **displayStrings.styleoverrides)\n    ui.text(msg1, slow=True, style=\"say_dialogue\", xmaximum=350, **displayStrings.styleoverrides)\n    ui.close()",
+   "    ui.text(speaker[0], style=\"say_label\", **displayStrings.styleoverrides)\n    ui.text(msg0, slow=True, style=\"say_dialogue\", xmaximum=700, **displayStrings.styleoverrides)\n    ui.close()\n    ui.vbox(style=\"say_vbox\", xpos=50)\n    ui.text(speaker[1], style=\"say_label\", **displayStrings.styleoverrides)\n    ui.text(msg1, slow=True, style=\"say_dialogue\", xmaximum=700, **displayStrings.styleoverrides)\n    ui.close()",
+   1
+  ],
+  [
+   "    \n    ui.fixed(xpos=-400)\n    ui.image(ctc[0])\n    ui.close()",
+   "    \n    ui.fixed(xpos=-960)\n    \n    ui.close()",
+   1
+  ],
+  [
+   "        textbase = LiveComposite((100, 30),\n                                     (0, 3), ib_base(\"ui/bt-return.png\"),\n                                     (30, 0), textbase)\n        texthover = LiveComposite((100, 30),\n                                     (0, 3), \"ui/bt-return.png\",\n                                     (30, 0), texthover)\n    ",
+   "        textbase = LiveComposite((100, 30),\n                                         (0, 1), ib_base(\"ui/bt-return.png\"),\n                                         (47, 0), textbase)\n        texthover = LiveComposite((100, 30),\n                                         (0, 1), \"ui/bt-return.png\",\n                                         (47, 0), texthover)\n    ",
+   1
+  ],
+  [
+   "    persistent.hdisabled = not persistent.hdisabled\n    return False",
+   "    persistent.hdisabled = not persistent.hdisabled\n    return False\n\n\ndef toggle_widesay():\n    persistent.widesay = not persistent.widesay\n    return False",
+   1
+  ],
+  [
+   "    global ss_desc\n    disp = Text(ss_desc, xalign=0.5, yalign=0.98, size=18, **displayStrings.styleoverrides)\n    return (disp,0.05)",
+   "    global ss_desc\n    disp = Text(ss_desc, xalign=0.5, yalign=0.98, size=31, **displayStrings.styleoverrides)\n    return (disp,0.05)",
+   1
+  ],
+  [
+   "    global auto_offset, available_languages\n    maxheight = auto_offset * (len(available_languages) - 9)\n    if input > maxheight:",
+   "    global auto_offset, available_languages\n    maxheight = auto_offset * (len(available_languages) - 8)\n    if input > maxheight:",
+   1
+  ]
+ ]
+}

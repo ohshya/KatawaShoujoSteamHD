@@ -1,0 +1,110 @@
+{
+ "nodes": [
+  {
+   "label": "E17",
+   "n": 0,
+   "match": [
+    "Show='<node>'",
+    "Show.imspec()()='im.Composite((295,1200), (0,0), \"sprites/emicas/emicas_wink.png\")'",
+    "Show.imspec()='im.Composite((295,1200), (0,0), \"sprites/emicas/emicas_wink.png\")'",
+    "Show.imspec()='emicas'",
+    "Show.imspec()='master'"
+   ],
+   "set": [
+    [
+     19,
+     "im.Composite((531,2160), (0,0), \"sprites/emicas/emicas_wink.png\")"
+    ],
+    [
+     20,
+     "im.Composite((531,2160), (0,0), \"sprites/emicas/emicas_wink.png\")  "
+    ]
+   ]
+  },
+  {
+   "label": "E17",
+   "n": 0,
+   "match": [
+    "Show='<node>'",
+    "Show.imspec()()='im.Composite((295,1200), (0,0), \"sprites/emicas/emicas_blush.png\")'",
+    "Show.imspec()='im.Composite((295,1200), (0,0), \"sprites/emicas/emicas_blush.png\")'",
+    "Show.imspec()='emicas'",
+    "Show.imspec()='master'"
+   ],
+   "set": [
+    [
+     19,
+     "im.Composite((531,2160), (0,0), \"sprites/emicas/emicas_blush.png\")"
+    ],
+    [
+     20,
+     "im.Composite((531,2160), (0,0), \"sprites/emicas/emicas_blush.png\")  "
+    ]
+   ]
+  },
+  {
+   "label": "E20",
+   "n": 0,
+   "match": [
+    "Show='<node>'",
+    "Show.imspec()()='im.Composite((295,1200), (0,0), \"sprites/emi/emi_excited_circle.png\")'",
+    "Show.imspec()='im.Composite((295,1200), (0,0), \"sprites/emi/emi_excited_circle.png\")'",
+    "Show.imspec()='emi'",
+    "Show.imspec()='master'"
+   ],
+   "set": [
+    [
+     21,
+     "im.Composite((531,2160), (0,0), \"sprites/emi/emi_excited_circle.png\")"
+    ],
+    [
+     22,
+     "im.Composite((531,2160), (0,0), \"sprites/emi/emi_excited_circle.png\")  "
+    ]
+   ]
+  },
+  {
+   "label": "E20",
+   "n": 0,
+   "match": [
+    "Show='<node>'",
+    "Show.imspec()()='im.Composite((295,1200), (0,0), \"sprites/emi/emi_excited_sad.png\")'",
+    "Show.imspec()='im.Composite((295,1200), (0,0), \"sprites/emi/emi_excited_sad.png\")'",
+    "Show.imspec()='emi'",
+    "Show.imspec()='master'"
+   ],
+   "set": [
+    [
+     21,
+     "im.Composite((531,2160), (0,0), \"sprites/emi/emi_excited_sad.png\")"
+    ],
+    [
+     22,
+     "im.Composite((531,2160), (0,0), \"sprites/emi/emi_excited_sad.png\")  "
+    ]
+   ]
+  },
+  {
+   "label": "_call_h_E21",
+   "n": 0,
+   "match": [
+    "Show='<node>'",
+    "Show.imspec()()='im.Composite((425,1200), (0,0), night(\"sprites/emiwheel/close/emiwheel_blush_close.png\"))'",
+    "Show.imspec()='im.Composite((425,1200), (0,0), night(\"sprites/emiwheel/close/emiwheel_blush_close.png\"))'",
+    "Show.imspec()='emiwheel'",
+    "Show.imspec()='master'"
+   ],
+   "set": [
+    [
+     21,
+     "im.Composite((765,2160), (0,0), night(\"sprites/emiwheel/close/emiwheel_blush_close.png\"))"
+    ],
+    [
+     22,
+     "im.Composite((765,2160), (0,0), night(\"sprites/emiwheel/close/emiwheel_blush_close.png\"))  "
+    ]
+   ]
+  }
+ ],
+ "languages": true
+}
