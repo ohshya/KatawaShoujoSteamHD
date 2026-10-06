@@ -9,7 +9,7 @@ from kshd import rpa
 from kshd.patch import PatchError, apply
 
 ROOT = Path(__file__).resolve().parent
-# Patch version, used in the output file name "KS HD <VERSION> STEAM.zip".
+# Patch version, used in the output file name "KS-HD-<VERSION>-Steam-Patch.zip".
 VERSION = '1.0.0'
 # Script suffixes of the Steam languages ('' is English); add new ones here if Steam adds languages.
 LANGUAGES = ['', '_ES', '_FR', '_JP', '_DE', '_KR', '_PL', '_PT-BR', '_RU', '_ZH', '_ZH-HANT']
@@ -103,7 +103,7 @@ def main():
             scripts = dict(pool.map(task, jobs, chunksize=4))
     except PatchError as e:
         sys.exit('%s\nThe game files are modified or from another version: verify them in Steam and try again.' % e)
-    out = ROOT / ('KS HD %s STEAM.zip' % VERSION)
+    out = ROOT / ('KS-HD-%s-Steam-Patch.zip' % VERSION)
     with zipfile.ZipFile(out, 'w') as z:
         z.write(ROOT / 'README.md', 'README.md', zipfile.ZIP_DEFLATED)
         for name, data in sorted(scripts.items()):

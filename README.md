@@ -39,7 +39,9 @@ No installer needed.
 > large for a GitHub repository, so they're only included in the release zip. Without them the patch
 > won't work.
 
-1. Download [`KS.HD.1.0.0.STEAM.zip`](https://github.com/ohshya/KatawaShoujoSteamHD/releases/download/v1.0.0/KS.HD.1.0.0.STEAM.zip) from the latest release.
+1. Download [`KS-HD-1.0.0-Steam-Patch.zip`](https://github.com/ohshya/KatawaShoujoSteamHD/releases/download/v1.0.0/KS-HD-1.0.0-Steam-Patch.zip) from the latest release.
+   It's the only file you need to play. The other one, `Assets-For-Building-Only`, is only for
+   [building the patch yourself](#building-from-source).
 2. In Steam, right-click **Katawa Shoujo** > **Manage** > **Browse local files**.
 3. Extract the zip into that folder (the one containing `Katawa Shoujo.exe`).
 4. When asked, choose **replace all files**.
@@ -104,21 +106,21 @@ makes. Those extraction modules were only needed once and were left out: their r
 - [Python](https://www.python.org/) 3.9 or newer. No extra packages are needed.
 - The Steam version of Katawa Shoujo, **unmodified**. If you already installed this patch, run
   **Verify integrity of game files** in Steam first.
-- The HD assets package: [`KS.HD.1.0.0.ASSETS.zip`](https://github.com/ohshya/KatawaShoujoSteamHD/releases/download/v1.0.0/KS.HD.1.0.0.ASSETS.zip) (about 700 MB). The art in it is
+- The HD assets package: [`KS-HD-1.0.0-Assets-For-Building-Only.zip`](https://github.com/ohshya/KatawaShoujoSteamHD/releases/download/v1.0.0/KS-HD-1.0.0-Assets-For-Building-Only.zip) (about 700 MB). The art in it is
   the work of [letow](https://github.com/letow) for the [Katawa Shoujo HD Patch](https://github.com/letow/KatawaShoujoHDPatch), repacked for
   this edition.
 
 ### Build
 
 1. Download or clone this repository.
-2. Put `KS.HD.1.0.0.ASSETS.zip` in the `assets` folder. You can leave it zipped or extract it there.
+2. Put `KS-HD-1.0.0-Assets-For-Building-Only.zip` in the `assets` folder. You can leave it zipped or extract it there.
 3. Run:
 
 ```bash
 python build.py
 ```
 
-The tool finds the game in your Steam library, patches the scripts and creates `KS HD 1.0.0 STEAM.zip`
+The tool finds the game in your Steam library, patches the scripts and creates `KS-HD-1.0.0-Steam-Patch.zip`
 next to `build.py`. That zip is the patch: install it as described in [Installation](#installation).
 
 If the game isn't installed through Steam on that computer, copy the game folder into the repository as
