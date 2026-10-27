@@ -41,7 +41,7 @@ Four Leaf Studios のビジュアルノベル **『かたわ少女』（Katawa S
 - **Steam 版への対応。** HD 用の調整（解像度、位置、ズーム、パン、UI レイアウト）を Steam 版のスクリプトを
   置き換えるのではなく、その上から適用しています。そのため実績、コントローラー対応、R18 の切り替え、パック
   された言語ファイルといった Steam 版の機能はそのまま使えます。
-- **HD 版の R18 パッチ。** `r18-hd.rpa` が公式の `r18.rpa` を置き換え、同じシーンを HD で収録しています。
+- **HD 版の R18 パッチ。** `r18_hd.rpa` が公式の `r18.rpa` を置き換え、同じシーンを HD で収録しています。
 - **スクロールできる言語選択画面。** HD レイアウトのまま、11 言語すべてが収まるようにスクロールします。
 - **画面に合わせたウィンドウ。** ゲームはデスクトップの作業領域（タスクバーとタイトルバーを除く）の 90% の
   大きさで、中央にウィンドウ表示されます。サイズは 1280×720 から 1920×1080 の間で、画面より大きくなることは
@@ -75,9 +75,9 @@ Four Leaf Studios のビジュアルノベル **『かたわ少女』（Katawa S
 
 > **パッチは [Releases](https://github.com/ohshya/KatawaShoujoSteamHD/releases/latest) ページからダウンロード
 > してください。** リポジトリにはビルドツールが入っており、HD アーカイブ（約 660 MB の `patch-hd.rpa` と
-> `r18-hd.rpa`）はリリースの zip にのみ含まれています。
+> `r18_hd.rpa`）はリリースの zip にのみ含まれています。
 
-1. 最新リリースから [`KS-HD-1.0.1-Steam-Patch.zip`](https://github.com/ohshya/KatawaShoujoSteamHD/releases/download/v1.0.1/KS-HD-1.0.1-Steam-Patch.zip) をダウンロードします。
+1. 最新リリースから [`KS-HD-1.0.2-Steam-Patch.zip`](https://github.com/ohshya/KatawaShoujoSteamHD/releases/download/v1.0.2/KS-HD-1.0.2-Steam-Patch.zip) をダウンロードします。
    遊ぶのに必要なのはこのファイルだけです。もう一方の `Assets-For-Building-Only` は、パッチを自分で
    ビルドする場合にのみ使います。
 2. Steam で **Katawa Shoujo** を右クリックし、**管理** > **ローカルファイルを閲覧** を選びます。
@@ -92,7 +92,7 @@ Four Leaf Studios のビジュアルノベル **『かたわ少女』（Katawa S
 
 公式の `r18.rpa` は不要です。すでにフォルダにある場合はそのままで構いません。ゲームは HD 版を使います。
 
-**アンインストール：** `game/patch-hd.rpa` と `game/r18-hd.rpa` を削除し、Steam で
+**アンインストール：** `game/patch-hd.rpa` と `game/r18_hd.rpa`（v1.0.0 または v1.0.1 を導入した場合は `game/r18-hd.rpa` も）を削除し、Steam で
 **プロパティ** > **インストール済みファイル** > **ゲームファイルの整合性を確認** を実行します。
 
 > Steam のアップデートでパッチを当てたスクリプトが上書きされることがあります。その場合はパッチをもう一度
@@ -107,7 +107,7 @@ Four Leaf Studios のビジュアルノベル **『かたわ少女』（Katawa S
 | ファイル | 内容 |
 |---|---|
 | `game/patch-hd.rpa` | HD の背景、立ち絵、CG、UI、エフェクト、動画。 |
-| `game/r18-hd.rpa` | HD 版の R18 パッチ。公式の `r18.rpa` を置き換えます。 |
+| `game/r18_hd.rpa` | HD 版の R18 パッチ。公式の `r18.rpa` を置き換えます。 |
 | `game/*.rpyc` | HD レイアウトの調整を加えた Steam 版のゲームスクリプト（全 11 言語）。 |
 | `game/presplash.png` | HD パッチのロード画面。 |
 
@@ -118,7 +118,7 @@ Four Leaf Studios のビジュアルノベル **『かたわ少女』（Katawa S
 スクリプトの形式が異なるため、そこに導入するとゲームが壊れます。
 
 **公式の R18 パッチ（`r18.rpa`）は必要ですか？**
-いいえ。`r18-hd.rpa` に R18 シーンが HD で含まれており、ゲーム内でそれをオフにするオプションも使えます。
+いいえ。`r18_hd.rpa` に R18 シーンが HD で含まれており、ゲーム内でそれをオフにするオプションも使えます。
 
 **letow 氏の Katawa Shoujo HD Patch と同じものですか？**
 同じ HD アートとシーンの調整を Steam 版に移植したもので、さらに「このエディションの新機能」に挙げた変更を
@@ -129,7 +129,7 @@ Four Leaf Studios のビジュアルノベル **『かたわ少女』（Katawa S
 Windows でしかテストしていないので、報告を歓迎します。
 
 **元のゲームに戻すには？**
-`game/patch-hd.rpa` と `game/r18-hd.rpa` を削除し、Steam で **ゲームファイルの整合性を確認** を実行します。
+`game/patch-hd.rpa` と `game/r18_hd.rpa` を削除し、Steam で **ゲームファイルの整合性を確認** を実行します。
 
 ## ソースからのビルド
 
@@ -152,7 +152,7 @@ HD パッチから情報を抽出し、それらを比較して HD パッチの�
 
 - [Python](https://www.python.org/) 3.9 以降。追加のパッケージは不要です。
 - Steam 版『かたわ少女』（**未改変**で、通常のブランチのもの。Ren'Py 8 のベータは不可）。
-- HD 素材パッケージ：[`KS-HD-1.0.1-Assets-For-Building-Only.zip`](https://github.com/ohshya/KatawaShoujoSteamHD/releases/download/v1.0.1/KS-HD-1.0.1-Assets-For-Building-Only.zip)（約 700 MB）。
+- HD 素材パッケージ：[`KS-HD-1.0.2-Assets-For-Building-Only.zip`](https://github.com/ohshya/KatawaShoujoSteamHD/releases/download/v1.0.2/KS-HD-1.0.2-Assets-For-Building-Only.zip)（約 700 MB）。
 
 ### ビルド
 
@@ -164,7 +164,7 @@ HD パッチから情報を抽出し、それらを比較して HD パッチの�
    - **Steam のインストールを使う：** リポジトリにコピーがない場合、ツールは Steam のライブラリからゲームを
      探します。すでにそこにパッチを導入している場合は、先に Steam で **ゲームファイルの整合性を確認** を
      実行してください。
-3. `KS-HD-1.0.1-Assets-For-Building-Only.zip` を `assets` フォルダに置きます（zip のままでも展開しても
+3. `KS-HD-1.0.2-Assets-For-Building-Only.zip` を `assets` フォルダに置きます（zip のままでも展開しても
    構いません）。
 4. 次を実行します。
 
@@ -172,7 +172,7 @@ HD パッチから情報を抽出し、それらを比較して HD パッチの�
 python build.py
 ```
 
-ツールがスクリプトにパッチを当て、`build.py` と同じ場所に `KS-HD-1.0.1-Steam-Patch.zip` を作成します。この zip が
+ツールがスクリプトにパッチを当て、`build.py` と同じ場所に `KS-HD-1.0.2-Steam-Patch.zip` を作成します。この zip が
 パッチです。「インストール」の説明どおりに導入してください。
 
 スクリプトがパッチの想定と一致しない場合、ビルドは止まり、どのスクリプトかを表示します。これはゲームの
@@ -205,7 +205,7 @@ JSON ファイルとして、読める形のデータで `kshd/edits` に保存�
 ```
 presplash.png    ロード画面
 hd/              背景、立ち絵、CG、インターフェース、エフェクト、動画（patch-hd.rpa にまとめられます）
-r18/             R18 シーンとその画像（r18-hd.rpa にまとめられます）
+r18/             R18 シーンとその画像（r18_hd.rpa にまとめられます）
 ```
 
 アートを更新するには、パッケージを `assets` フォルダに展開し、同じ名前とフォルダ構成のままファイルを

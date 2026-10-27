@@ -40,7 +40,7 @@ Four Leaf Studios의 비주얼 노벨 **Katawa Shoujo(카타와 쇼죠)** Steam�
   같은 방식으로 HD로 만들었습니다.
 - **Steam판 지원.** HD 조정(해상도, 위치, 줌, 팬, UI 레이아웃)을 Steam판 스크립트를 교체하지 않고 그 위에
   적용하므로 업적, 컨트롤러 지원, R18 설정, 압축된 언어 파일 같은 Steam판 기능이 그대로 작동합니다.
-- **HD R18 패치.** `r18-hd.rpa`가 공식 `r18.rpa`를 대신하며 같은 장면을 HD로 담고 있습니다.
+- **HD R18 패치.** `r18_hd.rpa`가 공식 `r18.rpa`를 대신하며 같은 장면을 HD로 담고 있습니다.
 - **스크롤되는 언어 선택 화면.** HD 레이아웃을 유지하면서 11개 언어가 모두 들어가도록 스크롤됩니다.
 - **화면에 맞는 창.** 게임은 바탕 화면의 사용 가능한 영역(작업 표시줄과 제목 표시줄 제외)의 90% 크기로
   가운데에 창으로 열립니다. 크기는 1280×720에서 1920×1080 사이이며 화면보다 커지지 않습니다. 전체 화면은
@@ -73,10 +73,10 @@ R18 패치(`r18.rpa`)로 분리했으며, 자체 기능도 추가했습니다. �
 설치 프로그램은 필요 없습니다.
 
 > **패치는 [Releases](https://github.com/ohshya/KatawaShoujoSteamHD/releases/latest) 페이지에서 받으세요.**
-> 저장소에는 빌드 도구가 들어 있으며, HD 아카이브(약 660MB인 `patch-hd.rpa`와 `r18-hd.rpa`)는 릴리스 zip에만
+> 저장소에는 빌드 도구가 들어 있으며, HD 아카이브(약 660MB인 `patch-hd.rpa`와 `r18_hd.rpa`)는 릴리스 zip에만
 > 있습니다.
 
-1. 최신 릴리스에서 [`KS-HD-1.0.1-Steam-Patch.zip`](https://github.com/ohshya/KatawaShoujoSteamHD/releases/download/v1.0.1/KS-HD-1.0.1-Steam-Patch.zip)을 받습니다.
+1. 최신 릴리스에서 [`KS-HD-1.0.2-Steam-Patch.zip`](https://github.com/ohshya/KatawaShoujoSteamHD/releases/download/v1.0.2/KS-HD-1.0.2-Steam-Patch.zip)을 받습니다.
    게임을 하는 데 필요한 파일은 이것 하나뿐입니다. 다른 하나인 `Assets-For-Building-Only`는 패치를 직접
    빌드할 때만 씁니다.
 2. Steam에서 **Katawa Shoujo**를 마우스 오른쪽 버튼으로 클릭하고 **관리** > **로컬 파일 보기**를 선택합니다.
@@ -91,7 +91,7 @@ Linux에서는 과정이 똑같습니다. macOS에서는 **로컬 파일 보기*
 
 공식 `r18.rpa`는 필요 없습니다. 이미 폴더에 있다면 그대로 두어도 되며, 게임은 HD 버전을 사용합니다.
 
-**제거 방법:** `game/patch-hd.rpa`와 `game/r18-hd.rpa`를 삭제한 다음, Steam에서
+**제거 방법:** `game/patch-hd.rpa`와 `game/r18_hd.rpa`(v1.0.0 또는 v1.0.1을 설치했다면 `game/r18-hd.rpa`도)를 삭제한 다음, Steam에서
 **속성** > **설치된 파일** > **게임 파일 무결성 확인**을 실행합니다.
 
 > Steam 업데이트로 패치된 스크립트가 덮어써질 수 있습니다. 그런 경우 패치를 다시 압축 해제하세요.
@@ -105,7 +105,7 @@ Linux에서는 과정이 똑같습니다. macOS에서는 **로컬 파일 보기*
 | 파일 | 설명 |
 |---|---|
 | `game/patch-hd.rpa` | HD 배경, 스프라이트, CG, UI, 효과, 영상. |
-| `game/r18-hd.rpa` | HD R18 패치. 공식 `r18.rpa`를 대신합니다. |
+| `game/r18_hd.rpa` | HD R18 패치. 공식 `r18.rpa`를 대신합니다. |
 | `game/*.rpyc` | HD 레이아웃 조정을 적용한 Steam판 게임 스크립트(11개 언어 전부). |
 | `game/presplash.png` | HD 패치의 로딩 화면. |
 
@@ -116,7 +116,7 @@ Linux에서는 과정이 똑같습니다. macOS에서는 **로컬 파일 보기*
 스크립트 형식이 달라서 거기에 설치하면 게임이 망가집니다.
 
 **공식 R18 패치(`r18.rpa`)가 필요한가요?**
-아니요. `r18-hd.rpa`에 R18 장면이 이미 HD로 들어 있으며, 게임에서 이를 끄는 옵션도 그대로 작동합니다.
+아니요. `r18_hd.rpa`에 R18 장면이 이미 HD로 들어 있으며, 게임에서 이를 끄는 옵션도 그대로 작동합니다.
 
 **letow의 Katawa Shoujo HD Patch와 같은 것인가요?**
 같은 HD 아트와 장면 조정을 Steam판으로 이식했으며, 여기에 "이번 에디션의 새로운 점"의 변경 사항이 더해졌습니다.
@@ -127,7 +127,7 @@ letow의 원본 패치는 StandAlone판용이라 Steam판에서는 멈춥니다.
 테스트했으므로 제보를 환영합니다.
 
 **원래 게임으로 돌아가려면 어떻게 하나요?**
-`game/patch-hd.rpa`와 `game/r18-hd.rpa`를 삭제한 다음, Steam에서 **게임 파일 무결성 확인**을 실행합니다.
+`game/patch-hd.rpa`와 `game/r18_hd.rpa`를 삭제한 다음, Steam에서 **게임 파일 무결성 확인**을 실행합니다.
 
 ## 소스에서 빌드하기
 
@@ -150,7 +150,7 @@ HD 패치를 이식하려면 Katawa Shoujo StandAlone판, Steam판, 공식 `r18.
 
 - [Python](https://www.python.org/) 3.9 이상. 추가 패키지는 필요 없습니다.
 - **수정하지 않은** 기본 브랜치의 Steam판 Katawa Shoujo(Ren'Py 8 베타 제외).
-- HD 리소스 패키지: [`KS-HD-1.0.1-Assets-For-Building-Only.zip`](https://github.com/ohshya/KatawaShoujoSteamHD/releases/download/v1.0.1/KS-HD-1.0.1-Assets-For-Building-Only.zip) (약 700MB).
+- HD 리소스 패키지: [`KS-HD-1.0.2-Assets-For-Building-Only.zip`](https://github.com/ohshya/KatawaShoujoSteamHD/releases/download/v1.0.2/KS-HD-1.0.2-Assets-For-Building-Only.zip) (약 700MB).
 
 ### 빌드
 
@@ -161,14 +161,14 @@ HD 패치를 이식하려면 Katawa Shoujo StandAlone판, Steam판, 공식 `r18.
      설치본에 패치를 적용한 채로 빌드할 수 있습니다.
    - **Steam 설치본 사용:** 저장소에 사본이 없으면 도구가 Steam 라이브러리에서 게임을 찾습니다. 이미 그곳에
      이 패치를 설치했다면 먼저 Steam에서 **게임 파일 무결성 확인**을 실행하세요.
-3. `KS-HD-1.0.1-Assets-For-Building-Only.zip`을 `assets` 폴더에 넣습니다(압축된 상태든 푼 상태든 상관없습니다).
+3. `KS-HD-1.0.2-Assets-For-Building-Only.zip`을 `assets` 폴더에 넣습니다(압축된 상태든 푼 상태든 상관없습니다).
 4. 다음을 실행합니다.
 
 ```bash
 python build.py
 ```
 
-도구가 스크립트에 패치를 적용하고 `build.py` 옆에 `KS-HD-1.0.1-Steam-Patch.zip`을 만듭니다. 이 zip이 패치이며,
+도구가 스크립트에 패치를 적용하고 `build.py` 옆에 `KS-HD-1.0.2-Steam-Patch.zip`을 만듭니다. 이 zip이 패치이며,
 "설치"에 설명한 대로 설치하면 됩니다.
 
 스크립트가 패치가 예상하는 내용과 다르면 빌드가 멈추고 어떤 스크립트인지 알려 줍니다. 게임 파일이 수정되었거나
@@ -201,7 +201,7 @@ HD 패치가 게임 스크립트에서 바꾸는 것은 해상도, 위치, 줌, 
 ```
 presplash.png    로딩 화면
 hd/              배경, 스프라이트, CG, 인터페이스, 효과, 영상(patch-hd.rpa로 묶임)
-r18/             R18 장면과 그 이미지(r18-hd.rpa로 묶임)
+r18/             R18 장면과 그 이미지(r18_hd.rpa로 묶임)
 ```
 
 아트를 업데이트하려면 패키지를 `assets` 폴더에 풀고, 같은 이름과 폴더 구조를 유지한 채 파일을 바꾸거나

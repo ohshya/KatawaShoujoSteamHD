@@ -42,7 +42,7 @@ Funkcje dostępne wyłącznie w tej edycji, których nie ma w oryginalnej łatce
 - **Obsługa wersji Steam.** Poprawki HD (rozdzielczość, pozycje, przybliżenia, panoramy, układ interfejsu) są
   nakładane na skrypty wersji Steam zamiast je zastępować, więc funkcje Steam nadal działają: osiągnięcia,
   obsługa kontrolera, przełącznik R18 i spakowane pliki językowe.
-- **Łatka R18 w HD.** `r18-hd.rpa` zastępuje oficjalny `r18.rpa` tymi samymi scenami w HD.
+- **Łatka R18 w HD.** `r18_hd.rpa` zastępuje oficjalny `r18.rpa` tymi samymi scenami w HD.
 - **Przewijany ekran wyboru języka.** Zachowuje układ HD i przewija się, aby zmieścić wszystkie 11 języków.
 - **Okno dopasowane do ekranu.** Gra otwiera się w wyśrodkowanym oknie zajmującym 90% użytecznego obszaru
   pulpitu (bez paska zadań i paska tytułu), w rozmiarze od 1280×720 do 1920×1080 i nigdy większym niż ekran.
@@ -77,10 +77,10 @@ chiński uproszczony i chiński tradycyjny: wszystkie 11 języków wersji Steam.
 Instalator nie jest potrzebny.
 
 > **Pobierz łatkę ze strony [Releases](https://github.com/ohshya/KatawaShoujoSteamHD/releases/latest).**
-> Repozytorium zawiera narzędzie do budowania; archiwa HD (`patch-hd.rpa`, około 660 MB, i `r18-hd.rpa`) są
+> Repozytorium zawiera narzędzie do budowania; archiwa HD (`patch-hd.rpa`, około 660 MB, i `r18_hd.rpa`) są
 > tylko w pliku zip wydania.
 
-1. Pobierz [`KS-HD-1.0.1-Steam-Patch.zip`](https://github.com/ohshya/KatawaShoujoSteamHD/releases/download/v1.0.1/KS-HD-1.0.1-Steam-Patch.zip) z najnowszego wydania.
+1. Pobierz [`KS-HD-1.0.2-Steam-Patch.zip`](https://github.com/ohshya/KatawaShoujoSteamHD/releases/download/v1.0.2/KS-HD-1.0.2-Steam-Patch.zip) z najnowszego wydania.
    To jedyny plik potrzebny do gry. Drugi, `Assets-For-Building-Only`, służy tylko do samodzielnego
    zbudowania łatki.
 2. W Steam kliknij prawym przyciskiem **Katawa Shoujo** > **Zarządzaj** > **Przeglądaj pliki lokalne**.
@@ -95,7 +95,7 @@ folderem `game` w środku.
 
 Oficjalny `r18.rpa` nie jest potrzebny. Jeśli już jest w folderze, możesz go zostawić; gra użyje wersji HD.
 
-**Aby odinstalować:** usuń `game/patch-hd.rpa` i `game/r18-hd.rpa`, a następnie w Steam przejdź do
+**Aby odinstalować:** usuń `game/patch-hd.rpa` i `game/r18_hd.rpa` (oraz `game/r18-hd.rpa`, jeśli instalowałeś v1.0.0 lub v1.0.1), a następnie w Steam przejdź do
 **Właściwości** > **Zainstalowane pliki** > **Zweryfikuj spójność plików gry**.
 
 > Aktualizacja Steam może nadpisać spatchowane skrypty. W takim przypadku rozpakuj łatkę ponownie.
@@ -109,7 +109,7 @@ Oficjalny `r18.rpa` nie jest potrzebny. Jeśli już jest w folderze, możesz go 
 | Plik | Opis |
 |---|---|
 | `game/patch-hd.rpa` | Tła, sprite'y, CG, interfejs, efekty i filmy w HD. |
-| `game/r18-hd.rpa` | Łatka R18 w HD. Zastępuje oficjalny `r18.rpa`. |
+| `game/r18_hd.rpa` | Łatka R18 w HD. Zastępuje oficjalny `r18.rpa`. |
 | `game/*.rpyc` | Skrypty gry z wersji Steam z poprawkami układu HD, dla wszystkich 11 języków. |
 | `game/presplash.png` | Ekran ładowania łatki HD. |
 
@@ -120,7 +120,7 @@ Jeszcze nie; trwają prace nad jej obsługą. Łatka jest przeznaczona dla domy�
 Ren'Py 8 używa innego formatu skryptów, więc zainstalowanie tam tej łatki zepsułoby grę.
 
 **Czy potrzebuję oficjalnej łatki R18 (`r18.rpa`)?**
-Nie. `r18-hd.rpa` zawiera już sceny R18 w HD, a opcja gry pozwalająca je wyłączyć nadal działa.
+Nie. `r18_hd.rpa` zawiera już sceny R18 w HD, a opcja gry pozwalająca je wyłączyć nadal działa.
 
 **Czy to to samo co Katawa Shoujo HD Patch od letow?**
 Używa tej samej grafiki HD i tych samych poprawek scen, przeniesionych do wersji Steam, oraz zmian z sekcji
@@ -132,7 +132,7 @@ Powinna: łatka zmienia tylko dane gry, które są takie same w każdym systemie
 systemie Windows, więc zgłoszenia są mile widziane.
 
 **Jak wrócić do oryginalnej gry?**
-Usuń `game/patch-hd.rpa` i `game/r18-hd.rpa`, a następnie użyj **Zweryfikuj spójność plików gry** w Steam.
+Usuń `game/patch-hd.rpa` i `game/r18_hd.rpa`, a następnie użyj **Zweryfikuj spójność plików gry** w Steam.
 
 ## Budowanie ze źródeł
 
@@ -156,7 +156,7 @@ aby zapewnić czysty i niezawodny sposób budowania łatki z danych uzyskanych p
 
 - [Python](https://www.python.org/) 3.9 lub nowszy. Dodatkowe pakiety nie są potrzebne.
 - Wersja Steam Katawa Shoujo, **niezmodyfikowana** i na domyślnej gałęzi (nie beta Ren'Py 8).
-- Pakiet zasobów HD: [`KS-HD-1.0.1-Assets-For-Building-Only.zip`](https://github.com/ohshya/KatawaShoujoSteamHD/releases/download/v1.0.1/KS-HD-1.0.1-Assets-For-Building-Only.zip) (około 700 MB).
+- Pakiet zasobów HD: [`KS-HD-1.0.2-Assets-For-Building-Only.zip`](https://github.com/ohshya/KatawaShoujoSteamHD/releases/download/v1.0.2/KS-HD-1.0.2-Assets-For-Building-Only.zip) (około 700 MB).
 
 ### Budowanie
 
@@ -167,14 +167,14 @@ aby zapewnić czysty i niezawodny sposób budowania łatki z danych uzyskanych p
      opcji instalacja Steam może pozostać spatchowana podczas budowania.
    - **Instalacja Steam:** jeśli w repozytorium nie ma kopii, narzędzie szuka gry w twoich bibliotekach Steam.
      Jeśli łatka jest już tam zainstalowana, najpierw użyj w Steam **Zweryfikuj spójność plików gry**.
-3. Umieść `KS-HD-1.0.1-Assets-For-Building-Only.zip` w folderze `assets`, spakowany lub rozpakowany.
+3. Umieść `KS-HD-1.0.2-Assets-For-Building-Only.zip` w folderze `assets`, spakowany lub rozpakowany.
 4. Uruchom:
 
 ```bash
 python build.py
 ```
 
-Narzędzie nakłada zmiany na skrypty i tworzy `KS-HD-1.0.1-Steam-Patch.zip` obok `build.py`. Ten zip to łatka:
+Narzędzie nakłada zmiany na skrypty i tworzy `KS-HD-1.0.2-Steam-Patch.zip` obok `build.py`. Ten zip to łatka:
 zainstaluj ją zgodnie z opisem w sekcji „Instalacja”.
 
 Jeśli skrypt nie zgadza się z tym, czego oczekuje łatka, budowanie zostaje przerwane z informacją, którego
@@ -210,7 +210,7 @@ polskie panele komiksowe, wykonane tak samo jak pozostałe:
 ```
 presplash.png    ekran ładowania
 hd/              tła, sprite'y, CG, interfejs, efekty i filmy (pakowane do patch-hd.rpa)
-r18/             sceny R18 i ich obrazy (pakowane do r18-hd.rpa)
+r18/             sceny R18 i ich obrazy (pakowane do r18_hd.rpa)
 ```
 
 Aby zaktualizować grafikę, rozpakuj pakiet do folderu `assets`, zastąp lub dodaj pliki, zachowując te same

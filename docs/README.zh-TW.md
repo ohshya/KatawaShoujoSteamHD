@@ -38,7 +38,7 @@
   （`comic_vfx*_pl`）也依照其他語言面板的相同方式製作成高畫質版本。
 - **支援 Steam 版。** 高畫質調整（解析度、位置、縮放、平移、介面配置）是疊加在 Steam 版腳本之上，而不是取代
   腳本，因此 Steam 版的功能依然可用：成就、控制器支援、R18 開關以及封裝的語言檔案。
-- **高畫質 R18 修正檔。** `r18-hd.rpa` 以相同場景的高畫質版本取代官方的 `r18.rpa`。
+- **高畫質 R18 修正檔。** `r18_hd.rpa` 以相同場景的高畫質版本取代官方的 `r18.rpa`。
 - **可捲動的語言選擇畫面。** 保持高畫質配置，並可捲動以容納全部 11 種語言。
 - **符合螢幕的視窗。** 遊戲會在螢幕中央開啟一個視窗，大小為桌面可用區域（不含工作列和標題列）的 90%，介於
   1280×720 和 1920×1080 之間，且不會超過螢幕大小。全螢幕模式與以前相同。
@@ -68,9 +68,9 @@
 不需要安裝程式。
 
 > **請從 [Releases](https://github.com/ohshya/KatawaShoujoSteamHD/releases/latest) 頁面下載修正檔。** 儲存庫中
-> 是建置工具；高畫質封存檔（約 660 MB 的 `patch-hd.rpa` 和 `r18-hd.rpa`）只包含在發行版的 zip 中。
+> 是建置工具；高畫質封存檔（約 660 MB 的 `patch-hd.rpa` 和 `r18_hd.rpa`）只包含在發行版的 zip 中。
 
-1. 從最新發行版下載 [`KS-HD-1.0.1-Steam-Patch.zip`](https://github.com/ohshya/KatawaShoujoSteamHD/releases/download/v1.0.1/KS-HD-1.0.1-Steam-Patch.zip)。
+1. 從最新發行版下載 [`KS-HD-1.0.2-Steam-Patch.zip`](https://github.com/ohshya/KatawaShoujoSteamHD/releases/download/v1.0.2/KS-HD-1.0.2-Steam-Patch.zip)。
    遊玩只需要這一個檔案。另一個檔案 `Assets-For-Building-Only` 僅用於自行建置修正檔。
 2. 在 Steam 中右鍵點選 **Katawa Shoujo** > **管理** > **瀏覽本機檔案**。
 3. 將 zip 解壓縮到該資料夾（包含 `Katawa Shoujo.exe` 的資料夾）。
@@ -83,7 +83,7 @@
 
 不需要官方的 `r18.rpa`。如果它已經在資料夾中，可以保留；遊戲會使用高畫質版本。
 
-**移除方法：** 刪除 `game/patch-hd.rpa` 和 `game/r18-hd.rpa`，然後在 Steam 中進入
+**移除方法：** 刪除 `game/patch-hd.rpa` 和 `game/r18_hd.rpa`（如果安裝過 v1.0.0 或 v1.0.1，還有 `game/r18-hd.rpa`），然後在 Steam 中進入
 **內容** > **已安裝的檔案** > **驗證遊戲檔案完整性**。
 
 > Steam 更新可能會覆寫已修改的腳本。遇到這種情況，重新解壓縮修正檔即可。
@@ -97,7 +97,7 @@
 | 檔案 | 說明 |
 |---|---|
 | `game/patch-hd.rpa` | 高畫質背景、立繪、CG、介面、特效和影片。 |
-| `game/r18-hd.rpa` | 高畫質版 R18 修正檔，取代官方的 `r18.rpa`。 |
+| `game/r18_hd.rpa` | 高畫質版 R18 修正檔，取代官方的 `r18.rpa`。 |
 | `game/*.rpyc` | 加入高畫質配置調整的 Steam 版遊戲腳本，涵蓋全部 11 種語言。 |
 | `game/presplash.png` | 高畫質修正檔的載入畫面。 |
 
@@ -108,7 +108,7 @@
 格式，在其上安裝本修正檔會導致遊戲損壞。
 
 **需要官方的 R18 修正檔（`r18.rpa`）嗎？**
-不需要。`r18-hd.rpa` 已經包含高畫質版 R18 場景，遊戲中關閉這些場景的選項也依然有效。
+不需要。`r18_hd.rpa` 已經包含高畫質版 R18 場景，遊戲中關閉這些場景的選項也依然有效。
 
 **它和 letow 的 Katawa Shoujo HD Patch 一樣嗎？**
 它使用相同的高畫質美術和場景調整，並移植到了 Steam 版，另外還有「本版本的新內容」中列出的變更。letow 的原版
@@ -118,7 +118,7 @@
 應該可以：修正檔只修改遊戲資料，這些資料在所有系統上都相同。不過目前只在 Windows 上測試過，歡迎回報。
 
 **如何恢復原版遊戲？**
-刪除 `game/patch-hd.rpa` 和 `game/r18-hd.rpa`，然後在 Steam 中使用 **驗證遊戲檔案完整性**。
+刪除 `game/patch-hd.rpa` 和 `game/r18_hd.rpa`，然後在 Steam 中使用 **驗證遊戲檔案完整性**。
 
 ## 從原始碼建置
 
@@ -140,7 +140,7 @@
 
 - [Python](https://www.python.org/) 3.9 或更新版本，不需要額外的套件。
 - Steam 版《Katawa Shoujo》，**未經修改**且位於預設分支（不是 Ren'Py 8 測試版）。
-- 高畫質素材包：[`KS-HD-1.0.1-Assets-For-Building-Only.zip`](https://github.com/ohshya/KatawaShoujoSteamHD/releases/download/v1.0.1/KS-HD-1.0.1-Assets-For-Building-Only.zip)（約 700 MB）。
+- 高畫質素材包：[`KS-HD-1.0.2-Assets-For-Building-Only.zip`](https://github.com/ohshya/KatawaShoujoSteamHD/releases/download/v1.0.2/KS-HD-1.0.2-Assets-For-Building-Only.zip)（約 700 MB）。
 
 ### 建置
 
@@ -151,14 +151,14 @@
      修正檔的狀態。
    - **使用 Steam 中的安裝：** 如果儲存庫中沒有副本，工具會在你的 Steam 收藏庫中尋找遊戲。如果你已經在那裡
      安裝了本修正檔，請先在 Steam 中執行 **驗證遊戲檔案完整性**。
-3. 將 `KS-HD-1.0.1-Assets-For-Building-Only.zip` 放入 `assets` 資料夾，壓縮或解壓縮皆可。
+3. 將 `KS-HD-1.0.2-Assets-For-Building-Only.zip` 放入 `assets` 資料夾，壓縮或解壓縮皆可。
 4. 執行：
 
 ```bash
 python build.py
 ```
 
-工具會修改腳本，並在 `build.py` 旁邊產生 `KS-HD-1.0.1-Steam-Patch.zip`。這個 zip 就是修正檔，依照「安裝」中的
+工具會修改腳本，並在 `build.py` 旁邊產生 `KS-HD-1.0.2-Steam-Patch.zip`。這個 zip 就是修正檔，依照「安裝」中的
 說明安裝即可。
 
 如果某個腳本與修正檔預期的不一致，建置會停止並指出是哪一個。這種情況發生在遊戲檔案被修改過或屬於其他版本時。
@@ -189,7 +189,7 @@ python build.py
 ```
 presplash.png    載入畫面
 hd/              背景、立繪、CG、介面、特效和影片（封裝為 patch-hd.rpa）
-r18/             R18 場景及其圖片（封裝為 r18-hd.rpa）
+r18/             R18 場景及其圖片（封裝為 r18_hd.rpa）
 ```
 
 要更新美術素材，請把素材包解壓縮到 `assets` 資料夾，保持相同的檔名和資料夾結構取代或新增檔案，然後執行建置。

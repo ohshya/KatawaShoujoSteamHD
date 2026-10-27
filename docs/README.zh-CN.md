@@ -38,7 +38,7 @@
   （`comic_vfx*_pl`）也按照其他语言面板的相同方式制作成了高清版本。
 - **支持 Steam 版。** 高清调整（分辨率、位置、缩放、平移、界面布局）是叠加在 Steam 版脚本之上，而不是替换
   脚本，因此 Steam 版的功能依然可用：成就、手柄支持、R18 开关以及打包的语言文件。
-- **高清 R18 补丁。** `r18-hd.rpa` 以相同场景的高清版本替代官方的 `r18.rpa`。
+- **高清 R18 补丁。** `r18_hd.rpa` 以相同场景的高清版本替代官方的 `r18.rpa`。
 - **可滚动的语言选择界面。** 保持高清布局，并可滚动以容纳全部 11 种语言。
 - **适应屏幕的窗口。** 游戏会在屏幕中央打开一个窗口，大小为桌面可用区域（不含任务栏和标题栏）的 90%，介于
   1280×720 和 1920×1080 之间，且不会超过屏幕大小。全屏模式与以前相同。
@@ -68,9 +68,9 @@ Steam 版运行在更新的 Ren'Py（6.16.5）上，把这部分内容连同原�
 无需安装程序。
 
 > **请从 [Releases](https://github.com/ohshya/KatawaShoujoSteamHD/releases/latest) 页面下载补丁。** 仓库中是
-> 构建工具；高清归档文件（约 660 MB 的 `patch-hd.rpa` 和 `r18-hd.rpa`）只包含在发布的 zip 中。
+> 构建工具；高清归档文件（约 660 MB 的 `patch-hd.rpa` 和 `r18_hd.rpa`）只包含在发布的 zip 中。
 
-1. 从最新发布中下载 [`KS-HD-1.0.1-Steam-Patch.zip`](https://github.com/ohshya/KatawaShoujoSteamHD/releases/download/v1.0.1/KS-HD-1.0.1-Steam-Patch.zip)。
+1. 从最新发布中下载 [`KS-HD-1.0.2-Steam-Patch.zip`](https://github.com/ohshya/KatawaShoujoSteamHD/releases/download/v1.0.2/KS-HD-1.0.2-Steam-Patch.zip)。
    游玩只需要这一个文件。另一个文件 `Assets-For-Building-Only` 仅用于自行构建补丁。
 2. 在 Steam 中右键点击 **Katawa Shoujo** > **管理** > **浏览本地文件**。
 3. 将 zip 解压到该文件夹（包含 `Katawa Shoujo.exe` 的文件夹）。
@@ -83,7 +83,7 @@ Steam 版运行在更新的 Ren'Py（6.16.5）上，把这部分内容连同原�
 
 不需要官方的 `r18.rpa`。如果它已经在文件夹中，可以保留；游戏会使用高清版本。
 
-**卸载方法：** 删除 `game/patch-hd.rpa` 和 `game/r18-hd.rpa`，然后在 Steam 中进入
+**卸载方法：** 删除 `game/patch-hd.rpa` 和 `game/r18_hd.rpa`（如果安装过 v1.0.0 或 v1.0.1，还有 `game/r18-hd.rpa`），然后在 Steam 中进入
 **属性** > **已安装文件** > **验证游戏文件的完整性**。
 
 > Steam 更新可能会覆盖已修改的脚本。遇到这种情况，重新解压补丁即可。
@@ -97,7 +97,7 @@ Steam 版运行在更新的 Ren'Py（6.16.5）上，把这部分内容连同原�
 | 文件 | 说明 |
 |---|---|
 | `game/patch-hd.rpa` | 高清背景、立绘、CG、界面、特效和视频。 |
-| `game/r18-hd.rpa` | 高清版 R18 补丁，替代官方的 `r18.rpa`。 |
+| `game/r18_hd.rpa` | 高清版 R18 补丁，替代官方的 `r18.rpa`。 |
 | `game/*.rpyc` | 加入高清布局调整的 Steam 版游戏脚本，涵盖全部 11 种语言。 |
 | `game/presplash.png` | 高清补丁的加载画面。 |
 
@@ -108,7 +108,7 @@ Steam 版运行在更新的 Ren'Py（6.16.5）上，把这部分内容连同原�
 格式，在其上安装本补丁会导致游戏损坏。
 
 **需要官方的 R18 补丁（`r18.rpa`）吗？**
-不需要。`r18-hd.rpa` 已经包含高清版 R18 场景，游戏中关闭这些场景的选项也依然有效。
+不需要。`r18_hd.rpa` 已经包含高清版 R18 场景，游戏中关闭这些场景的选项也依然有效。
 
 **它和 letow 的 Katawa Shoujo HD Patch 是一样的吗？**
 它使用相同的高清美术和场景调整，并移植到了 Steam 版，另外还有“本版本的新内容”中列出的改动。letow 的原版补丁
@@ -118,7 +118,7 @@ Steam 版运行在更新的 Ren'Py（6.16.5）上，把这部分内容连同原�
 应该可以：补丁只修改游戏数据，这些数据在所有系统上都相同。不过目前只在 Windows 上测试过，欢迎反馈。
 
 **如何恢复原版游戏？**
-删除 `game/patch-hd.rpa` 和 `game/r18-hd.rpa`，然后在 Steam 中使用 **验证游戏文件的完整性**。
+删除 `game/patch-hd.rpa` 和 `game/r18_hd.rpa`，然后在 Steam 中使用 **验证游戏文件的完整性**。
 
 ## 从源码构建
 
@@ -139,7 +139,7 @@ Steam 版运行在更新的 Ren'Py（6.16.5）上，把这部分内容连同原�
 
 - [Python](https://www.python.org/) 3.9 或更高版本，无需额外的软件包。
 - Steam 版《Katawa Shoujo》，**未经修改**且位于默认分支（不是 Ren'Py 8 测试版）。
-- 高清素材包：[`KS-HD-1.0.1-Assets-For-Building-Only.zip`](https://github.com/ohshya/KatawaShoujoSteamHD/releases/download/v1.0.1/KS-HD-1.0.1-Assets-For-Building-Only.zip)（约 700 MB）。
+- 高清素材包：[`KS-HD-1.0.2-Assets-For-Building-Only.zip`](https://github.com/ohshya/KatawaShoujoSteamHD/releases/download/v1.0.2/KS-HD-1.0.2-Assets-For-Building-Only.zip)（约 700 MB）。
 
 ### 构建
 
@@ -149,14 +149,14 @@ Steam 版运行在更新的 Ren'Py（6.16.5）上，把这部分内容连同原�
      `Katawa Shoujo`。请使用安装补丁之前的副本。使用这种方式，Steam 中的安装可以在构建时保持已打补丁的状态。
    - **使用 Steam 中的安装：** 如果仓库中没有副本，工具会在你的 Steam 库中查找游戏。如果你已经在那里安装了
      本补丁，请先在 Steam 中执行 **验证游戏文件的完整性**。
-3. 将 `KS-HD-1.0.1-Assets-For-Building-Only.zip` 放入 `assets` 文件夹，压缩或解压均可。
+3. 将 `KS-HD-1.0.2-Assets-For-Building-Only.zip` 放入 `assets` 文件夹，压缩或解压均可。
 4. 运行：
 
 ```bash
 python build.py
 ```
 
-工具会修改脚本，并在 `build.py` 旁边生成 `KS-HD-1.0.1-Steam-Patch.zip`。这个 zip 就是补丁，按照“安装”中的说明
+工具会修改脚本，并在 `build.py` 旁边生成 `KS-HD-1.0.2-Steam-Patch.zip`。这个 zip 就是补丁，按照“安装”中的说明
 安装即可。
 
 如果某个脚本与补丁预期的不一致，构建会停止并指出是哪一个。这种情况发生在游戏文件被修改过或属于其他版本时。
@@ -187,7 +187,7 @@ python build.py
 ```
 presplash.png    加载画面
 hd/              背景、立绘、CG、界面、特效和视频（打包为 patch-hd.rpa）
-r18/             R18 场景及其图片（打包为 r18-hd.rpa）
+r18/             R18 场景及其图片（打包为 r18_hd.rpa）
 ```
 
 要更新美术素材，请把素材包解压到 `assets` 文件夹，保持相同的文件名和文件夹结构替换或添加文件，然后运行构建。

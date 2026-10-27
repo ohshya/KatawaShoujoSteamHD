@@ -42,7 +42,7 @@ Recursos exclusivos desta edição, que não existem no patch HD original:
 - **Suporte à versão Steam.** Os ajustes de HD (resolução, posições, zooms, panorâmicas, layout da interface)
   são aplicados sobre os scripts da Steam em vez de substituí-los, então os recursos da Steam continuam
   funcionando: conquistas, suporte a controle, a opção de R18 e os arquivos de idioma empacotados.
-- **Patch R18 em HD.** `r18-hd.rpa` substitui o `r18.rpa` oficial com as mesmas cenas em HD.
+- **Patch R18 em HD.** `r18_hd.rpa` substitui o `r18.rpa` oficial com as mesmas cenas em HD.
 - **Tela de idiomas com rolagem.** Mantém o layout em HD e rola para que todos os 11 idiomas caibam.
 - **Janela que cabe na tela.** O jogo abre em uma janela centralizada com 90% da área útil da área de trabalho
   (sem a barra de tarefas e a barra de título), entre 1280×720 e 1920×1080 e nunca maior que a tela. A tela
@@ -78,9 +78,9 @@ Não é preciso instalador.
 
 > **Baixe o patch na página de [Releases](https://github.com/ohshya/KatawaShoujoSteamHD/releases/latest).** O
 > repositório contém a ferramenta de compilação; os arquivos em HD (`patch-hd.rpa`, com cerca de 660 MB, e
-> `r18-hd.rpa`) estão apenas no zip do release.
+> `r18_hd.rpa`) estão apenas no zip do release.
 
-1. Baixe [`KS-HD-1.0.1-Steam-Patch.zip`](https://github.com/ohshya/KatawaShoujoSteamHD/releases/download/v1.0.1/KS-HD-1.0.1-Steam-Patch.zip) do release mais recente.
+1. Baixe [`KS-HD-1.0.2-Steam-Patch.zip`](https://github.com/ohshya/KatawaShoujoSteamHD/releases/download/v1.0.2/KS-HD-1.0.2-Steam-Patch.zip) do release mais recente.
    É o único arquivo de que você precisa para jogar. O outro, `Assets-For-Building-Only`, serve apenas para
    compilar o patch por conta própria.
 2. Na Steam, clique com o botão direito em **Katawa Shoujo** > **Gerenciar** > **Explorar arquivos locais**.
@@ -95,7 +95,7 @@ com a pasta `game` que está dentro.
 
 O `r18.rpa` oficial não é necessário. Se ele já estiver na pasta, pode deixá-lo lá; o jogo usa a versão em HD.
 
-**Para desinstalar:** apague `game/patch-hd.rpa` e `game/r18-hd.rpa` e, depois, na Steam, vá em
+**Para desinstalar:** apague `game/patch-hd.rpa` e `game/r18_hd.rpa` (e `game/r18-hd.rpa`, se você instalou a v1.0.0 ou a v1.0.1) e, depois, na Steam, vá em
 **Propriedades** > **Arquivos instalados** > **Verificar integridade dos arquivos do jogo**.
 
 > Uma atualização da Steam pode sobrescrever os scripts modificados. Se isso acontecer, extraia o patch de novo.
@@ -109,7 +109,7 @@ O `r18.rpa` oficial não é necessário. Se ele já estiver na pasta, pode deix�
 | Arquivo | Descrição |
 |---|---|
 | `game/patch-hd.rpa` | Cenários, sprites, CGs, interface, efeitos e vídeos em HD. |
-| `game/r18-hd.rpa` | O patch R18 em HD. Substitui o `r18.rpa` oficial. |
+| `game/r18_hd.rpa` | O patch R18 em HD. Substitui o `r18.rpa` oficial. |
 | `game/*.rpyc` | Scripts do jogo da Steam com os ajustes de layout em HD, para todos os 11 idiomas. |
 | `game/presplash.png` | Tela de carregamento do patch HD. |
 
@@ -120,7 +120,7 @@ Ainda não; o suporte está em andamento. O patch foi feito para a versão padr�
 Ren'Py 8 usa outro formato de scripts, então instalar este patch nele quebraria o jogo.
 
 **Preciso do patch R18 oficial (`r18.rpa`)?**
-Não. `r18-hd.rpa` já contém as cenas R18 em HD, e a opção do jogo para desativá-las continua funcionando.
+Não. `r18_hd.rpa` já contém as cenas R18 em HD, e a opção do jogo para desativá-las continua funcionando.
 
 **É o mesmo que o Katawa Shoujo HD Patch de letow?**
 Usa a mesma arte em HD e os mesmos ajustes de cenas, adaptados para a versão Steam, além das mudanças listadas
@@ -131,7 +131,7 @@ Deve funcionar: o patch só muda dados do jogo, que são iguais em todos os sist
 no Windows, então relatos são bem-vindos.
 
 **Como volto ao jogo original?**
-Apague `game/patch-hd.rpa` e `game/r18-hd.rpa` e, depois, use **Verificar integridade dos arquivos do jogo** na
+Apague `game/patch-hd.rpa` e `game/r18_hd.rpa` e, depois, use **Verificar integridade dos arquivos do jogo** na
 Steam.
 
 ## Compilando a partir do código-fonte
@@ -157,7 +157,7 @@ port.
 
 - [Python](https://www.python.org/) 3.9 ou mais recente. Não é preciso nenhum pacote extra.
 - A versão Steam de Katawa Shoujo, **sem modificações** e na versão padrão (não o beta com Ren'Py 8).
-- O pacote de recursos em HD: [`KS-HD-1.0.1-Assets-For-Building-Only.zip`](https://github.com/ohshya/KatawaShoujoSteamHD/releases/download/v1.0.1/KS-HD-1.0.1-Assets-For-Building-Only.zip) (cerca de 700 MB).
+- O pacote de recursos em HD: [`KS-HD-1.0.2-Assets-For-Building-Only.zip`](https://github.com/ohshya/KatawaShoujoSteamHD/releases/download/v1.0.2/KS-HD-1.0.2-Assets-For-Building-Only.zip) (cerca de 700 MB).
 
 ### Compilação
 
@@ -169,14 +169,14 @@ port.
    - **A instalação da Steam:** se não houver uma cópia no repositório, a ferramenta procura o jogo nas suas
      bibliotecas da Steam. Se você já instalou este patch lá, use antes **Verificar integridade dos arquivos do
      jogo** na Steam.
-3. Coloque `KS-HD-1.0.1-Assets-For-Building-Only.zip` na pasta `assets`, compactado ou extraído.
+3. Coloque `KS-HD-1.0.2-Assets-For-Building-Only.zip` na pasta `assets`, compactado ou extraído.
 4. Execute:
 
 ```bash
 python build.py
 ```
 
-A ferramenta aplica o patch nos scripts e cria `KS-HD-1.0.1-Steam-Patch.zip` ao lado de `build.py`. Esse zip é o
+A ferramenta aplica o patch nos scripts e cria `KS-HD-1.0.2-Steam-Patch.zip` ao lado de `build.py`. Esse zip é o
 patch: instale-o como descrito em "Instalação".
 
 Se um script não corresponder ao que o patch espera, a compilação para e diz qual é: isso acontece quando os
@@ -212,7 +212,7 @@ adição desta edição são os quatro painéis de quadrinhos em polonês, feito
 ```
 presplash.png    tela de carregamento
 hd/              cenários, sprites, CGs, interface, efeitos e vídeos (empacotados em patch-hd.rpa)
-r18/             cenas R18 e suas imagens (empacotadas em r18-hd.rpa)
+r18/             cenas R18 e suas imagens (empacotadas em r18_hd.rpa)
 ```
 
 Para atualizar a arte, extraia o pacote na pasta `assets`, substitua ou adicione arquivos mantendo os mesmos

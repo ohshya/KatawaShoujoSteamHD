@@ -44,7 +44,7 @@ Fonctionnalités exclusives à cette édition, absentes du patch HD d'origine :
   disposition de l'interface) sont appliqués par-dessus les scripts Steam au lieu de les remplacer, donc les
   fonctions de Steam continuent de marcher : succès, prise en charge de la manette, l'option R18 et les fichiers
   de langue empaquetés.
-- **Patch R18 en HD.** `r18-hd.rpa` remplace le `r18.rpa` officiel avec les mêmes scènes en HD.
+- **Patch R18 en HD.** `r18_hd.rpa` remplace le `r18.rpa` officiel avec les mêmes scènes en HD.
 - **Écran des langues défilant.** Il garde la disposition HD et défile pour que les 11 langues tiennent.
 - **Fenêtre adaptée à l'écran.** Le jeu s'ouvre dans une fenêtre centrée à 90 % de la zone utile du bureau
   (sans la barre des tâches ni la barre de titre), entre 1280×720 et 1920×1080 et jamais plus grande que
@@ -79,10 +79,10 @@ simplifié et chinois traditionnel : les 11 langues de la version Steam.
 Aucun installateur nécessaire.
 
 > **Téléchargez le patch depuis la page [Releases](https://github.com/ohshya/KatawaShoujoSteamHD/releases/latest).**
-> Le dépôt contient l'outil de compilation ; les archives HD (`patch-hd.rpa`, environ 660 Mo, et `r18-hd.rpa`)
+> Le dépôt contient l'outil de compilation ; les archives HD (`patch-hd.rpa`, environ 660 Mo, et `r18_hd.rpa`)
 > se trouvent uniquement dans le zip de la release.
 
-1. Téléchargez [`KS-HD-1.0.1-Steam-Patch.zip`](https://github.com/ohshya/KatawaShoujoSteamHD/releases/download/v1.0.1/KS-HD-1.0.1-Steam-Patch.zip) depuis la dernière release.
+1. Téléchargez [`KS-HD-1.0.2-Steam-Patch.zip`](https://github.com/ohshya/KatawaShoujoSteamHD/releases/download/v1.0.2/KS-HD-1.0.2-Steam-Patch.zip) depuis la dernière release.
    C'est le seul fichier nécessaire pour jouer. L'autre, `Assets-For-Building-Only`, sert uniquement à
    compiler le patch vous-même.
 2. Dans Steam, faites un clic droit sur **Katawa Shoujo** > **Gérer** > **Parcourir les fichiers locaux**.
@@ -98,7 +98,7 @@ paquet** et fusionnez le dossier `game` du zip avec le dossier `game` qui s'y tr
 Le `r18.rpa` officiel n'est pas nécessaire. S'il est déjà dans le dossier, vous pouvez le laisser ; le jeu
 utilise la version HD.
 
-**Pour désinstaller :** supprimez `game/patch-hd.rpa` et `game/r18-hd.rpa`, puis dans Steam allez dans
+**Pour désinstaller :** supprimez `game/patch-hd.rpa` et `game/r18_hd.rpa` (et `game/r18-hd.rpa` si vous avez installé la v1.0.0 ou la v1.0.1), puis dans Steam allez dans
 **Propriétés** > **Fichiers installés** > **Vérifier l'intégrité des fichiers du jeu**.
 
 > Une mise à jour de Steam peut écraser les scripts patchés. Dans ce cas, extrayez à nouveau le patch.
@@ -113,7 +113,7 @@ utilise la version HD.
 | Fichier | Description |
 |---|---|
 | `game/patch-hd.rpa` | Décors, sprites, CG, interface, effets et vidéos en HD. |
-| `game/r18-hd.rpa` | Le patch R18 en HD. Remplace le `r18.rpa` officiel. |
+| `game/r18_hd.rpa` | Le patch R18 en HD. Remplace le `r18.rpa` officiel. |
 | `game/*.rpyc` | Scripts du jeu Steam avec les ajustements de disposition HD, pour les 11 langues. |
 | `game/presplash.png` | Écran de chargement du patch HD. |
 
@@ -124,7 +124,7 @@ Pas encore ; sa prise en charge est en cours. Le patch est conçu pour la branch
 bêta Ren'Py 8 utilise un autre format de scripts : installer ce patch dessus casserait le jeu.
 
 **Ai-je besoin du patch R18 officiel (`r18.rpa`) ?**
-Non. `r18-hd.rpa` contient déjà les scènes R18 en HD, et l'option du jeu pour les désactiver fonctionne
+Non. `r18_hd.rpa` contient déjà les scènes R18 en HD, et l'option du jeu pour les désactiver fonctionne
 toujours.
 
 **Est-ce la même chose que le Katawa Shoujo HD Patch de letow ?**
@@ -137,7 +137,7 @@ Normalement oui : le patch ne modifie que des données du jeu, identiques sur to
 que sous Windows pour l'instant, donc les retours sont les bienvenus.
 
 **Comment revenir au jeu d'origine ?**
-Supprimez `game/patch-hd.rpa` et `game/r18-hd.rpa`, puis utilisez **Vérifier l'intégrité des fichiers du jeu**
+Supprimez `game/patch-hd.rpa` et `game/r18_hd.rpa`, puis utilisez **Vérifier l'intégrité des fichiers du jeu**
 dans Steam.
 
 ## Compiler depuis les sources
@@ -164,7 +164,7 @@ portage.
 
 - [Python](https://www.python.org/) 3.9 ou plus récent. Aucun paquet supplémentaire n'est nécessaire.
 - La version Steam de Katawa Shoujo, **non modifiée** et sur la branche par défaut (pas la bêta Ren'Py 8).
-- Le paquet de ressources HD : [`KS-HD-1.0.1-Assets-For-Building-Only.zip`](https://github.com/ohshya/KatawaShoujoSteamHD/releases/download/v1.0.1/KS-HD-1.0.1-Assets-For-Building-Only.zip) (environ 700 Mo).
+- Le paquet de ressources HD : [`KS-HD-1.0.2-Assets-For-Building-Only.zip`](https://github.com/ohshya/KatawaShoujoSteamHD/releases/download/v1.0.2/KS-HD-1.0.2-Assets-For-Building-Only.zip) (environ 700 Mo).
 
 ### Compilation
 
@@ -176,14 +176,14 @@ portage.
    - **L'installation Steam :** s'il n'y a pas de copie dans le dépôt, l'outil cherche le jeu dans vos
      bibliothèques Steam. Si vous y avez déjà installé ce patch, utilisez d'abord **Vérifier l'intégrité des
      fichiers du jeu** dans Steam.
-3. Placez `KS-HD-1.0.1-Assets-For-Building-Only.zip` dans le dossier `assets`, compressé ou extrait.
+3. Placez `KS-HD-1.0.2-Assets-For-Building-Only.zip` dans le dossier `assets`, compressé ou extrait.
 4. Exécutez :
 
 ```bash
 python build.py
 ```
 
-L'outil patche les scripts et crée `KS-HD-1.0.1-Steam-Patch.zip` à côté de `build.py`. Ce zip est le patch :
+L'outil patche les scripts et crée `KS-HD-1.0.2-Steam-Patch.zip` à côté de `build.py`. Ce zip est le patch :
 installez-le comme décrit dans « Installation ».
 
 Si un script ne correspond pas à ce que le patch attend, la compilation s'arrête et indique lequel : cela
@@ -221,7 +221,7 @@ les autres :
 ```
 presplash.png    écran de chargement
 hd/              décors, sprites, CG, interface, effets et vidéos (empaquetés dans patch-hd.rpa)
-r18/             scènes R18 et leurs images (empaquetées dans r18-hd.rpa)
+r18/             scènes R18 et leurs images (empaquetées dans r18_hd.rpa)
 ```
 
 Pour mettre à jour les illustrations, extrayez le paquet dans le dossier `assets`, remplacez ou ajoutez des

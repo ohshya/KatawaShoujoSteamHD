@@ -10,7 +10,7 @@ from kshd.patch import PatchError, apply
 
 ROOT = Path(__file__).resolve().parent
 # Patch version, used in the output file name "KS-HD-<VERSION>-Steam-Patch.zip".
-VERSION = '1.0.1'
+VERSION = '1.0.2'
 # Script suffixes of the Steam languages ('' is English); add new ones here if Steam adds languages.
 LANGUAGES = ['', '_ES', '_FR', '_JP', '_DE', '_KR', '_PL', '_PT-BR', '_RU', '_ZH', '_ZH-HANT']
 
@@ -111,7 +111,9 @@ def main():
             z.writestr('game/' + name, data, zipfile.ZIP_DEFLATED)
         with assets.open('presplash.png') as f:
             z.writestr('game/presplash.png', f.read())
-        for archive, folder in (('patch-hd.rpa', 'hd/'), ('r18-hd.rpa', 'r18/')):
+        # Ren'Py 6.16 searches archives in reverse order of their file names, so "r18_hd.rpa" is read before the
+        # official "r18.rpa" if it's still in the game folder ("r18-hd.rpa" was read after it).
+        for archive, folder in (('patch-hd.rpa', 'hd/'), ('r18_hd.rpa', 'r18/')):
             with z.open('game/' + archive, 'w', force_zip64=True) as f:
                 rpa.write(f, {n[len(folder):]: (assets.size(n), lambda n=n: assets.open(n)) for n in assets.names if n.startswith(folder)})
     print('Done:', out)

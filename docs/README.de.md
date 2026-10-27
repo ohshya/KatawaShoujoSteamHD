@@ -44,7 +44,7 @@ Funktionen, die es nur in dieser Edition gibt und die der ursprüngliche HD-Patc
   Oberflächenlayout) werden auf die Steam-Skripte angewendet, statt sie zu ersetzen. So funktionieren die
   Steam-Funktionen weiterhin: Errungenschaften, Controller-Unterstützung, die R18-Option und die gepackten
   Sprachdateien.
-- **R18-Patch in HD.** `r18-hd.rpa` ersetzt die offizielle `r18.rpa` mit denselben Szenen in HD.
+- **R18-Patch in HD.** `r18_hd.rpa` ersetzt die offizielle `r18.rpa` mit denselben Szenen in HD.
 - **Scrollbarer Sprachbildschirm.** Er behält das HD-Layout bei und scrollt, damit alle 11 Sprachen Platz haben.
 - **Fenster, das auf den Bildschirm passt.** Das Spiel öffnet sich in einem zentrierten Fenster mit 90 % des
   nutzbaren Desktopbereichs (ohne Taskleiste und Titelleiste), zwischen 1280×720 und 1920×1080 und nie größer
@@ -80,9 +80,9 @@ Kein Installationsprogramm nötig.
 
 > **Lade den Patch von der [Releases](https://github.com/ohshya/KatawaShoujoSteamHD/releases/latest)-Seite
 > herunter.** Das Repository enthält das Build-Werkzeug; die HD-Archive (`patch-hd.rpa`, etwa 660 MB, und
-> `r18-hd.rpa`) sind nur im Release-Zip enthalten.
+> `r18_hd.rpa`) sind nur im Release-Zip enthalten.
 
-1. Lade [`KS-HD-1.0.1-Steam-Patch.zip`](https://github.com/ohshya/KatawaShoujoSteamHD/releases/download/v1.0.1/KS-HD-1.0.1-Steam-Patch.zip) aus dem neuesten Release herunter.
+1. Lade [`KS-HD-1.0.2-Steam-Patch.zip`](https://github.com/ohshya/KatawaShoujoSteamHD/releases/download/v1.0.2/KS-HD-1.0.2-Steam-Patch.zip) aus dem neuesten Release herunter.
    Das ist die einzige Datei, die du zum Spielen brauchst. Die andere, `Assets-For-Building-Only`, dient nur
    dazu, den Patch selbst zu erstellen.
 2. Klicke in Steam mit der rechten Maustaste auf **Katawa Shoujo** > **Verwalten** > **Lokale Dateien durchsuchen**.
@@ -98,7 +98,7 @@ dem Zip mit dem Ordner `game` darin zusammen.
 Die offizielle `r18.rpa` wird nicht benötigt. Wenn sie schon im Ordner liegt, kannst du sie dort lassen; das
 Spiel verwendet die HD-Version.
 
-**Zum Deinstallieren:** Lösche `game/patch-hd.rpa` und `game/r18-hd.rpa` und gehe dann in Steam auf
+**Zum Deinstallieren:** Lösche `game/patch-hd.rpa` und `game/r18_hd.rpa` (und `game/r18-hd.rpa`, falls du v1.0.0 oder v1.0.1 installiert hast) und gehe dann in Steam auf
 **Eigenschaften** > **Installierte Dateien** > **Spieldateien auf Fehler überprüfen**.
 
 > Ein Steam-Update kann die gepatchten Skripte überschreiben. Entpacke den Patch in diesem Fall einfach erneut.
@@ -113,7 +113,7 @@ Spiel verwendet die HD-Version.
 | Datei | Beschreibung |
 |---|---|
 | `game/patch-hd.rpa` | HD-Hintergründe, Sprites, CGs, Oberfläche, Effekte und Videos. |
-| `game/r18-hd.rpa` | Der R18-Patch in HD. Ersetzt die offizielle `r18.rpa`. |
+| `game/r18_hd.rpa` | Der R18-Patch in HD. Ersetzt die offizielle `r18.rpa`. |
 | `game/*.rpyc` | Spielskripte der Steam-Version mit den HD-Layoutanpassungen, für alle 11 Sprachen. |
 | `game/presplash.png` | Ladebildschirm des HD-Patches. |
 
@@ -125,7 +125,7 @@ und die Ren'Py-8-Beta verwendet ein anderes Skriptformat. Den Patch dort zu inst
 beschädigen.
 
 **Brauche ich den offiziellen R18-Patch (`r18.rpa`)?**
-Nein. `r18-hd.rpa` enthält die R18-Szenen bereits in HD, und die Spieloption, sie auszuschalten, funktioniert
+Nein. `r18_hd.rpa` enthält die R18-Szenen bereits in HD, und die Spieloption, sie auszuschalten, funktioniert
 weiterhin.
 
 **Ist das dasselbe wie der Katawa Shoujo HD Patch von letow?**
@@ -138,7 +138,7 @@ Das sollte er: Der Patch ändert nur Spieldaten, die auf jedem System gleich sin
 Windows getestet, daher sind Rückmeldungen willkommen.
 
 **Wie komme ich zum Originalspiel zurück?**
-Lösche `game/patch-hd.rpa` und `game/r18-hd.rpa` und verwende dann in Steam **Spieldateien auf Fehler
+Lösche `game/patch-hd.rpa` und `game/r18_hd.rpa` und verwende dann in Steam **Spieldateien auf Fehler
 überprüfen**.
 
 ## Aus dem Quellcode erstellen
@@ -165,7 +165,7 @@ erstellen zu können.
 
 - [Python](https://www.python.org/) 3.9 oder neuer. Zusätzliche Pakete sind nicht nötig.
 - Die Steam-Version von Katawa Shoujo, **unverändert** und im Standard-Branch (nicht die Ren'Py-8-Beta).
-- Das HD-Ressourcenpaket: [`KS-HD-1.0.1-Assets-For-Building-Only.zip`](https://github.com/ohshya/KatawaShoujoSteamHD/releases/download/v1.0.1/KS-HD-1.0.1-Assets-For-Building-Only.zip) (etwa 700 MB).
+- Das HD-Ressourcenpaket: [`KS-HD-1.0.2-Assets-For-Building-Only.zip`](https://github.com/ohshya/KatawaShoujoSteamHD/releases/download/v1.0.2/KS-HD-1.0.2-Assets-For-Building-Only.zip) (etwa 700 MB).
 
 ### Erstellen
 
@@ -177,14 +177,14 @@ erstellen zu können.
    - **Die Steam-Installation:** Gibt es keine Kopie im Repository, sucht das Werkzeug das Spiel in deinen
      Steam-Bibliotheken. Wenn du diesen Patch dort schon installiert hast, verwende vorher in Steam
      **Spieldateien auf Fehler überprüfen**.
-3. Lege `KS-HD-1.0.1-Assets-For-Building-Only.zip` in den Ordner `assets`, gepackt oder entpackt.
+3. Lege `KS-HD-1.0.2-Assets-For-Building-Only.zip` in den Ordner `assets`, gepackt oder entpackt.
 4. Führe aus:
 
 ```bash
 python build.py
 ```
 
-Das Werkzeug patcht die Skripte und erstellt `KS-HD-1.0.1-Steam-Patch.zip` neben `build.py`. Dieses Zip ist der
+Das Werkzeug patcht die Skripte und erstellt `KS-HD-1.0.2-Steam-Patch.zip` neben `build.py`. Dieses Zip ist der
 Patch: Installiere ihn wie unter „Installation“ beschrieben.
 
 Wenn ein Skript nicht dem entspricht, was der Patch erwartet, bricht der Vorgang ab und nennt das Skript. Das
@@ -221,7 +221,7 @@ erstellt wurden:
 ```
 presplash.png    Ladebildschirm
 hd/              Hintergründe, Sprites, CGs, Oberfläche, Effekte und Videos (gepackt in patch-hd.rpa)
-r18/             R18-Szenen und ihre Bilder (gepackt in r18-hd.rpa)
+r18/             R18-Szenen und ihre Bilder (gepackt in r18_hd.rpa)
 ```
 
 Um die Grafiken zu aktualisieren, entpacke das Paket in den Ordner `assets`, ersetze oder ergänze Dateien mit
