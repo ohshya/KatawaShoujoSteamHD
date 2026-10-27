@@ -146,6 +146,11 @@
    1
   ],
   [
+   "im.Crop(\"event/lilly_wheat_large.jpg\", 500,0,800,600)",
+   "im.Crop(\"event/lilly_wheat_large.jpg\", 420,0,1920,1080)",
+   1
+  ],
+  [
    "im.Composite(None,\n                                                  (0,0),\"event/hanako_breakdown/hanako_breakdown_down.png\",\n                                                  (588,71),\"event/hanako_breakdown/hanako_breakdown_up.jpg\")",
    "im.Composite(None,\n                                                  (0,0),\"event/hanako_breakdown/hanako_breakdown_down.png\",\n                                                  (1411,141),\"event/hanako_breakdown/hanako_breakdown_up.jpg\")",
    1
@@ -318,6 +323,11 @@
   [
    "LiveComposite((800, 600),\n                             (0,0), rainAnim(alpha=0.6),",
    "LiveComposite((1920, 1080),\n                             (0,0), rainAnim(alpha=0.6),",
+   1
+  ],
+  [
+   "Solid(\"#FFFFFF\")",
+   "Solid(\"#e9e9e7\")",
    1
   ],
   [
