@@ -10,7 +10,7 @@ from kshd.patch import PatchError, apply
 
 ROOT = Path(__file__).resolve().parent
 # Patch version, used in the output file name "KS-HD-<VERSION>-Steam-Patch.zip".
-VERSION = '1.0.0'
+VERSION = '1.0.1'
 # Script suffixes of the Steam languages ('' is English); add new ones here if Steam adds languages.
 LANGUAGES = ['', '_ES', '_FR', '_JP', '_DE', '_KR', '_PL', '_PT-BR', '_RU', '_ZH', '_ZH-HANT']
 
@@ -66,11 +66,12 @@ def steam_libraries():
 
 
 def find_game():
-    for folder in [lib / 'steamapps' / 'common' / 'Katawa Shoujo' for lib in steam_libraries()] + [ROOT / 'Katawa Shoujo']:
+    # A copy of the game in the repository comes first, so the Steam installation can stay patched.
+    for folder in [ROOT / 'Katawa Shoujo'] + [lib / 'steamapps' / 'common' / 'Katawa Shoujo' for lib in steam_libraries()]:
         hit = next(folder.rglob('data.rpa'), None) if folder.is_dir() else None
         if hit:
             return hit.parent
-    sys.exit('Katawa Shoujo was not found in Steam. Copy the game folder here as "Katawa Shoujo".')
+    sys.exit('Katawa Shoujo was not found. Copy the game folder here as "Katawa Shoujo" or install it with Steam.')
 
 
 def find_assets():
@@ -102,10 +103,10 @@ def main():
         with ProcessPoolExecutor(initializer=init, initargs=(str(game),)) as pool:
             scripts = dict(pool.map(task, jobs, chunksize=4))
     except PatchError as e:
-        sys.exit('%s\nThe game files are modified or from another version: verify them in Steam and try again.' % e)
+        sys.exit('%s\nThe game files are modified or from another version: verify them in Steam and try again.\n'
+                 'The patch is made for the default Steam branch (Ren\'Py 6.16), not for "modern - Ren\'Py 8 branch".' % e)
     out = ROOT / ('KS-HD-%s-Steam-Patch.zip' % VERSION)
     with zipfile.ZipFile(out, 'w') as z:
-        z.write(ROOT / 'README.md', 'README.md', zipfile.ZIP_DEFLATED)
         for name, data in sorted(scripts.items()):
             z.writestr('game/' + name, data, zipfile.ZIP_DEFLATED)
         with assets.open('presplash.png') as f:

@@ -5,5 +5,7 @@ __pycache__/
 assets/*
 !assets/.gitkeep
 Katawa Shoujo/
+Katawa Shoujo Modern/
+videos/
 KS/
 social-preview.png
