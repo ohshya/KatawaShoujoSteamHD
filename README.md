@@ -5,17 +5,17 @@
 # Katawa Shoujo HD Patch — Steam Edition (1080p)
 
 <p align="center">
-  :gb: <b>English</b> ·
-  :es: <a href="docs/README.es.md">Español</a> ·
-  :fr: <a href="docs/README.fr.md">Français</a> ·
-  :jp: <a href="docs/README.ja.md">日本語</a> ·
-  :de: <a href="docs/README.de.md">Deutsch</a> ·
-  :kr: <a href="docs/README.ko.md">한국어</a> ·
-  :poland: <a href="docs/README.pl.md">Polski</a> ·
-  :brazil: <a href="docs/README.pt-BR.md">Português (Brasil)</a> ·
-  :ru: <a href="docs/README.ru.md">Русский</a> ·
-  :cn: <a href="docs/README.zh-CN.md">简体中文</a> ·
-  :taiwan: <a href="docs/README.zh-TW.md">繁體中文</a>
+  <img src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/1f1ec-1f1e7.svg" width="20" alt="GB"> <b>English</b> ·
+  <img src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/1f1ea-1f1f8.svg" width="20" alt="ES"> <a href="docs/README.es.md">Español</a> ·
+  <img src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/1f1eb-1f1f7.svg" width="20" alt="FR"> <a href="docs/README.fr.md">Français</a> ·
+  <img src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/1f1ef-1f1f5.svg" width="20" alt="JP"> <a href="docs/README.ja.md">日本語</a> ·
+  <img src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/1f1e9-1f1ea.svg" width="20" alt="DE"> <a href="docs/README.de.md">Deutsch</a> ·
+  <img src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/1f1f0-1f1f7.svg" width="20" alt="KR"> <a href="docs/README.ko.md">한국어</a> ·
+  <img src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/1f1f5-1f1f1.svg" width="20" alt="PL"> <a href="docs/README.pl.md">Polski</a> ·
+  <img src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/1f1e7-1f1f7.svg" width="20" alt="BR"> <a href="docs/README.pt-BR.md">Português (Brasil)</a> ·
+  <img src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/1f1f7-1f1fa.svg" width="20" alt="RU"> <a href="docs/README.ru.md">Русский</a> ·
+  <img src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/1f1e8-1f1f3.svg" width="20" alt="CN"> <a href="docs/README.zh-CN.md">简体中文</a> ·
+  <img src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/1f1f9-1f1fc.svg" width="20" alt="TW"> <a href="docs/README.zh-TW.md">繁體中文</a>
 </p>
 
 **Play the Steam version of Katawa Shoujo in 1920×1080 widescreen, R18 included.**
